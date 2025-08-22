@@ -1,0 +1,28 @@
+@echo off
+SET DBNAME=open2
+SET MYSQL_PATH="C:\Archivos de programa\MySQL\MySQL Server 5.0"
+SET USER=myuser
+SET PASSWORD=mypass
+SET HOST=192.168.0.1
+SET PORT=3306
+SET SOURCE_FILE=%1
+
+:: ------------
+:: Get current date/time
+:: ------------
+FOR /F "TOKENS=2-4 DELIMS=/ " %%F IN ('DATE /T') DO (
+ SET YYYY=%%H
+ SET MM=%%F
+ SET DD=%%G
+)
+FOR /F "TOKENS=5-6 DELIMS=: " %%F IN ('ECHO.^|TIME') DO (
+ SET HR=%%F
+ SET MN=%%G
+)
+echo Creando Base de datos %DBNAME% en %HOST% ...
+%MYSQL_PATH%\bin\mysql.exe -u%USER% -p%password% -h%HOST% --port %PORT% --execute="CREATE DATABASE /*!32312 IF NOT EXISTS*/ `%DBNAME%` /*!40100 DEFAULT CHARACTER SET latin1 */;"
+echo Importando Base de datos %DBNAME% en %HOST% ...
+%MYSQL_PATH%\bin\mysql.exe -u%USER% -p%password% -h%HOST% --port %PORT% --batch --database %DBNAME% < %SOURCE_FILE%
+
+echo Importacion Terminada.
+echo.

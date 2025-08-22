@@ -1,0 +1,2 @@
+#!/bin/bash
+yum install qt3 d-linux.so.2 zlib.i686 libXext.so.6 libstdc++.so.6 libcryto.so.0.9.8 libfontconfig.so.1 libaudio.so.2 libjpeg.so.62 libpng12.so.0 libXi.so.6 libXrandar.so.2 libXcursor.so.1 libXinerama.so.1 libXft.so.2 libXrender.so.1q

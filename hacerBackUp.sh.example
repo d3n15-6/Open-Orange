@@ -1,0 +1,59 @@
+MYSQLBIN_PATH='/usr/local/mysql/bin'
+BACKUP_PATH='/usr/local/mysql/backUp'
+USER='myuser'
+PASSWD='mypass'
+HOST='192.168.0.1'
+DATABASE_NAME='open'
+
+####################################################################
+#                                                                  #
+#para dejarlo automático:                                          #
+#   (hay q estar como root)                                        #
+#>su                                                               #
+#   (copiar el hacerBackUp.sh.example -sin el .example-            #
+#   en /user/local/mysql o en alguna otra carpeta)                 #
+#>cp hacerBackUp.sh.example /user/local/mysql/hacerBackUp.sh       #
+#   (editar las variables de hacerBackUp.sh con un editor de texto)#
+#   (agregar al cron)                                              #
+#>crontab -e  (se abre el vi)                                      #
+#   (pegar la siguiente linea al final (primer campo: minutos,     #
+#   segundo campo: horas)                                          #
+#>00 01 * * * /usr/local/mysql/hacerBackUp.sh 1> /dev/null         #
+#   (Nota: indicar bien el path si eligió otra carpeta en vez de   #
+#          /usr/local/mysql)                                       #
+#   (salir grabando del vi)                                        #
+#   (comprobar que se editó bien el cron)                          #
+#>crontab -l                                                       #
+#                                                                  #
+####################################################################
+
+FILE_NAME=$DATABASE_NAME`date +%F_%H%M`\.sql
+ATTACH_NAME=$DATABASE_NAME`date +%F_%H%M`-Attach\.sql
+EVENTLOG_NAME=$DATABASE_NAME`date +%F_%H%M`-EventLog\.sql
+
+if ! test -d $BACKUP_PATH
+then
+    mkdir -p $BACKUP_PATH
+fi
+
+echo "Making Database Backup without Tables (EventLog,Attach)"
+$MYSQLBIN_PATH/mysqldump -u$USER -p$PASSWD -h$HOST --hex-blob --ignore-table="$DATABASE_NAME.Attach" --ignore-table="$DATABASE_NAME.EventLog" $DATABASE_NAME > $BACKUP_PATH/$FILE_NAME
+
+echo "Making Database Backup Table Attach"
+$MYSQLBIN_PATH/mysqldump -u$USER -p$PASSWD -h$HOST --hex-blob $DATABASE_NAME Attach > $BACKUP_PATH/$ATTACH_NAME 
+
+echo "Making Database Backup Table EventLog"
+$MYSQLBIN_PATH/mysqldump -u$USER -p$PASSWD -h$HOST --hex-blob $DATABASE_NAME EventLog > $BACKUP_PATH/$EVENTLOG_NAME 
+
+cd $BACKUP_PATH
+echo "Compressing Database Backup without Tables (EventLog,Attach)"
+tar cvfz "$FILE_NAME.tgz" "$FILE_NAME"
+rm "$FILE_NAME"
+
+echo "Compressing Database Backup Table Attach"
+tar cvfz "$ATTACH_NAME.tgz" "$ATTACH_NAME"
+rm "$ATTACH_NAME"
+
+echo "Compressing Database Backup Table EventLog"
+tar cvfz "$EVENTLOG_NAME.tgz" "$EVENTLOG_NAME"
+rm "$EVENTLOG_NAME"

@@ -1,0 +1,16 @@
+#101
+Nota:
+OpenOrange envia informacion estadistica sobre uso a openorange.com.ar.
+La informacion que se envia es la siguiente:
+
+codigo del usuario.
+nombre del usuario.
+codigo del servidor.
+ip del servidor.
+cantidad de usuarios registrados en el sevidor.
+nombre de la empresa.
+nombre de fantasia de la empresa.
+CUIT de la empresa.
+
+Esta informacion es utilizada unicamente con fines estadisticos.
+OpenOrange no envia ningun tipo de informacion financiera ni de otra indole; solo la mencionada anteriormente.
