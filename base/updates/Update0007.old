@@ -1,0 +1,90 @@
+# Agosto 2009 - Martin Salcedo
+from OpenOrange import *
+
+class Update0007:
+    Description = "CRM Settings: Campos obligatorios de Personas y Clientes se pasan a RecordCheckPolicy "
+    UpdateResult = "No Ejecutado\n"
+
+    def performUpdate(self):
+        self.UpdateResult = "Verificando CRM Settings\n"
+
+        try:
+            
+            from CRMSettings import CRMSettings
+            from RecordCheckPolicy import RecordCheckPolicy
+            from RecordCheckPolicy import RecordCheckPolicyFieldsListRow
+            
+            crmset = CRMSettings.bring()
+            
+            if (crmset.CustForceEntryFields):
+                self.UpdateResult += "Creando RCP para Customer \n"
+                rcp = RecordCheckPolicy.bring("Customer")
+                if (not rcp):
+                    rcp = RecordCheckPolicy()
+                    rcp.Code = "Customer"
+                    rcp.Enabled = True
+                    res = rcp.store()
+                    if (not res):
+                        self.UpdateResult += "Error grabando RCP al crear, %s \n" %(res)
+                        rollback()
+                        return False
+                rcp = RecordCheckPolicy.bring("Customer")
+                if (rcp):
+                    for field in crmset.CustForceEntryFields.split(","):
+                        rcprow = RecordCheckPolicyFieldsListRow()
+                        rcprow.HeaderField = field
+                        rcprow.NonBlank = True
+                        rcprow.DontSave = True
+                        rcprow.Message = "%s - %s" %(tr("NONBLANKERR"),field)
+                        rcp.FieldsList.append(rcprow)
+                    res = rcp.store()
+                    if (not res):
+                        self.UpdateResult += "Error grabando RCP al actualizar, %s \n" %(res)
+                        rollback()
+                        return False
+                    else:
+                        self.UpdateResult += "RCP OK\n"
+                else:
+                    self.UpdateResult += "No se encontró RCP \n"
+                    rollback()
+                    return False
+
+            if (crmset.PersForceEntryFields):
+                self.UpdateResult += "Creando RCP para Person \n"
+                rcp = RecordCheckPolicy.bring("Person")
+                if (not rcp):
+                    rcp = RecordCheckPolicy()
+                    rcp.Code = "Person"
+                    rcp.Enabled = True
+                    res = rcp.store()
+                    if (not res):
+                        self.UpdateResult += "Error grabando RCP al crear, %s \n" %(res)
+                        rollback()
+                        return False
+                rcp = RecordCheckPolicy.bring("Person")
+                if (rcp):
+                    for field in crmset.PersForceEntryFields.split(","):
+                        rcprow = RecordCheckPolicyFieldsListRow()
+                        rcprow.HeaderField = field
+                        rcprow.NonBlank = True
+                        rcprow.DontSave = True
+                        rcprow.Message = "%s - %s" %(tr("NONBLANKERR"),field)
+                        rcp.FieldsList.append(rcprow)
+                    res = rcp.store()
+                    if (not res):
+                        self.UpdateResult += "Error grabando RCP al actualizar, %s \n" %(res)
+                        rollback()
+                        return False
+                    else:
+                        self.UpdateResult += "RCP OK\n"
+                else:
+                    self.UpdateResult += "No se encontró RCP \n"
+                    rollback()
+                    return False
+
+            self.UpdateResult += "Actualizado \n"
+            commit()
+        except Exception, err:
+            self.UpdateResult += "Error %s \n" %(err)
+            return False
+        return True

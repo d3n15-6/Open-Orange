@@ -1,0 +1,41 @@
+# Agosto 2009 - Martin Salcedo
+from OpenOrange import *
+
+class Update0003:
+    Description = "Se ajusta el tamaño de los campos MainContact de Supplier y Customer "
+    UpdateResult = "No Ejecutado\n"
+
+    def performUpdate(self):
+        self.UpdateResult = "Actualización de Clientes\n"
+
+        gri = getRecordsInfo()
+        mclen = gri["Customer"]["Fields"]["MainContact"]["Length"]
+        uquery = Query()
+        uquery.sql  = "UPDATE Customer "
+        uquery.sql += "SET MainContact = LEFT(MainContact,%s) " %(mclen)
+        
+        res = uquery.execute()
+        if (res):
+            self.UpdateResult += "%s Clientes actualizados \n" %(uquery.matchedrows)
+            commit()
+        
+        synchronizeRecord("Customer")
+
+        self.UpdateResult += "Actualización de Proveedores\n"
+
+        gri = getRecordsInfo()
+        mclen = gri["Customer"]["Fields"]["MainContact"]["Length"]
+        uquery = Query()
+        uquery.sql  = "UPDATE Supplier "
+        uquery.sql += "SET MainContact = LEFT(MainContact,%s) " %(mclen)
+        
+        res = uquery.execute()
+        if (res):
+            self.UpdateResult += "%s Proveedores actualizados \n" %(uquery.matchedrows)
+            commit()
+
+        self.UpdateResult += "Fin Actualizacion\n "
+
+        synchronizeRecord("Supplier")
+
+        return True

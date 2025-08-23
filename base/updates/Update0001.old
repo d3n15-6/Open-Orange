@@ -1,0 +1,53 @@
+# Agosto 2009 - Martin Salcedo
+from OpenOrange import *
+
+class Update0001:
+    Description = "ReturnSupplier y Customer, los datos de campos Label pasan al campo Labels"
+    UpdateResult = "No ejecutado"
+
+    def performUpdate(self):
+
+        self.UpdateResult = "StartUpdating\n"
+        
+        try:
+            #Return Supplier
+            self.UpdateResult += "ReturnSupplier\n"
+            uquery = Query()
+            uquery.sql  = "SELECT COUNT(RS.Label) Counter FROM ReturnSupplier RS "
+            uquery.sql += "WHERE (RS.Label IS NOT NULL AND RS.Label != '' ) "
+            if (uquery.open()):
+                self.UpdateResult += "%s registros para actualizar\n" %(uquery[0].Counter)
+            
+            uquery = Query()
+            uquery.sql  = "UPDATE ReturnSupplier RS "
+            uquery.sql += "SET RS.Labels = IF(RS.Labels = NULL OR RS.Labels = '', RS.Label, CONCAT(RS.Label,',',RS.Labels) ) "
+            uquery.sql += "WHERE (RS.Label IS NOT NULL AND RS.Label != '' ) "
+            
+            if (uquery.execute()):
+                commit()
+                self.UpdateResult += "actualización terminada \n"
+
+            #Return Customer
+            self.UpdateResult += "ReturnCustomer\n"
+            uquery = Query()
+            uquery.sql  = "SELECT COUNT(RS.Label) Counter FROM ReturnCustomer RS "
+            uquery.sql += "WHERE (RS.Label IS NOT NULL AND RS.Label != '' ) "
+            if (uquery.open()):
+                self.UpdateResult += "%s registros para actualizar\n" %(uquery[0].Counter)
+            
+            uquery = Query()
+            uquery.sql  = "UPDATE ReturnCustomer RS "
+            uquery.sql += "SET RS.Labels = IF(RS.Labels = NULL OR RS.Labels = '', RS.Label, CONCAT(RS.Label,',',RS.Labels) ) "
+            uquery.sql += "WHERE (RS.Label IS NOT NULL AND RS.Label != '' ) "
+            
+            if (uquery.execute()):
+                commit()
+                self.UpdateResult += "actualización terminada \n"
+
+            self.UpdateResult += "EndUpdating\n"
+        except Exception, err:
+            message(err)
+            self.UpdateResult += "%s \n" %(err)
+            return True
+
+        return True

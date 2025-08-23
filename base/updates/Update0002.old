@@ -1,0 +1,53 @@
+# Agosto 2009 - Martin Salcedo
+from OpenOrange import *
+
+class Update0002:
+    Description = "Mueve los datos Name de los tipos de tablas SimpleMaster. ItemColor, Nationality, Package, Profession, JobPosition. "
+    UpdateResult = "No Ejecutado\n"
+
+    def performUpdate(self):
+        self.UpdateResult = "Actualización de Items\n"
+
+        try:
+            queryItem = Query()
+            queryItem.sql  = "SELECT COUNT(I.BrandName)+COUNT(PackageName)+COUNT(ColorName) TotalReg FROM Item I "
+
+            if (queryItem.open()):
+                self.UpdateResult += "%s campos en items\n" %(queryItem[0].TotalReg)
+
+            queryItem = Query()
+            queryItem.sql  = "UPDATE Item [I] "
+            queryItem.sql += "SET [I].{Brand} = IF(I.Brand   = NULL OR I.Brand   = '', [I].{BrandName},   CONCAT(I.Brand  , ',',I.BrandName)),"
+            queryItem.sql += " [I].{Package} =  IF(I.Package = NULL OR I.Package = '', [I].{PackageName}, CONCAT(I.Package, ',',I.PackageName)),"
+            queryItem.sql += " [I].{Color} =    IF(I.Color   = NULL OR I.Color   = '', [I].{ColorName},   CONCAT(I.Color,   ',',I.ColorName)), \n "
+            queryItem.sql += " [I].{BrandName} = '', [I].{PackageName} = '', [I].{ColorName} = '' "
+            if (queryItem.execute()):
+                commit()
+                self.UpdateResult += "Items Terminado\n"
+            else:
+                self.UpdateResult += "Error en Items\n"
+
+            queryPerson = Query()
+            queryPerson.sql  = "SELECT COUNT(I.NationalityName)+COUNT(I.JobPositionName)+COUNT(I.ProfessionName) TotalReg FROM Person I "
+
+            if (queryPerson.open()):
+                self.UpdateResult += "%s campos en personas\n" %(queryPerson[0].TotalReg)
+
+            queryPerson = Query()
+            queryPerson.sql  = "UPDATE Person [P] "
+            queryPerson.sql += "SET [P].{Nationality} = IF([P].{Nationality} = NULL OR [P].{Nationality} = '', [P].{NationalityName},   CONCAT([P].{Nationality},   ',',[P].{NationalityName})), "
+            queryPerson.sql += " [P].{JobPosition}  =   IF([P].{JobPosition} = NULL OR [P].{JobPosition} = '', [P].{JobPositionName},   CONCAT([P].{JobPosition},   ',',[P].{JobPositionName})), "
+            queryPerson.sql += " [P].{Profession} =     IF([P].{Profession}  = NULL OR [P].{Profession}  = '', [P].{ProfessionName},    CONCAT([P].{ProfessionName},',',[P].{Profession})), \n"
+            queryPerson.sql += " [P].{NationalityName} = '', [P].{JobPositionName} = '', [P].{ProfessionName} = '' "
+            if (queryPerson.execute()):
+                commit()
+                self.UpdateResult += "Personas Terminado\n"
+            else:
+                self.UpdateResult += "Error en Personas\n"
+        except Exception, err:
+            message(err)
+            self.UpdateResult += "%s \n" %(err)
+            return True
+
+        self.UpdateResult += "Actualización terminada\n"
+        return True

@@ -1,0 +1,9 @@
+<html>
+  <table width="720" border="1">
+  	<?iterate: template.iterateFields(__content__) ?>
+	<tr>
+		<td><?eval: field.getName() ?></?eval></td><td><?eval: field.getValue() ?></?eval></td>
+	</tr>
+	</?iterate>
+  </table>
+</html>

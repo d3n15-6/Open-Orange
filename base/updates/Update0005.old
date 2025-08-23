@@ -1,0 +1,31 @@
+# Agosto 2009 - Martin Salcedo
+from OpenOrange import *
+
+class Update0005:
+    Description = "Creación de los Códigos de Impuestos de las Ordenes de Venta"
+    UpdateResult = "No Ejecutado\n"
+
+    def performUpdate(self):
+        self.UpdateResult = "Creando Codigos\n"
+
+        iquery = Query()
+        iquery.sql  = "SELECT SOTr.TaxCode FROM SalesOrderTaxRow SOTr "
+        iquery.sql += "GROUP BY SOTr.TaxCode "
+
+        if (iquery.open()):
+            from Tax import Tax
+            aa = 0
+            for tcode in iquery:
+                tx = Tax.bring(tcode.TaxCode)
+                if (not tx):
+                    aa += 1
+                    tx = Tax()
+                    tx.Code = tcode.TaxCode
+                    tx.Name = tcode.TaxCode
+                    res = tx.save()
+                    if (res):
+                        commit()
+                    else:
+                        self.UpdateResult += "Error creando %s, %s\n" %(tcode,aa)
+        self.UpdateResult += "%s Códigos creados\n" %(aa)
+        return True
