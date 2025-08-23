@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module label="Synchronization" name="Synchronization" >
+    <recordentries >
+        <settingentry label="Synchronization Settings" name="SynchronizationSettingsWindow" />
+    </recordentries>
+    <reportentries >
+    </reportentries>
+    <routineentries >
+    </routineentries>
+</module>

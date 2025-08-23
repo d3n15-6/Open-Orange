@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="ShiftWindow" recordname="Shift" title="Shift" >
+    <line>
+        <column>
+            <text label="Code" fieldname="Code" />
+            <text label="Name" fieldname="Name" />
+            <time label="Start Time" fieldname="StartTime" />
+            <time label="End Time" fieldname="EndTime" />
+            <value label="Duration" fieldname="Duration" />
+            <text label="Branch" fieldname="Office" pastewindow="OfficePasteWindow" />
+            <text label="Previous" fieldname="PrevShift" pastewindow="ShiftPasteWindow" />
+            <text label="Next" fieldname="NextShift" pastewindow="ShiftPasteWindow" />
+            <text label="Department" fieldname="Department" pastewindow="DepartmentPasteWindow" />
+            <checkbox label="Don't Close with Open Transactions" fieldname="DontCloseWOpenTrans" />
+        </column>
+        <column>
+            <checkbox label="Sunday" fieldname="Sun" />
+            <checkbox label="Monday" fieldname="Mon" />
+            <checkbox label="Tuesday" fieldname="Tue" />
+            <checkbox label="Wednesday" fieldname="Wen" />
+            <checkbox label="Thursday" fieldname="Thu" />
+            <checkbox label="Friday" fieldname="Fri" />
+            <checkbox label="Saturday" fieldname="Sat" />
+            <radiobutton label="Type" fieldname="Type" >
+                <radiooption label="First" value="0" />
+                <radiooption label="Intermediate" value="1" />
+                <radiooption label="Last" value="2" />
+            </radiobutton>
+        </column>
+    </line>
+</window>

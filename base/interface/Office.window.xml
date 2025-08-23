@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="OfficeWindow" recordname="Office" title="Branch Office" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <text label="Name" fieldname="Name" />
+        <!-- Para los codigos cortos en las exportaciones de impuestos    -->
+        <text label="ShortCode" fieldname="ShortCode" />
+        <tabs >
+            <tabpage label="Address" name="AddressPage" >
+                <text label="Address" fieldname="Address" />
+                <text label="City" fieldname="City" pastewindow="CityPasteWindow" optionchars="2" />
+                <line>
+                    <text label="Province" fieldname="ProvinceCode" pastewindow="ProvincePasteWindow" width="080" />
+                    <text label="" fieldname="Province" readonly="True" />
+                    <text label="Country" fieldname="Country" pastewindow="CountryPasteWindow" />
+                </line>
+                <line>
+                    <text label="Locality Code" fieldname="LocalityCode" pastewindow="LocalityPasteWindow" width="50" />
+                    <text label="Locality" fieldname="Locality" readonly="True" />
+                </line>
+                <line>
+                    <text label="ZipCode" fieldname="ZipCode" pastewindow="ZipCodePasteWindow" width="65" />
+                    <pushbutton label="Obtain ZipCode" name="getZipCode" height="20" />
+                    <pushbutton label="View on Map" name="openWeb" height="20" getsfocus="false" />
+                </line>
+                <value label="Latitude" fieldname="Latitude" width="100" decimals="7" />
+                <value label="Longitude" fieldname="Longitude" width="100" decimals="7" />
+            </tabpage>
+            <tabpage label="Caracteristics" name="CaracteristicsPage" >
+                <text label="Payment Form" fieldname="PayMode" pastewindow="PayModePasteWindow" />
+                <integer label="Salesman" fieldname="Salesmen" />
+                <value label="Sales Objective" fieldname="SalesTarget" />
+                <text label="Branch Label" fieldname="BranchLabel" pastewindow="BranchLabelPasteWindow" />
+                <text label="Price Deal" fieldname="PriceDeal" pastewindow="PriceDealPasteWindow" />
+                <text label="Discount Deal" fieldname="DiscountDeal" pastewindow="DiscountDealPasteWindow" />
+            </tabpage>
+        </tabs>
+    </column>
+</window>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="RecordCommunicationWindow" recordname="RecordCommunication" title="Record Communication" >
+    <integer label="No." fieldname="SerNr" />
+    <text label="Person" fieldname="Person" pastewindow="PersonPasteWindow" />
+    <text label="Name" fieldname="Name" />
+    <date label="Date" fieldname="TransDate" />
+    <time label="Time" fieldname="TransTime" />
+    <memo label="Message" fieldname="Message" />
+    <text label="Origin Type" fieldname="OriginRecord" />
+    <text label="Origin Id" fieldname="OriginId" />
+</window>

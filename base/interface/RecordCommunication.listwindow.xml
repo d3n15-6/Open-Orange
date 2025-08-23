@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="RecordCommunicationListWindow" title="Record Communications" >
+    <matrix name="RecordCommunication" recordname="RecordCommunication" windowname="RecordCommunicationWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Person" fieldname="Person" editor="text" />
+        <matrixcolumn label="Message" fieldname="Message" editor="text" />
+        <matrixcolumn label="Date" fieldname="TransDate" editor="date" />
+        <matrixcolumn label="Time" fieldname="TransDate" editor="time" />
+        <matrixcolumn label="Origin Type" fieldname="OriginRecord" editor="text" />
+        <matrixcolumn label="Origin Id" fieldname="OriginId" editor="text" />
+    </matrix>
+</listwindow>

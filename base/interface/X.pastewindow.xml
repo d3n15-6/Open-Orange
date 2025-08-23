@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="XPasteWindow" title="Pegar Tabla" >
+    <matrix name="X" recordname="X" pastefieldname="Code" windowname="XWindow" >
+        <matrixcolumn fieldname="Code" editor="text" width="250" />
+        <matrixcolumn fieldname="Name" editor="text" width="250" />
+    </matrix>
+</listwindow>

@@ -1,0 +1,4 @@
+<detailrecord name="SchemaSettingsRow" tablename="SchemaSettingsRow" >
+    <field name="TableName" type="string" length="30" />
+    <field name="Schema" type="string" length="60" />
+</detailrecord>

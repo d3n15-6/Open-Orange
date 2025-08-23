@@ -1,0 +1,15 @@
+<record name="WindowState" tablename="WindowState" >
+    <field name="User" type="string" length="10" />
+    <field name="WindowName" type="string" length="60" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Height" type="integer" />
+    <field name="ColumnNr" type="integer" />
+    <field name="Order" type="integer" />
+    <field name="ColumnWidths" type="string" length="255" />
+    <index name="UserWindowName" >
+        <indexfield fieldname="User" />
+        <indexfield fieldname="WindowName" />
+    </index>
+</record>

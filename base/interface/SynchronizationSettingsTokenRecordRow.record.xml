@@ -1,0 +1,5 @@
+<!-- esto debe estar aca porque se utiliza desde core -->
+<detailrecord name="SynchronizationSettingsTokenRecordRow" tablename="SynchronizationSettingsTokenRecordRow" >
+    <field name="TableName" type="string" length="60" />
+    <field name="syncVersion" type="integer" />
+</detailrecord>

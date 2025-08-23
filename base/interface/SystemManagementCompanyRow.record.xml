@@ -1,0 +1,19 @@
+<detailrecord name="SystemManagementCompanyRow" tablename="SystemManagementCompanyRow" >
+    <!-- fields order is important-->
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="Host" type="string" length="60" />
+    <field name="Port" type="integer" />
+    <field name="User" type="string" length="60" />
+    <field name="Password" type="string" length="60" />
+    <field name="DefaultUser" type="string" length="20" />
+    <field name="DefaultUserPassword" type="string" length="60" />
+    <field name="ApplicationType" type="integer" />
+    <field name="DBName" type="string" length="60" />
+    <field name="OfficialSerNr" type="string" length="10" />
+    <field name="DBEngine" type="integer" />
+    
+    <field name="internalId" type="internalid" nullable="false" />
+    <field name="attachFlag" type="boolean" />
+    <field name="syncVersion" type="integer" />
+</detailrecord>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="XWindow" recordname="X" title="Table" >
+    <column>
+        <text fieldname="Code" />
+        <text fieldname="Name" />
+    </column>
+</window>

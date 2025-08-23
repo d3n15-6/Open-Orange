@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="RecordCheckPolicyListWindow" title="Record Check Policies" >
+    <matrix name="RecordCheckPolicy" recordname="RecordCheckPolicy" windowname="RecordCheckPolicyWindow" >
+        <matrixcolumn label="Table" fieldname="Code" editor="text" width="200" />
+        <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="50" />
+    </matrix>
+</listwindow>

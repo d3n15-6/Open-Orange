@@ -1,0 +1,6 @@
+<record name="SalesGroup" tablename="SalesGroup" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Comment" type="string" length="255" />
+    <field name="Discounts" type="detail" recordname="SalesGroupDiscount" />
+    <field name="MinGProfit" type="value" />
+</record>

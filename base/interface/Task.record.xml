@@ -1,0 +1,19 @@
+<record name="Task" tablename="Task" inherits="Numerable" >
+    <field name="SerNr" type="integer" />
+    <field name="Comment" type="memo" />
+    <field name="Enabled" type="boolean" />
+    <field name="RoutineName" type="string" length="50" />
+    <field name="ScheduleMode" type="integer" />
+    <field name="LastRunDate" type="date" />
+    <field name="LastRunTime" type="time" />
+    <field name="LastBeginRunDate" type="date" />
+    <field name="LastBeginRunTime" type="time" />
+    <field name="DayTime" type="time" />
+    <field name="WeekDay" type="integer" />
+    <field name="MonthDay" type="integer" />
+    <field name="Interval" type="time" />
+    <field name="Background" type="boolean" />
+    <field name="User" type="string" length="20" />
+    <field name="RunOnTime" type="boolean" />
+    <field name="Running" type="boolean" persistent="false" /> <!--used internally by ejecutable-->
+</record>

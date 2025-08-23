@@ -1,0 +1,11 @@
+<detailrecord name="RecordCheckPolicyFieldsListRow" tablename="RecordCheckPolicyFieldsListRow" >
+    <field name="HeaderField" type="string" length="40" />
+    <field name="RowField" type="string" length="40" />
+    <field name="NonBlank" type="boolean" />
+    <field name="NotEditable" type="boolean" />
+    <field name="Case" type="integer" />
+    <field name="Message" type="string" length="100" />
+    <field name="DontSave" type="boolean" />
+    <field name="MaxRows" type="integer" />
+    <field name="Default" type="string" length="30" />
+</detailrecord>

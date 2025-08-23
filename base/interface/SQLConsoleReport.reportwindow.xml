@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="sql" type="memo" />
+        <field name="xx" type="string" length="20" />
+    </reportrecord>
+    <reportwindow title="SQL Console" >
+        <column>
+            <memo label="SQL Query" fieldname="sql" />
+        </column>
+    </reportwindow>
+</reportuserinput>

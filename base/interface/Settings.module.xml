@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module label="Settings" name="Settings" >
+    <recordentries >
+        <recordentry label="Printers per Document" name="DocumentPrinterListWindow" />
+        <recordentry label="User Report Specifications" name="UserReportSpecListWindow" />
+        <settingentry label="Local Settings" name="LocalSettingsWindow" />
+        <!-- please dont change the name of the next menu entry -->
+        <settingentry label="Record Logging Options" name="LogSettingsWindow" />
+        <settingentry label="Schema Settings" name="SchemaSettingsWindow" />
+        <settingentry label="System Management" name="SystemManagementWindow" />
+        <settingentry label="Version Settings" name="VersionSettingsWindow" />
+        <recordentry label="Form Type Definition" name="FormTypeDefListWindow" />
+    </recordentries>
+    <reportentries >
+    </reportentries>
+    <routineentries >
+        <!--<routineentry name="fetchMail" label="Download Mails" />-->
+    </routineentries>
+</module>

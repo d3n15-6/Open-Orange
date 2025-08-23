@@ -1,0 +1,9 @@
+<record name="OOCase" tablename="OOCase" inherits="Numerable" >
+    <field name="Subject" type="string" length="255" />
+    <field name="Message" type="memo" persistent="false" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="OOCaseNr" type="integer" />
+    <field name="User" type="string" linkto="User" />
+    <field name="Closed" type="boolean" persistent="false" />
+</record>

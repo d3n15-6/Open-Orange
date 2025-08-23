@@ -1,0 +1,16 @@
+<record name="SystemManagement" tablename="SystemManagement" persistent="False" local="true" setting="true" >
+    <field name="DbServer" type="string" length="20" />
+    <field name="LogQueries" type="boolean" />
+    <field name="Skin" type="string" length="20" />
+    <field name="Language" type="string" length="20" />
+    <field name="AutoSyncTables" type="boolean" />
+    <field name="WebDir" type="string" length="200" />
+    <field name="UpdateLocalSettings" type="boolean" />
+    <field name="syncVersion" type="integer" />
+    <field name="AskBeforeChange" type="boolean" />
+    <field name="BeepOnQueries" type="boolean" />
+    <field name="DefaultCompany" type="string" length="30" />
+
+    <field name="Modules" type="detail" recordname="SystemManagementModuleRow" />
+    <field name="Companies" type="detail" recordname="SystemManagementCompanyRow" />
+</record>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="VersionUpdatesListWindow" title="Version Updates" >
+    <matrix name="VersionUpdates" recordname="VersionUpdates" windowname="VersionUpdatesWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Done" fieldname="Done" editor="checkbox" />
+        <matrixcolumn label="Success" fieldname="Success" editor="checkbox" />
+        <matrixcolumn label="Description" fieldname="Description" editor="text" width="200" />
+    </matrix>
+</listwindow>

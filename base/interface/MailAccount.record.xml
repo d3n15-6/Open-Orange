@@ -1,0 +1,36 @@
+<record name="MailAccount" tablename="MailAccount" inherits="Master" >
+    <field name="Mail" type="string" length="50" />
+    <field name="Name" type="string" length="30" />
+    <field name="User" type="string" length="20" linkto="User" />
+    <field name="Comment" type="string" length="30" />
+    <field name="POP3Server" type="string" length="100" />
+    <field name="SMTPServer" type="string" length="100" />
+    <field name="POP3User" type="string" length="50" />
+    <field name="SMTPUser" type="string" length="50" />
+    <field name="POP3Password" type="string" length="20" />
+    <field name="SMTPPassword" type="string" length="20" />
+    <field name="GoogleUser" type="string" length="50" />
+    <field name="GooglePassword" type="string" length="30" />
+    <field name="POP3Port" type="integer" />
+    <field name="ServerType" type="integer" />
+    <field name="SMTPPort" type="integer" />
+    <field name="SMTPReqSSL" type="boolean" />
+    <field name="SMTPReqAuth" type="boolean" />
+    <field name="DelFromServer" type="boolean" />
+    <field name="Token" type="string" length="50" />
+    <!--Firma del mail-->
+    <field name="AddSignature" type="boolean" />
+    <!--<field name="Name" type="string" length="30" />-->
+    <field name="Phone" type="string" length="20" />
+    <field name="CellPhone" type="string" length="20" />
+    <field name="Address" type="string" length="50" />
+    <!--Enviar automaticamente una copia al usuario-->
+    <field name="SendBCCCopy" type="string" length="50" />
+    <field name="City" type="string" length="30" />
+    <field name="Province" type="string" length="30" />
+    <field name="Country" type="string" length="50" />
+    <field name="Company" type="string" length="50" />
+    <field name="Site" type="string" length="50" />
+    <field name="OtherData" type="string" length="75" />
+    <!--/Firma del mail-->
+</record>

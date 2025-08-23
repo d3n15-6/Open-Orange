@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="OOChatClientWindow" recordname="OOChatClient" title="Chat" >
+    <reportview name="MessageHistory" height="200" width="300" />
+    <text label="" fieldname="Message" height="80" width="300" />
+    <action label="send window link" methodname="sendWindowLink" shortcut="ctrl+l" />
+</window>

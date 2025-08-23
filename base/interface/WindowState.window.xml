@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="WindowStateWindow" recordname="WindowState" title="Window State" >
+    <text label="User" fieldname="User" pastewindow="UserPasteWindow" />
+    <text label="Window" fieldname="WindowName" />
+    <integer label="X" fieldname="X" />
+    <integer label="Y" fieldname="Y" />
+    <integer label="Width" fieldname="Width" />
+    <integer label="Height" fieldname="Height" />
+    <integer label="Column" fieldname="ColumnNr" />
+    <integer label="Sort" fieldname="Order" />
+</window>

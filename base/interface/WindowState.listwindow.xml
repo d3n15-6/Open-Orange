@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="WindowStateListWindow" title="Window State" >
+    <matrix name="WindowStates" recordname="WindowState" windowname="WindowStateWindow" >
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Window" fieldname="WindowName" editor="text" width="200" />
+    </matrix>
+</listwindow>

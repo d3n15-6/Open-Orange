@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="VersionUpdatesWindow" recordname="VersionUpdates" title="Version Updates" >
+    <text label="Code" fieldname="Code" />
+    <line>
+        <column>
+            <memo label="Description" fieldname="Description" />
+        </column>
+        <column>
+            <text label="User" fieldname="User" />
+            <line>
+                <date label="Date" fieldname="RunDate" />
+                <time label="Time" fieldname="RunTime" />
+            </line>
+            <line>
+                <checkbox label="Done" fieldname="Done" />
+                <checkbox label="Success" fieldname="Success" />
+            </line>
+        </column>
+    </line>
+    <memo label="Update Result" fieldname="UpdateResult" width="600" />
+</window>

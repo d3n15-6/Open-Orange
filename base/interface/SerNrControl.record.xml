@@ -1,0 +1,16 @@
+<record name="SerNrControl" tablename="SerNrControl" >
+    <field name="DocType" type="integer" />
+    <field name="InvoiceType" type="integer" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="Computer" type="string" length="5" linkto="Computer" />
+    <field name="TransType" type="string" length="50" />
+    <field name="FromDate" type="date" />
+    <field name="ToDate" type="date" />
+    <field name="FromNr" type="integer" />
+    <field name="ToNr" type="integer" />
+    <field name="Comment" type="string" length="60" />
+    <field name="FormType" type="string" length="5" />
+    <field name="NoGenTrans" type="boolean" />
+    <field name="IsManualTransaction" type="boolean" />
+    <field name="OfficialPOSNr" type="integer" />
+</record>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="TraceRecorderWindow" recordname="TraceRecorder" title="Trace Recorder" >
+    <line>
+        <date label="Date" fieldname="Date" />
+        <time label="Time" fieldname="Time" />
+        <text label="User" fieldname="User" />
+    </line>
+    <line>
+        <pushbutton label="Start" name="start" />
+        <pushbutton label="Next" name="next" />
+    </line>
+    <line>
+        <column>
+            <combobox label="" fieldname="FilenameFilter" width="300" >
+            </combobox>
+            <reportview name="Viewer" height="500" width="300" />
+        </column>
+        <column>
+            <text label="" fieldname="Filename" width="700" />
+            <reportview name="FileViewer" height="500" width="700" />
+        </column>
+    </line>
+</window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="SerNrPasteWindow" title="Numbers" >
+    <matrix name="SerNrPasteWindow" recordname="X" pastefieldname="Code" windowname="" >
+        <matrixcolumn label="Number" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>

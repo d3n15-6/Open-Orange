@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="TaskWindow" recordname="Task" title="Task" >
+    <line>
+        <column>
+            <integer label="Number" fieldname="SerNr" />
+            <memo label="Description" fieldname="Comment" height="50" />
+            <checkbox label="Enabled" fieldname="Enabled" />
+            <checkbox label="Background" fieldname="Background" />
+            <checkbox label="Run on Time" fieldname="RunOnTime" />
+            <checkbox label="Running" fieldname="Running" readonly="True" />
+            <text label="Routine" fieldname="RoutineName" />
+            <text label="User" fieldname="User" pastewindow="UserPasteWindow" />
+            <combobox label="Type" fieldname="ScheduleMode" width="200" >
+                <combooption label="Daily" value="0" />
+                <combooption label="Weekly" value="1" />
+                <combooption label="Monthly" value="2" />
+                <combooption label="Continuous (From the Time it Begins)" value="3" />
+                <combooption label="By Intervals" value="4" />
+            </combobox>
+            <tabs >
+                <tabpage label="Last Run" name="LastRunPage" >
+                    <line>
+                        <date label="Start" fieldname="LastBeginRunDate" />
+                        <time label=" " fieldname="LastBeginRunTime" />
+                    </line>
+                    <line>
+                        <date label="End" fieldname="LastRunDate" />
+                        <time label=" " fieldname="LastRunTime" />
+                    </line>
+                </tabpage>
+            </tabs>
+        </column>
+        <column>
+            <tabs width="250" >
+                <tabpage label="Daily" name="DailyPage" >
+                    <time label="Time" fieldname="DayTime" />
+                </tabpage>
+            </tabs>
+            <tabs width="250" >
+                <tabpage label="Weekly" name="WeeklyPage" >
+                    <combobox label="Weekday" fieldname="WeekDay" >
+                        <combooption label="Monday" value="0" />
+                        <combooption label="Tuesday" value="1" />
+                        <combooption label="Wednesday" value="2" />
+                        <combooption label="Thursday" value="3" />
+                        <combooption label="Friday" value="4" />
+                        <combooption label="Saturday" value="5" />
+                        <combooption label="Sunday" value="6" />
+                    </combobox>
+                </tabpage>
+            </tabs>
+            <tabs width="250" >
+                <tabpage label="Monthly" name="MonthlyPage" >
+                    <integer label="Day of month" fieldname="MonthDay" />
+                </tabpage>
+            </tabs>
+            <tabs width="250" >
+                <tabpage label="By Intervals" name="ByIntervalsPage" >
+                    <time label="Run Every" fieldname="Interval" />
+                </tabpage>
+            </tabs>
+        </column>
+    </line>
+</window>

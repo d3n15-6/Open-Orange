@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="ShiftPasteWindow" title="Shift" >
+    <matrix name="Shift" recordname="Shift" pastefieldname="Code" windowname="ShiftWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="40" />
+        <matrixcolumn label="Start Time" fieldname="StartTime" editor="time" />
+        <matrixcolumn label="Branch" fieldname="Office" editor="text" />
+        <matrixcolumn label="Previous" fieldname="PrevShift" editor="text" />
+        <matrixcolumn label="Next" fieldname="NextShift" editor="text" />
+        <matrixcolumn label="Department" fieldname="Department" editor="text" />
+    </matrix>
+</listwindow>

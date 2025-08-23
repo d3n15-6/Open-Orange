@@ -1,0 +1,20 @@
+<record name="Shift" tablename="Shift" inherits="Master" >
+    <field name="Code" type="string" length="3" />
+    <field name="Name" type="string" length="60" />
+    <field name="StartTime" type="time" />
+    <field name="EndTime" type="time" />
+    <field name="Duration" type="value" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="PrevShift" type="string" length="5" linkto="Shift" />
+    <field name="NextShift" type="string" length="5" linkto="Shift" />
+    <field name="Department" type="string" length="5" linkto="Department" />
+    <field name="DontCloseWOpenTrans" type="boolean" />
+    <field name="Type" type="integer" />
+    <field name="Sun" type="boolean" />
+    <field name="Mon" type="boolean" />
+    <field name="Tue" type="boolean" />
+    <field name="Wen" type="boolean" />
+    <field name="Thu" type="boolean" />
+    <field name="Fri" type="boolean" />
+    <field name="Sat" type="boolean" />
+</record>

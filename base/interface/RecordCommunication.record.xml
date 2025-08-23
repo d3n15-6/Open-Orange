@@ -1,0 +1,11 @@
+<record name="RecordCommunication" tablename="RecordCommunication" inherits="Numerable" >
+    <field name="Person" type="string" linkto="Person" />
+    <field name="Name" type="string" length="255" />
+    <field name="Message" type="memo" />
+    <field name="OriginRecord" type="string" length="60" />
+    <field name="OriginId" type="string" length="255" />
+    <index name="Origin" >
+        <indexfield fieldname="OriginRecord" />
+        <indexfield fieldname="OriginId" />
+    </index>
+</record>

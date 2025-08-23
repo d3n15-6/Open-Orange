@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="MailAccountWindow" recordname="MailAccount" title="Email Account" >
+    <text label="Code" fieldname="Code" />
+    <text label="User" fieldname="User" />
+    <text label="Address" fieldname="Mail" />
+    <text label="Send BCC Copy" fieldname="SendBCCCopy" />
+    <text label="Name" fieldname="Name" />
+    <text label="Comment" fieldname="Comment" />
+    <tabs >
+        <tabpage label="POP3 and IMAP" name="POP3Page" >
+            <text label="User Name" fieldname="POP3User" />
+            <text label="Password" fieldname="POP3Password" password="true" />
+            <text label="Server" fieldname="POP3Server" />
+            <radiobutton label="Server Type" fieldname="ServerType" >
+                <radiooption label="POP3" value="0" />
+                <radiooption label="IMAP" value="1" />
+            </radiobutton>
+            <integer label="Port" fieldname="POP3Port" />
+            <checkbox label="Delete from Server after downloading" fieldname="DelFromServer" />
+        </tabpage>
+        <tabpage label="SMTP" name="SMTPPage" >
+            <checkbox label="Requires Authentication" fieldname="SMTPReqAuth" />
+            <checkbox label="Requires SSL" fieldname="SMTPReqSSL" />
+            <text label="User Name" fieldname="SMTPUser" />
+            <text label="Password" fieldname="SMTPPassword" password="true" />
+            <text label="Server" fieldname="SMTPServer" />
+            <integer label="Port" fieldname="SMTPPort" />
+        </tabpage>
+        <tabpage label="Google" name="GooglePage" >
+            <text label="User Name" fieldname="GoogleUser" />
+            <text label="Password" fieldname="GooglePassword" password="true" />
+        </tabpage>
+        <tabpage label="Token" name="TokenPage" >
+            <text label="Token" fieldname="Token" />
+        </tabpage>
+        <tabpage label="Signature" name="SignaturePage" >
+            <checkbox label="Add Signature" fieldname="AddSignature" />
+            <text label="Name" fieldname="Name" />
+            <text label="Phone" fieldname="Phone" />
+            <text label="Cell Phone" fieldname="CellPhone" />
+            <line>
+                <text label="Address" fieldname="Address" />
+                <text label="City" fieldname="City" />
+            </line>
+            <line>
+                <text label="Province" fieldname="Province" />
+                <text label="Country" fieldname="Country" />
+            </line>
+            <text label="Company" fieldname="Company" />
+            <text label="Site" fieldname="Site" />
+            <text label="Other Data" fieldname="OtherData" />
+        </tabpage>
+    </tabs>
+</window>

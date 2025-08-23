@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="SystemManagementWindow" recordname="SystemManagement" title="System Management" >
+    <tabs >
+        <tabpage label="settings.xml" name="settingsxmlPage" >
+            <line>
+                <text label="Server Type" fieldname="DbServer" />
+                <checkbox label="Log Queries" fieldname="LogQueries" />
+            </line>
+            <line>
+                <text label="Skin" fieldname="Skin" />
+                <combobox label="Language" fieldname="Language" >
+                    <combooption label="Spanish" value="es" />
+                    <combooption label="Portuguese" value="pt" />
+                    <combooption label="English" value="en" />
+                    <combooption label="Korean" value="ko" />
+                    <combooption label="Russian" value="ru" />
+                </combobox>
+            </line>
+            <text label="Web Folder" fieldname="WebDir" />
+            <text label="Default Company" fieldname="DefaultCompany" pastewindow="CompanyPasteWindow" />
+            <checkbox label="Automatic Tables Sync." fieldname="AutoSyncTables" />
+            <checkbox label="Beep on Queries" fieldname="BeepOnQueries" />
+            <matrix fieldname="Modules" name="Modules" >
+                <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="40" />
+                <matrixcolumn label="Directory" fieldname="Directory" editor="text" width="200" />
+                <matrixcolumn label="Level" fieldname="Level" editor="integer" width="50" />
+            </matrix>
+        </tabpage>
+        <tabpage label="company.data" name="companydataPage" >
+            <tabs >
+                <tabpage label="Code" name="CompanyPage" >
+                    <matrix fieldname="Companies" name="CompaniesMatrix" width="600" height="400" >
+                        <matrixcolumn label="Code" fieldname="Code" editor="text" width="150" />
+                        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+                        <matrixcolumn label="DBName" fieldname="DBName" editor="text" width="150" />
+                        <matrixcolumn label="Host" fieldname="Host" editor="text" width="150" />
+                        <matrixcolumn label="Port" fieldname="Port" editor="integer" />
+                        <matrixcolumn label="User" fieldname="User" editor="text" />
+                        <matrixcolumn label="Password" fieldname="Password" editor="text" width="150" password="true" />
+                        <matrixcolumn label="Application Type" fieldname="ApplicationType" editor="combobox" width="100" >
+                            <combooption label="to Data Base Server" value="0" />
+                            <combooption label="to OpenOrange Server" value="1" />
+                        </matrixcolumn>
+                        <matrixcolumn label="Default User" fieldname="DefaultUser" editor="text" width="150" />
+                        <matrixcolumn label="Default User Password" fieldname="DefaultUserPassword" editor="text" width="150" password="true" />
+                        <matrixcolumn label="Official Nr." fieldname="OfficialSerNr" editor="text" />
+                        <matrixcolumn label="internalId" fieldname="internalId" editor="integer" />
+                        <matrixcolumn label="attachFlag" fieldname="attachFlag" editor="integer" />
+                        <matrixcolumn label="syncVersion" fieldname="syncVersion" editor="integer" />
+                        <matrixcolumn label="DBEngine" fieldname="DBEngine" editor="combobox" width="200" >
+                            <combooption label="MySQL" value="0" />
+                            <combooption label="Oracle -not available yet-" value="3" />
+                            <combooption label="Embedded (SQLite -not available yet-" value="4" />
+                        </matrixcolumn>
+                    </matrix>
+                </tabpage>
+            </tabs>
+        </tabpage>
+    </tabs>
+    <action label="Load Companies" methodname="loadCompanies" />
+    <action label="Sort Companies" methodname="sortCompanies" />
+    <action label="Truncate Log File" methodname="truncateLogFile" />
+    <action label="Set Query Logging" methodname="setQueryLogging" />
+    <action label="Show Triggers" methodname="showStoreProcs" />
+    <action label="Refresh Triggers" methodname="loadTriggers" />
+</window>

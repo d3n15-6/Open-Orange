@@ -1,0 +1,5 @@
+<record name="Record" tablename="Record" inherits="RawRecord" persistent="false" >
+    <field name="internalId" type="internalid" nullable="false" />
+    <field name="attachFlag" type="boolean" />
+    <field name="syncVersion" type="integer" />
+</record>

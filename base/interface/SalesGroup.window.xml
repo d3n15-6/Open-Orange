@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="SalesGroupWindow" recordname="SalesGroup" title="Sales Group" >
+    <text label="Code" fieldname="Code" />
+    <text label="Description" fieldname="Comment" />
+    <value label="Minimun GProfit Allowed" fieldname="MinGProfit" />
+    <matrix fieldname="Discounts" name="Discounts" >
+        <matrixcolumn label="Price Deal" fieldname="PriceDeal" editor="text" pastewindow="PriceDealPasteWindow" width="100" />
+        <matrixcolumn label="Item Group" fieldname="ItemGroup" editor="text" pastewindow="ItemGroupPasteWindow" width="100" />
+        <matrixcolumn label="Item" fieldname="ArtCode" editor="text" pastewindow="ItemPasteWindow" width="100" />
+        <matrixcolumn label="Max. %" fieldname="MaxPercent" editor="value" width="70" />
+    </matrix>
+</window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="UserReportSpecListWindow" title="User Report Specifications" >
+    <matrix name="UserReportSpec" recordname="UserReportSpec" windowname="UserReportSpecWindow" >
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Report" fieldname="ReportLabel" editor="text" width="150" />
+    </matrix>
+</listwindow>

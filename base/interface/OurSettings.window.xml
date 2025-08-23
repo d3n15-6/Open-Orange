@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="OurSettingsWindow" recordname="OurSettings" title="Company Data" >
+    <column>
+        <text label="Legal Name" fieldname="Name" />
+        <text label="Commercial Name" fieldname="FantasyName" />
+        <text label="Ruc" fieldname="TaxRegNr" />
+        <tabs >
+            <tabpage label="Address" name="AddressPage" >
+                <text label="Address" fieldname="Address" />
+                <text label="City" fieldname="City" pastewindow="CityPasteWindow" optionchars="2" />
+                <line>
+                    <text label="Province" fieldname="ProvinceCode" pastewindow="ProvincePasteWindow" width="080" />
+                    <text label="" fieldname="Province" readonly="True" />
+                    <text label="Country" fieldname="Country" pastewindow="CountryPasteWindow" />
+                </line>
+                <line>
+                    <text label="Locality Code" fieldname="LocalityCode" pastewindow="LocalityPasteWindow" width="50" />
+                    <text label="Locality" fieldname="Locality" readonly="True" />
+                </line>
+                <line>
+                    <text label="ZipCode" fieldname="ZipCode" pastewindow="ZipCodePasteWindow" width="65" />
+                </line>
+                <text label="Phone" fieldname="Phone" />
+                <text label="Fax" fieldname="Fax" />
+                <text label="Email" fieldname="Email" />
+                <text label="Web Site" fieldname="WebSite" />
+                <date label="Start Activities" fieldname="StartDate" />
+                <text label="Legal Info" fieldname="LegalInfo" />
+            </tabpage>
+            <tabpage label="Other Data" name="OtherDataPage" >
+                <text label="Language" fieldname="Language" pastewindow="LanguagePasteWindow" />
+                <!-- should go to taxsettings <text label="VAT Reg.Nr." fieldname="TaxRegNr"/>    -->
+                <text label="Base Currency 1" fieldname="BaseCur1" pastewindow="CurrencyPasteWindow" />
+                <text label="Base Currency 2" fieldname="BaseCur2" pastewindow="CurrencyPasteWindow" />
+                <text label="Logo" fieldname="Logo" />
+                <text label="Financial Account" fieldname="FinAccount" pastewindow="FinAccountPasteWindow" />
+                <!-- this setting is totally lost here !! -->
+            </tabpage>
+            <tabpage label="Default" name="DefaultPage" >
+                <combobox label="Office is Determined by" fieldname="OfficeDeterminator" >
+                    <combooption label="User" value="0" />
+                    <combooption label="Computer" value="1" />
+                </combobox>
+                <text label="Branch" fieldname="DefOffice" pastewindow="OfficePasteWindow" />
+                <text label="Department" fieldname="DefDepartment" pastewindow="DepartmentPasteWindow" />
+                <text label="Stock Location" fieldname="DefStockDepo" pastewindow="StockDepoPasteWindow" />
+            </tabpage>
+        </tabs>
+    </column>
+</window>

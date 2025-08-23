@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="SchemaSettingsWindow" recordname="SchemaSettings" title="Schema Settings" >
+    <checkbox label="Enabled" fieldname="Enabled" />
+    <matrix fieldname="Schemas" name="SchemaSettingsRow" >
+        <matrixcolumn label="Table Name" fieldname="TableName" editor="text" />
+        <matrixcolumn label="Schema" fieldname="Schema" editor="text" />
+    </matrix>
+</window>

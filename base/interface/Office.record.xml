@@ -1,0 +1,15 @@
+<record name="Office" tablename="Office" inherits="Addressable" >
+    <field name="Code" type="string" length="10" />
+    <field name="Name" type="string" length="60" />
+    <field name="ShortCode" type="string" length="5"/>     <!-- Cuando la empresa define codigos largos esto se usa para las exportaciones de impuestos -->
+    <field name="CreditPolicy" type="integer" />
+    <field name="SalesTarget" type="value" />
+    <field name="Salesmen" type="integer" />
+    <field name="PayMode" type="string" length="5" linkto="PayMode" />
+    <field name="Phone" type="string" length="20" />
+    <field name="Fax" type="string" length="20" />
+    <field name="Email" type="string" length="60" />
+    <field name="PriceDeal" type="string" length="10" linkto="PriceDeal" />
+    <field name="DiscountDeal" type="string" length="10" linkto="DiscountDeal" />
+    <field name="BranchLabel" type="string" length="60"/>       <!-- Nota that this has No link to !!!  -->
+</record>

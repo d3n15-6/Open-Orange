@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="RecordCheckPolicyWindow" recordname="RecordCheckPolicy" title="Record Check Policy" >
+    <text label="Table" fieldname="Code" pastewindow="XPasteWindow" />
+    <checkbox label="Enabled" fieldname="Enabled" />
+    <tabs width="600" >
+        <tabpage label="Editable" name="EditablePage" >
+            <matrix fieldname="FieldsList" name="EditableMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Not Editable" fieldname="NotEditable" editor="checkbox" width="080" />
+            </matrix>
+        </tabpage>
+        <tabpage label="On Save" name="OnSavePage" >
+            <matrix fieldname="FieldsList" name="OnSaveMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Non Blank" fieldname="NonBlank" editor="checkbox" width="080" />
+                <matrixcolumn label="Don't save" fieldname="DontSave" editor="checkbox" width="080" />
+                <matrixcolumn label="Message" fieldname="Message" editor="text" width="150" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Uppercase/Lowercase" name="CasePage" >
+            <matrix fieldname="FieldsList" name="CaseMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Case" fieldname="Case" editor="combobox" width="100" >
+                    <combooption label="Normal" value="0" />
+                    <combooption label="Upper" value="1" />
+                    <combooption label="Lower" value="2" />
+                    <combooption label="Title" value="3" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Defaults" name="DefaultsPage" >
+            <matrix fieldname="FieldsList" name="DefaultsMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Default" fieldname="Default" editor="text" width="150" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Checks" name="CheckPage" >
+            <matrix fieldname="Checks" name="ChecksMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Condition" fieldname="Condition" editor="combobox" width="150" >
+                    <combooption label="-" value="0" />
+                    <combooption label="Is Equal To" value="1" />
+                    <combooption label="Is Less Than" value="2" />
+                    <combooption label="Is More Than" value="3" />
+                    <combooption label="Is Equal or Less Than" value="4" />
+                    <combooption label="Is Equal or More Than" value="5" />
+                    <combooption label="Contains" value="6" />
+                    <combooption label="Not Equal To" value="7" />
+                </matrixcolumn>
+                <matrixcolumn label="Value" fieldname="Value" editor="text" width="100" />
+                <matrixcolumn label="Message" fieldname="Message" editor="text" width="150" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Transaction" name="TransactionPage" >
+            <checkbox label="Update Computer On Confirming" fieldname="UpdateComputerOnConfirming" />
+            <checkbox label="Update User On Confirming" fieldname="UpdateUserOnConfirming" />
+        </tabpage>
+    </tabs>
+</window>

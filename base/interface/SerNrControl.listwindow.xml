@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="SerNrControlListWindow" title="Serial Number Control" >
+    <matrix name="SerNrControls" recordname="SerNrControl" windowname="SerNrControlWindow" >
+        <matrixcolumn label="Transaction Type" fieldname="TransType" editor="text" />
+        <matrixcolumn label="Invoice Type" fieldname="InvoiceType" editor="combobox" >
+            <combooption label="None" value="-1" />
+            <combooption label="Invoice" value="0" />
+            <combooption label="Credit Note" value="1" />
+            <combooption label="Debit Note" value="2" />
+            <combooption label="All" value="3" />
+        </matrixcolumn>
+        <matrixcolumn label="Document Type" fieldname="DocType" editor="combobox" >
+            <combooption label="Indistinct" value="-1" />
+            <combooption label="Invoice A" value="0" />
+            <combooption label="Invoice B" value="1" />
+            <combooption label="Invoice C" value="2" />
+            <combooption label="Invoice E" value="3" />
+            <combooption label="Invoice Z" value="4" />
+            <combooption label="Invoice M" value="5" />
+            <combooption label="Invoice L" value="6" />
+            <combooption label="Invoice I" value="7" />
+        </matrixcolumn>
+        <matrixcolumn label="Office" fieldname="Office" editor="text" />
+        <matrixcolumn label="Computer" fieldname="Computer" editor="text" />
+        <matrixcolumn label="From Number" fieldname="FromNr" editor="integer" />
+        <matrixcolumn label="To Number" fieldname="ToNr" editor="integer" />
+        <matrixcolumn label="From Date" fieldname="FromDate" editor="date" />
+        <matrixcolumn label="To Date" fieldname="ToDate" editor="date" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" />
+        <matrixcolumn label="No Gen. Trans." fieldname="NoGenTrans" editor="checkbox" />
+        <matrixcolumn label="Manual" fieldname="IsManualTransaction" editor="checkbox" />
+    </matrix>
+</listwindow>

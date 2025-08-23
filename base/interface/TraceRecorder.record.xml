@@ -1,0 +1,8 @@
+<record name="TraceRecorder" tablename="TraceRecorder" inherits="Record" >
+    <field name="Date" type="date" />
+    <field name="Time" type="time" />
+    <field name="User" type="string" length="10" linkto="User" />
+    <field name="Filename" type="string" length="255" persistent="false" />
+    <field name="FilenameFilter" type="string" length="255" persistent="false" />
+    <field name="Data" type="memo" />
+</record>

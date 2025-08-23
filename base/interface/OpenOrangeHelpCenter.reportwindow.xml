@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="TableName" type="string" length="60" />
+        <field name="FieldName" type="string" length="60" />
+    </reportrecord>
+    <reportwindow name="OpenOrangeHelpCenterReportWindow" title="Open Orange Help Center" >
+        <text label="Table Name" fieldname="TableName" />
+        <text label="Field Name" fieldname="FieldName" />
+    </reportwindow>
+</reportuserinput>

@@ -1,0 +1,5 @@
+<detailrecord name="VersionSettingsScriptDir" tablename="VersionSettingsScriptDir" >
+    <field name="User" type="string" length="10" linkto="User" />
+    <field name="ScriptDir" type="string" length="200" />
+    <field name="Type" type="integer" />
+</detailrecord>

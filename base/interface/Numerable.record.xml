@@ -1,0 +1,32 @@
+<record name="Numerable" tablename="Numerable" inherits="Record" persistent="false" >
+    <field name="SerNr" type="integer" />
+    <field name="ToSerNr" type="integer" /> <!-- used in multipage transactions -->
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="Department" type="string" length="10" linkto="Department" />
+    <field name="Computer" type="string" linkto="Computer" />
+    <field name="FormType" type="string" linkto="FormTypeDef" />
+    <index name="SerNr" unique="true" >
+        <indexfield fieldname="SerNr" />
+    </index>
+    <index name="ToSerNr" unique="true" >
+        <indexfield fieldname="ToSerNr" />
+    </index>
+    <index name="Office" >
+        <!--used in SerNr resolution sernrs by Office -->
+        <indexfield fieldname="Office" />
+        <indexfield fieldname="SerNr" />
+    </index>
+    <index name="OfficeComputer" >
+        <!--used in SerNr resolution sernrs by office by POS -->
+        <!-- Added after experience gasstation py: different ranges by office by computer without this field very slow -->
+        <indexfield fieldname="Office" />
+        <indexfield fieldname="Computer" />
+        <indexfield fieldname="SerNr" />
+    </index>
+    <index name="TransDate" >
+        <indexfield fieldname="TransDate" />
+        <indexfield fieldname="TransTime" />
+    </index>
+</record>

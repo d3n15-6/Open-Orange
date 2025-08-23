@@ -1,0 +1,10 @@
+<record name="UserReportSpec" tablename="UserReportSpec" >
+    <field name="User" type="string" length="10" />
+    <field name="ReportName" type="string" length="255" />
+    <field name="ReportLabel" type="string" length="255" />
+    <field name="Fields" type="detail" recordname="UserReportSpecFieldRow" />
+    <index name="Main" unique="True" >
+        <indexfield fieldname="User" />
+        <indexfield fieldname="ReportName" />
+    </index>
+</record>

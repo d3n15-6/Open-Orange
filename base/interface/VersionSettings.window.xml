@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="VersionSettingsWindow" recordname="VersionSettings" title="Version Settings" >
+    <checkbox label="SVN Check Enabled" fieldname="CheckVersionEnabled" />
+    <checkbox label="New Updating Mode" fieldname="NewMode" />
+    <checkbox label="Script Dirs Check Enabled" fieldname="CheckScriptDirsEnabled" />
+    <checkbox label="Show Post Messages instead of Alerts" fieldname="ShowPostInsteadAlerts" />
+    <tabs >
+        <tabpage label="SVN" name="SVNPage" >
+            <matrix fieldname="Paths" name="Paths" >
+                <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="030" />
+                <matrixcolumn label="User" fieldname="User" editor="text" pastewindow="UserPasteWindow" />
+                <matrixcolumn label="Path" fieldname="Path" editor="text" width="200" />
+                <matrixcolumn label="Revision" fieldname="Revision" editor="integer" />
+                <matrixcolumn label="User Name" fieldname="SVNUserName" editor="text" />
+                <matrixcolumn label="Password" fieldname="SVNPassword" editor="text" />
+            </matrix>
+        </tabpage>
+        <tabpage label="ScriptDirs" name="ScriptDirsPage" >
+            <matrix fieldname="ScriptDirs" name="ScriptDirs" >
+                <matrixcolumn label="User" fieldname="User" editor="text" pastewindow="UserPasteWindow" />
+                <matrixcolumn label="ScriptDirs" fieldname="ScriptDir" editor="text" width="200" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Novelties" name="NoveltiesPage" >
+            <checkbox label="Disable" fieldname="NoveltiesDisabled" />
+            <text label="Users" fieldname="NoveltiesUsers" />
+            <matrix fieldname="Novelties" name="NoveltiesMatrix" >
+                <matrixcolumn label="User" fieldname="User" editor="text" />
+                <matrixcolumn label="Revision" fieldname="Revision" editor="integer" />
+            </matrix>
+        </tabpage>
+    </tabs>
+    <action label="Update" methodname="update" />
+</window>

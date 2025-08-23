@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- esto debe estar aca porque se utiliza desde core -->
+<window name="SynchronizationSettingsWindow" recordname="SynchronizationSettings" title="Synchronization Settings" >
+    <column>
+        <integer label="Port" fieldname="SynchronizationPort" />
+        <checkbox label="Bloquear Registros sin token" fieldname="LockNonTokenRecords" />
+    </column>
+    <matrix fieldname="TokenRecords" name="TokenRecords" >
+        <matrixcolumn label="Tablas controladas" fieldname="TableName" editor="text" width="150" />
+    </matrix>
+    <action label="Preparar tablas para Token" methodname="prepareTokenRecords" />
+</window>

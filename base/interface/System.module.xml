@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module label="System" name="System" >
+    <recordentries >
+        <recordentry label="Access Groups" name="AccessGroupListWindow" />
+        <recordentry label="Attachments" name="AttachListWindow" />
+        <recordentry label="Document Models" name="DocumentSpecListWindow" image="Tasks.png" />
+        <recordentry label="Set Tasks" name="TaskListWindow" image="Tasks.png" />
+        <recordentry label="Version Updates" name="VersionUpdatesListWindow" />
+        <recordentry label="User Window Statuses" name="WindowStateListWindow" />
+        <recordentry label="OpenOrange Cases" name="OOCaseListWindow" />
+        <settingentry label="Buffer Settings" name="BufferSettingsWindow" />
+        <settingentry label="Database Management" name="DatabaseManagementWindow" />
+        <recordentry label="Record Communications" name="RecordCommunicationListWindow" />
+    </recordentries>
+    <reportentries >
+        <reportentry label="Users by Access Group" name="AccessGroupUsers" />
+        <reportentry label="Attach List" name="AttachList" />
+        <reportentry label="Version Novelties" name="VersionNoveltiesReport" />
+        <reportentry label="Report Usage" name="ReportUsage" />
+        <reportentry label="Chat" name="ChatReport" />
+    </reportentries>
+    <routineentries >
+    </routineentries>
+</module>

@@ -1,0 +1,8 @@
+<record name="RecordCheckPolicy" tablename="RecordCheckPolicy" inherits="Master" >
+    <field name="Code" type="string" length="60" />
+    <field name="Enabled" type="boolean" />
+    <field name="FieldsList" type="detail" recordname="RecordCheckPolicyFieldsListRow" />
+    <field name="UpdateComputerOnConfirming" type="boolean" />
+    <field name="UpdateUserOnConfirming" type="boolean" />
+    <field name="Checks" type="detail" recordname="RecordCheckPolicyCheckRow" />
+</record>

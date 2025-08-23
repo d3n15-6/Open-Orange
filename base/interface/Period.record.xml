@@ -1,0 +1,6 @@
+<record name="Period" tablename="Period" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Comment" type="string" length="60" />
+    <field name="FromDate" type="date" />
+    <field name="ToDate" type="date" />
+</record>

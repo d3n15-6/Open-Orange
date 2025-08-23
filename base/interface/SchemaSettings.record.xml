@@ -1,0 +1,4 @@
+<record name="SchemaSettings" tablename="SchemaSettings" setting="true" >
+    <field name="Enabled" type="boolean" />
+    <field name="Schemas" type="detail" recordname="SchemaSettingsRow" />
+</record>

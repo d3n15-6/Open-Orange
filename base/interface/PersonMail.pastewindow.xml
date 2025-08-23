@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="PersonMailPasteWindow" title="Direcciones de Mail" >
+    <matrix name="Person" recordname="Person" pastefieldname="Email" windowname="PersonWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" />
+        <matrixcolumn label="Lastname" fieldname="LastName" editor="text" />
+        <matrixcolumn label="Job Position" fieldname="JobPosition" editor="text" />
+        <matrixcolumn label="Mail" fieldname="Email" editor="text" />
+    </matrix>
+</listwindow>

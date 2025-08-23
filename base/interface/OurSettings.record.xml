@@ -1,0 +1,29 @@
+<record name="OurSettings" tablename="OurSettings" setting="true" >
+    <field name="Name" type="string" length="60" />
+    <field name="FantasyName" type="string" length="60" />
+    <field name="Address" type="string" length="60" />
+    <field name="City" type="string" length="60" />
+    <field name="Country" type="string" length="2" linkto="Country" />
+    <field name="Locality" type="string" length="60" />
+    <field name="LocalityCode" type="string" length="5" linkto="Locality" />
+    <field name="Phone" type="string" length="20" />
+    <field name="Province" type="string" length="60" />
+    <field name="ProvinceCode" type="string" length="10" linkto="Province" />
+    <field name="ZipCode" type="string" length="20" />
+    <field name="Phone" type="string" length="20" />
+    <field name="Fax" type="string" length="20" />
+    <field name="LegalInfo" type="string" length="255" />
+    <field name="Email" type="string" length="60" />
+    <field name="Logo" type="string" length="60" />
+    <field name="WebSite" type="string" length="30" />
+    <field name="Language" type="string" length="5" linkto="Language" />
+    <field name="BaseCur1" type="string" length="3" linkto="Currency" />
+    <field name="BaseCur2" type="string" length="3" linkto="Currency" />
+    <field name="DefOffice" type="string" length="10" linkto="Office" />
+    <field name="DefDepartment" type="string" length="10" linkto="Department" />
+    <field name="DefStockDepo" type="string" length="10" linkto="StockDepo" />
+    <field name="StartDate" type="date" />
+    <field name="OfficeDeterminator" type="integer" />
+    <field name="FinAccount" type="string" linkto="FinAccount" />
+    <field name="TaxRegNr" type="string" length="20" />
+</record>

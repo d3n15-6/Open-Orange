@@ -1,0 +1,8 @@
+<detailrecord name="VersionSettingsPath" tablename="VersionSettingsPath" >
+    <field name="Enabled" type="boolean" />
+    <field name="User" type="string" length="10" linkto="User" />
+    <field name="Path" type="string" length="200" />
+    <field name="Revision" type="integer" />
+    <field name="SVNUserName" type="string" length="100" />
+    <field name="SVNPassword" type="string" length="100" />
+</detailrecord>

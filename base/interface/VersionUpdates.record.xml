@@ -1,0 +1,10 @@
+<record name="VersionUpdates" tablename="VersionUpdates" inherits="Master" >
+    <field name="Code" type="string" length="60" />
+    <field name="Description" type="memo" />
+    <field name="User" type="string" linkto="User" />
+    <field name="RunDate" type="date" />
+    <field name="RunTime" type="time" />
+    <field name="Done" type="boolean" />
+    <field name="UpdateResult" type="memo" />
+    <field name="Success" type="boolean" />
+</record>

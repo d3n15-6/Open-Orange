@@ -1,0 +1,4 @@
+<record name="X" tablename="X" persistent="false" >
+    <field name="Code" type="string" length="100" />
+    <field name="Name" type="string" length="100" />
+</record>

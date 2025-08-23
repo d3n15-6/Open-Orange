@@ -1,0 +1,7 @@
+<detailrecord name="RecordCheckPolicyCheckRow" tablename="RecordCheckPolicyCheckRow" >
+    <field name="HeaderField" type="string" length="40" />
+    <field name="RowField" type="string" length="40" />
+    <field name="Condition" type="integer" />
+    <field name="Value" type="string" length="60" />
+    <field name="Message" type="string" length="100" />
+</detailrecord>

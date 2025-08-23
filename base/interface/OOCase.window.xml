@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="OOCaseWindow" recordname="OOCase" title="OpenOrange Case" >
+    <pushbutton label="Show Cases" name="showListWindow" />
+    <line>
+        <integer label="Number" fieldname="No." />
+        <integer label="OpenOrange Case No." fieldname="OOCaseNr" readonly="true" />
+        <date label="Date" fieldname="TransDate" readonly="true" />
+        <checkbox label="Closed" fieldname="Closed" readonly="true" />
+    </line>
+    <text label="Subject" fieldname="Subject" width="600" />
+    <memo label="Message" fieldname="Message" width="600" />
+    <reportview name="CaseDetail" height="200" width="600" />
+</window>

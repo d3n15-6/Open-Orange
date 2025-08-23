@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="GroupByUser" type="boolean" />
+    </reportrecord>
+    <reportwindow name="AccessGroupUsersWindow" title="Access Group Report" >
+        <checkbox label="Group by User" fieldname="GroupByUser" />
+    </reportwindow>
+</reportuserinput>

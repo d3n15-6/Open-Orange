@@ -1,0 +1,4 @@
+<record name="OOChatClient" tablename="OOChatClient" persistent="false" >
+    <field name="ToUsers" type="memo" length="255" />
+    <field name="Message" type="string" length="255" />
+</record>

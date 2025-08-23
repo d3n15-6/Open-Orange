@@ -1,0 +1,10 @@
+<record name="SimpleMaster" tablename="SimpleMaster" inherits="Master" persistent="false" >
+    <field name="Code" type="string" length="30" />
+    <index name="Code" unique="true" >
+        <indexfield fieldname="Code" />
+    </index>
+    <index name="ClosedCode" >
+        <indexfield fieldname="Closed" />
+        <indexfield fieldname="Code" />
+    </index>
+</record>

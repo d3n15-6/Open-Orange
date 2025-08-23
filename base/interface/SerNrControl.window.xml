@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="SerNrControlWindow" recordname="SerNrControl" title="Serial Number Control" >
+    <text label="Transaction Type" fieldname="TransType" pastewindow="XPasteWindow" />
+    <line>
+        <column>
+            <integer label="From Number" fieldname="FromNr" />
+            <integer label="To Number" fieldname="ToNr" />
+        </column>
+        <column>
+            <date label="From Date" fieldname="FromDate" />
+            <date label="To Date" fieldname="ToDate" />
+        </column>
+    </line>
+    <text label="Description" fieldname="Comment" />
+    <combobox label="Invoice Type" fieldname="InvoiceType" >
+        <combooption label="None" value="-1" />
+        <combooption label="Invoice" value="0" />
+        <combooption label="Credit Note" value="1" />
+        <combooption label="Debit Note" value="2" />
+        <combooption label="All" value="3" />
+    </combobox>
+    <combobox label="Document Type" fieldname="DocType" >
+        <combooption label="Indistinct" value="-1" />
+        <combooption label="Invoice A" value="0" />
+        <combooption label="Invoice B" value="1" />
+        <combooption label="Invoice C" value="2" />
+        <combooption label="Invoice E" value="3" />
+        <combooption label="Invoice Z" value="4" />
+        <combooption label="Invoice M" value="5" />
+        <combooption label="Invoice L" value="6" />
+        <combooption label="Invoice I" value="7" />
+    </combobox>
+    <text label="Office" fieldname="Office" pastewindow="OfficePasteWindow" />
+    <integer label="Official POS Nr" fieldname="OfficialPOSNr" />
+    <text label="Computer" fieldname="Computer" pastewindow="ComputerPasteWindow" />
+    <text label="Form Type" fieldname="FormType" pastewindow="FormTypeDefPasteWindow" />
+    <checkbox label="Do not Generate Nominal Ledger Transaction" fieldname="NoGenTrans" />
+    <checkbox label="Is Transaction Manual" fieldname="IsManualTransaction" />
+    <action label="Check Last Numbers" methodname="checkLastNumbers" />
+</window>

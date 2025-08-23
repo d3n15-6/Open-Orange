@@ -1,0 +1,7 @@
+<detailrecord name="UserReportSpecFieldRow" tablename="UserReportSpecFieldRow" >
+    <field name="FieldName" type="string" length="30" />
+    <field name="FieldLabel" type="string" length="60" />
+    <field name="Type" type="string" length="20" />
+    <field name="Value" type="string" length="100" />
+    <field name="DateTemplate" type="integer" />
+</detailrecord>

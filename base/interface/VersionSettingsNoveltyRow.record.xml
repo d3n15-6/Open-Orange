@@ -1,0 +1,4 @@
+<detailrecord name="VersionSettingsNoveltyRow" tablename="VersionSettingsNoveltyRow" >
+    <field name="User" type="string" linkto="User" />
+    <field name="Revision" type="integer" />
+</detailrecord>

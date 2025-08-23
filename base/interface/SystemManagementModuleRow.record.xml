@@ -1,0 +1,6 @@
+<detailrecord name="SystemManagementModuleRow" tablename="SystemManagementModuleRow" >
+    <field name="Directory" type="string" length="100" />
+    <field name="Level" type="integer" />
+    <field name="Enabled" type="boolean" />
+    <field name="syncVersion" type="integer" />
+</detailrecord>

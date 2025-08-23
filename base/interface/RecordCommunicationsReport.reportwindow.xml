@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="OriginRecord" type="string" length="60" />
+        <field name="OriginId" type="string" length="255" />
+    </reportrecord>
+    <reportwindow name="RecordCommunicationsReportWindow" title="Communications" >
+        <text label="Origin Type" fieldname="OriginRecord" />
+        <text label="Origin Id" fieldname="OriginId" />
+    </reportwindow>
+</reportuserinput>

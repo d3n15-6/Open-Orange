@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="UserPasteWindow" title="User" >
+    <matrix name="Users" recordname="User" pastefieldname="Code" windowname="UserWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" />
+    </matrix>
+</listwindow>

@@ -1,0 +1,7 @@
+<!-- esto debe estar aca porque se utiliza desde core -->
+<record name="SynchronizationSettings" tablename="SynchronizationSettings" setting="true" >
+    <field name="SynchronizationPort" type="integer" />
+    <field name="LockNonTokenRecords" type="Boolean" />
+    <field name="syncVersion" type="integer" />
+    <field name="TokenRecords" type="detail" recordname="SynchronizationSettingsTokenRecordRow" />
+</record>

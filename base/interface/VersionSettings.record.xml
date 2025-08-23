@@ -1,0 +1,11 @@
+<record name="VersionSettings" tablename="VersionSettings" setting="true" >
+    <field name="CheckVersionEnabled" type="boolean" />
+    <field name="CheckScriptDirsEnabled" type="boolean" />
+    <field name="ShowPostInsteadAlerts" type="boolean" />
+    <field name="NewMode" type="boolean" />
+    <field name="Paths" type="detail" recordname="VersionSettingsPath" />
+    <field name="ScriptDirs" type="detail" recordname="VersionSettingsScriptDir" />
+    <field name="NoveltiesDisabled" type="boolean" />
+    <field name="NoveltiesUsers" type="string" length="255" />
+    <field name="Novelties" type="detail" recordname="VersionSettingsNoveltyRow" />
+</record>

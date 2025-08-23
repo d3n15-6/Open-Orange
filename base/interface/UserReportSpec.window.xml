@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="UserReportSpecWindow" recordname="UserReportSpec" title="User Report Specification" >
+    <text label="User" fieldname="User" pastewindow="UserPasteWindow" readonly="True" />
+    <!-- <text label="Report Name" fieldname="ReportName" readonly="True"/> -->
+    <text label="Label" fieldname="ReportLabel" readonly="True" />
+    <tabs >
+        <tabpage label="Fields" name="FieldPage">
+            <matrix fieldname="Fields" name="Fields" >
+                <!-- <matrixcolumn label="Field Name" fieldname="FieldName" editor="text" /> -->
+                <matrixcolumn label="Label" fieldname="FieldLabel" editor="text" width="150" />
+                <!-- <matrixcolumn label="Type" fieldname="Type" editor="text" readonly="True"/> -->
+                <matrixcolumn label="Value" fieldname="Value" editor="text" />
+                <matrixcolumn label="Template" fieldname="DateTemplate" editor="combobox" width="150" >
+                    <combooption label="Fixed Value" value="0" />
+                    <combooption label="Today" value="1" />
+                    <combooption label="Start of Month" value="2" />
+                    <combooption label="End of Month" value="3" />
+                    <combooption label="Start of Year" value="4" />
+                    <combooption label="End of Year" value="5" />
+                    <combooption label="Beginning of Time" value="6" />
+                </matrixcolumn>
+            </matrix>
+            <pushbutton label="Update" name="updateFieldSpecs" height="20" />
+        </tabpage>
+    </tabs>
+    <action label="Change Size" methodname="changeSize" />
+</window>
