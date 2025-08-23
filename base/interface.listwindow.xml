@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<interface>
+<listwindow name="AccessGroupListWindow" title="User Access Groups" >
+    <matrix name="AccessGroup" recordname="AccessGroup" windowname="AccessGroupWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" width="250" />
+    </matrix>
+</listwindow>
+
+<listwindow name="AttachListWindow" title="Attachments" >
+    <matrix name="Attachs" recordname="Attach" windowname="AttachWindow" >
+        <matrixcolumn label="Record" fieldname="OriginRecordName" editor="text" />
+        <matrixcolumn label="Id" fieldname="OriginId" editor="text" />
+        <matrixcolumn label="Source" fieldname="SourceId" editor="text" />
+        <matrixcolumn label="Destination" fieldname="DestId" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" />
+        <matrixcolumn label="Type" fieldname="Type" editor="integer" />
+    </matrix>
+</listwindow>
+
+<listwindow name="ClausesListWindow" title="Clauses" >
+    <matrix name="Clauses" recordname="Clauses" windowname="ClausesWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Type" fieldname="TextType" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="250" />
+    </matrix>
+</listwindow>
+
+<listwindow name="CompanyListWindow" title="Companies" >
+    <matrix name="Empresas" recordname="Company" windowname="CompanyWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Data Base Name" fieldname="DBName" editor="text" width="100" />
+        <matrixcolumn label="Host" fieldname="Host" editor="text" width="100" />
+        <matrixcolumn label="Port" fieldname="Port" editor="text" width="060" />
+    </matrix>
+</listwindow>
+
+<listwindow name="ComputerListWindow" title="Computers" >
+    <matrix name="Computer" recordname="Computer" windowname="ComputerWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="CurrencyListWindow" title="Currencies" >
+    <matrix name="Monedas" recordname="Currency" windowname="CurrencyWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="120" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DecimalSpecListWindow" title="Decimal Definitions" >
+    <matrix name="DecimalSpecs" recordname="DecimalSpec" windowname="DecimalSpecWindow" >
+        <matrixcolumn label="Currency" fieldname="Currency" editor="text" />
+        <matrixcolumn label="Record" fieldname="RecordName" editor="text" />
+        <matrixcolumn label="Field" fieldname="FieldName" editor="text" />
+        <matrixcolumn label="Row Field" fieldname="RowFieldName" editor="text" />
+        <matrixcolumn label="View" fieldname="ViewDecimals" editor="integer" />
+        <matrixcolumn label="Round Off" fieldname="RoundDecimals" editor="integer" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DepartmentListWindow" title="Departments" >
+    <matrix name="Departamentos" recordname="Department" windowname="DepartmentWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="DeptName" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DocumentLinkListWindow" title="Document Links" >
+    <matrix recordname="DocumentLink" windowname="DocumentLinkWindow" >
+        <matrixcolumn label="Table" fieldname="Code" editor="text" width="150" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DocumentPrinterListWindow" title="Printers per Document" >
+    <matrix name="DocumentPrinter" recordname="DocumentPrinter" windowname="DocumentPrinterWindow" >
+        <matrixcolumn label="Document" fieldname="Code" editor="text" />
+        <matrixcolumn label="Printer" fieldname="PrinterName" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DocumentSpecListWindow" title="Document" >
+    <matrix recordname="DocumentSpec" windowname="DocumentSpecWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="150" />
+    </matrix>
+</listwindow>
+
+<listwindow name="FontStyleListWindow" title="Font Styles" >
+    <matrix recordname="FontStyle" windowname="FontStyleWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="150" />
+        <matrixcolumn label="Family" fieldname="Family" editor="text" width="150" />
+        <matrixcolumn label="Size" fieldname="Size" editor="integer" width="100" />
+        <matrixcolumn label="Underline" fieldname="Underline" editor="combobox" width="60" >
+            <combooption label="Underline" value="1" />
+            <combooption label="" value="0" />
+        </matrixcolumn>
+        <matrixcolumn label="Bold" fieldname="Bold" editor="combobox" width="60" >
+            <combooption label="Bold" value="1" />
+            <combooption label="" value="0" />
+        </matrixcolumn>
+    </matrix>
+</listwindow>
+
+<listwindow name="FormTypeDefListWindow" title="Form Type Definition" >
+    <matrix name="FormTypeDef" recordname="FormTypeDef" windowname="FormTypeDefWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="HTMLRecordViewListWindow" title="HTML Templates" >
+    <matrix name="HTMLRecordViews" recordname="HTMLRecordView" windowname="HTMLRecordViewWindow" >
+        <matrixcolumn label="Record" fieldname="RecordName" editor="text" />
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="LabelListWindow" title="Labels" >
+    <matrix name="Etiquetas" recordname="Label" windowname="LabelWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Type" fieldname="Type" editor="text" />
+        <matrixcolumn label="Hierarchy" fieldname="PathToRoot" editor="text" />
+        <matrixcolumn label="Level" fieldname="Level" editor="integer" />
+    </matrix>
+</listwindow>
+
+<listwindow name="LabelTypeListWindow" title="Label Type" >
+    <matrix name="Etiquetas" recordname="LabelType" windowname="LabelTypeWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="MailListWindow" title="Messages" >
+    <matrix name="Mail" recordname="Mail" windowname="MailWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Date" fieldname="TransDate" editor="date" />
+        <matrixcolumn label="Time" fieldname="TransTime" editor="time" />
+        <matrixcolumn label="From" fieldname="MailFrom" editor="text" width="150" />
+        <matrixcolumn label="To" fieldname="MailTo" editor="text" width="150" />
+        <matrixcolumn label="Subject" fieldname="Subject" editor="text" width="200" />
+        <matrixcolumn label="Sent" fieldname="SentFlag" editor="checkbox" />
+        <matrixcolumn label="Mailing" fieldname="Mailing" editor="integer" />
+    </matrix>
+</listwindow>
+
+<listwindow name="MailAccountListWindow" title="Email Accounts" >
+    <matrix name="MailAccount" recordname="MailAccount" windowname="MailAccountWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Address" fieldname="Mail" editor="text" width="150" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="150" />
+    </matrix>
+</listwindow>
+
+<listwindow name="OfficeListWindow" title="Branches" >
+    <matrix name="Offices" recordname="Office" windowname="OfficeWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="OOCaseListWindow" title="OpenOrange Cases" >
+    <matrix name="OOCase" recordname="OOCase" windowname="OOCaseWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Date" fieldname="TransDate" editor="date" />
+        <matrixcolumn label="Subject" fieldname="Subject" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="PeriodListWindow" title="Standard Period" >
+    <matrix name="Periods" recordname="Period" windowname="PeriodWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" />
+        <matrixcolumn label="From" fieldname="FromDate" editor="date" />
+        <matrixcolumn label="To" fieldname="ToDate" editor="date" />
+    </matrix>
+</listwindow>
+
+<listwindow name="RecordCheckPolicyListWindow" title="Record Check Policies" >
+    <matrix name="RecordCheckPolicy" recordname="RecordCheckPolicy" windowname="RecordCheckPolicyWindow" >
+        <matrixcolumn label="Table" fieldname="Code" editor="text" width="200" />
+        <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="50" />
+    </matrix>
+</listwindow>
+
+<listwindow name="RecordCommunicationListWindow" title="Record Communications" >
+    <matrix name="RecordCommunication" recordname="RecordCommunication" windowname="RecordCommunicationWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Person" fieldname="Person" editor="text" />
+        <matrixcolumn label="Message" fieldname="Message" editor="text" />
+        <matrixcolumn label="Date" fieldname="TransDate" editor="date" />
+        <matrixcolumn label="Time" fieldname="TransDate" editor="time" />
+        <matrixcolumn label="Origin Type" fieldname="OriginRecord" editor="text" />
+        <matrixcolumn label="Origin Id" fieldname="OriginId" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="SalesGroupListWindow" title="Sales Group" >
+    <matrix name="SalesGroup" recordname="SalesGroup" windowname="SalesGroupWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="SerNrControlListWindow" title="Serial Number Control" >
+    <matrix name="SerNrControls" recordname="SerNrControl" windowname="SerNrControlWindow" >
+        <matrixcolumn label="Transaction Type" fieldname="TransType" editor="text" />
+        <matrixcolumn label="Invoice Type" fieldname="InvoiceType" editor="combobox" >
+            <combooption label="None" value="-1" />
+            <combooption label="Invoice" value="0" />
+            <combooption label="Credit Note" value="1" />
+            <combooption label="Debit Note" value="2" />
+            <combooption label="All" value="3" />
+        </matrixcolumn>
+        <matrixcolumn label="Document Type" fieldname="DocType" editor="combobox" >
+            <combooption label="Indistinct" value="-1" />
+            <combooption label="Invoice A" value="0" />
+            <combooption label="Invoice B" value="1" />
+            <combooption label="Invoice C" value="2" />
+            <combooption label="Invoice E" value="3" />
+            <combooption label="Invoice Z" value="4" />
+            <combooption label="Invoice M" value="5" />
+            <combooption label="Invoice L" value="6" />
+            <combooption label="Invoice I" value="7" />
+        </matrixcolumn>
+        <matrixcolumn label="Office" fieldname="Office" editor="text" />
+        <matrixcolumn label="Computer" fieldname="Computer" editor="text" />
+        <matrixcolumn label="From Number" fieldname="FromNr" editor="integer" />
+        <matrixcolumn label="To Number" fieldname="ToNr" editor="integer" />
+        <matrixcolumn label="From Date" fieldname="FromDate" editor="date" />
+        <matrixcolumn label="To Date" fieldname="ToDate" editor="date" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" />
+        <matrixcolumn label="No Gen. Trans." fieldname="NoGenTrans" editor="checkbox" />
+        <matrixcolumn label="Manual" fieldname="IsManualTransaction" editor="checkbox" />
+    </matrix>
+</listwindow>
+
+<listwindow name="ShiftListWindow" title="Shift" >
+    <matrix name="Shift" recordname="Shift" windowname="ShiftWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="60" />
+        <matrixcolumn label="Start Time" fieldname="StartTime" editor="time" />
+        <matrixcolumn label="Branch" fieldname="Office" editor="text" />
+        <matrixcolumn label="Previous" fieldname="PrevShift" editor="text" />
+        <matrixcolumn label="Next" fieldname="NextShift" editor="text" />
+        <matrixcolumn label="Department" fieldname="Department" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="TaskListWindow" title="Tasks" >
+    <matrix name="Tasks" recordname="Task" windowname="TaskWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="060" />
+        <matrixcolumn label="Background" fieldname="Background" editor="checkbox" width="060" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" width="200" />
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Routine" fieldname="RoutineName" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="UserReportSpecListWindow" title="User Report Specifications" >
+    <matrix name="UserReportSpec" recordname="UserReportSpec" windowname="UserReportSpecWindow" >
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Report" fieldname="ReportLabel" editor="text" width="150" />
+    </matrix>
+</listwindow>
+
+<listwindow name="VersionUpdatesListWindow" title="Version Updates" >
+    <matrix name="VersionUpdates" recordname="VersionUpdates" windowname="VersionUpdatesWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Done" fieldname="Done" editor="checkbox" />
+        <matrixcolumn label="Success" fieldname="Success" editor="checkbox" />
+        <matrixcolumn label="Description" fieldname="Description" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="WindowStateListWindow" title="Window State" >
+    <matrix name="WindowStates" recordname="WindowState" windowname="WindowStateWindow" >
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Window" fieldname="WindowName" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+</interface>

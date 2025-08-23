@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<interface>
+<listwindow name="AccessGroupPasteWindow" title="User Access Groups" >
+    <matrix name="AccessGroups" recordname="AccessGroup" pastefieldname="Code" windowname="AccessGroupWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" width="250" />
+    </matrix>
+</listwindow>
+
+<listwindow name="ClausesPasteWindow" title="Clauses" >
+    <matrix name="Clauses" recordname="Clauses" pastefieldname="Code" windowname="ClausesWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Type" fieldname="TextType" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="250" />
+    </matrix>
+</listwindow>
+
+<listwindow name="CompanyPasteWindow" title="Company" >
+    <matrix name="Empresas" recordname="Company" pastefieldname="Code" windowname="CompanyWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Data Base Name" fieldname="DBName" editor="text" width="100" />
+        <matrixcolumn label="Host" fieldname="Host" editor="text" width="100" />
+        <matrixcolumn label="Port" fieldname="Port" editor="text" width="060" />
+    </matrix>
+</listwindow>
+
+<listwindow name="ComputerPasteWindow" title="Computers" >
+    <matrix name="Computer" recordname="Computer" pastefieldname="Code" windowname="ComputerWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="CurrencyPasteWindow" title="Currencies" >
+    <matrix name="Monedas" recordname="Currency" pastefieldname="Code" windowname="CurrencyWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="120" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DepartmentPasteWindow" title="Departments" >
+    <matrix name="Departments" recordname="Department" pastefieldname="Code" windowname="DepartmentWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="DeptName" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="DocumentSpecPasteWindow" title="Document" >
+    <matrix recordname="DocumentSpec" pastefieldname="Code" windowname="DocumentSpecWindow" >
+        <matrixcolumn label="Document" fieldname="Code" editor="text" width="150" />
+    </matrix>
+</listwindow>
+
+<listwindow name="FontStylePasteWindow" title="Font Styles" >
+    <matrix recordname="FontStyle" pastefieldname="Code" windowname="FontStyleWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="150" />
+        <matrixcolumn label="Family" fieldname="Family" editor="text" width="150" />
+        <matrixcolumn label="Size" fieldname="Size" editor="integer" width="100" />
+        <matrixcolumn label="Underline" fieldname="Underline" editor="combobox" width="60" >
+            <combooption label="Underline" value="1" />
+            <combooption label="" value="0" />
+        </matrixcolumn>
+        <matrixcolumn label="Bold" fieldname="Bold" editor="combobox" width="60" >
+            <combooption label="Bold" value="1" />
+            <combooption label="" value="0" />
+        </matrixcolumn>
+    </matrix>
+</listwindow>
+
+<listwindow name="FormTypeDefPasteWindow" title="Form Type Definition" >
+    <matrix name="FormTypeDef" recordname="FormTypeDef" pastefieldname="Code" windowname="FormTypeDefWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="FunctionalityPasteWindow" title="Functionality" >
+    <matrix name="FunctionalityPasteWindow" recordname="X" pastefieldname="Code" windowname="" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="250" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="450" />
+    </matrix>
+</listwindow>
+
+<listwindow name="HTMLRecordViewPasteWindow" title="HTML Templates" >
+    <matrix name="HTMLRecordViews" recordname="HTMLRecordView" pastefieldname="Code" windowname="HTMLRecordViewWindow" >
+        <matrixcolumn label="Record" fieldname="RecordName" editor="text" />
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="LabelPasteWindow" title="Label" >
+    <matrix name="Etiquetas" recordname="Label" pastefieldname="Code" windowname="LabelWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="220" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="250" />
+        <matrixcolumn label="Type" fieldname="Type" editor="text" />
+        <matrixcolumn label="Level" fieldname="Level" editor="integer" />
+    </matrix>
+</listwindow>
+
+<listwindow name="LabelTypePasteWindow" title="Label Type" >
+    <matrix name="LabelTypes" recordname="LabelType" pastefieldname="Code" windowname="LabelTypeWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="MailAccountPasteWindow" title="Email Accounts" >
+    <matrix name="MailAccount" recordname="MailAccount" pastefieldname="Code" windowname="MailAccountWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="User" fieldname="User" editor="text" />
+        <matrixcolumn label="Address" fieldname="Mail" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="OfficePasteWindow" title="Branches" >
+    <matrix name="Offices" recordname="Office" pastefieldname="Code" windowname="OfficeWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="PersonMailPasteWindow" title="Direcciones de Mail" >
+    <matrix name="Person" recordname="Person" pastefieldname="Email" windowname="PersonWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" />
+        <matrixcolumn label="Lastname" fieldname="LastName" editor="text" />
+        <matrixcolumn label="Job Position" fieldname="JobPosition" editor="text" />
+        <matrixcolumn label="Mail" fieldname="Email" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="SalesGroupPasteWindow" title="Sales Group" >
+    <matrix name="SalesGroup" recordname="SalesGroup" pastefieldname="Code" windowname="SalesGroupWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="SerNrPasteWindow" title="Numbers" >
+    <matrix name="SerNrPasteWindow" recordname="X" pastefieldname="Code" windowname="" >
+        <matrixcolumn label="Number" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>
+
+<listwindow name="ShiftPasteWindow" title="Shift" >
+    <matrix name="Shift" recordname="Shift" pastefieldname="Code" windowname="ShiftWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="40" />
+        <matrixcolumn label="Start Time" fieldname="StartTime" editor="time" />
+        <matrixcolumn label="Branch" fieldname="Office" editor="text" />
+        <matrixcolumn label="Previous" fieldname="PrevShift" editor="text" />
+        <matrixcolumn label="Next" fieldname="NextShift" editor="text" />
+        <matrixcolumn label="Department" fieldname="Department" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="UserPasteWindow" title="User" >
+    <matrix name="Users" recordname="User" pastefieldname="Code" windowname="UserWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" />
+    </matrix>
+</listwindow>
+
+<listwindow name="XPasteWindow" title="Pegar Tabla" >
+    <matrix name="X" recordname="X" pastefieldname="Code" windowname="XWindow" >
+        <matrixcolumn fieldname="Code" editor="text" width="250" />
+        <matrixcolumn fieldname="Name" editor="text" width="250" />
+    </matrix>
+</listwindow>
+
+</interface>

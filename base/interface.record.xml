@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<interface>
+<record name="AccessGroup" tablename="AccessGroup" inherits="Master" >
+    <field name="Code" type="string" length="5" />
+    <field name="Comment" type="string" length="60" />
+    <field name="InitialModule" type="string" length="60" />
+    <field name="SuperUser" type="boolean" />
+    <field name="ModulesAccessType" type="integer" />
+    <field name="RecordsAccessType" type="integer" />
+    <field name="ReportsAccessType" type="integer" />
+    <field name="RoutinesAccessType" type="integer" />
+    <field name="CustomsAccessType" type="integer" />
+    <field name="Modules" type="detail" recordname="AccessGroupModuleRow" />
+    <field name="Records" type="detail" recordname="AccessGroupRecordRow" />
+    <field name="Reports" type="detail" recordname="AccessGroupReportRow" />
+    <field name="Routines" type="detail" recordname="AccessGroupRoutineRow" />
+    <field name="Customs" type="detail" recordname="AccessGroupCustomRow" />
+</record>
+
+<detailrecord name="AccessGroupCustomRow" tablename="AccessGroupCustomRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+</detailrecord>
+
+<detailrecord name="AccessGroupModuleRow" tablename="AccessGroupModuleRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+</detailrecord>
+
+<detailrecord name="AccessGroupRecordRow" tablename="AccessGroupRecordRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+    <field name="Visibility" type="integer" />
+</detailrecord>
+
+<detailrecord name="AccessGroupReportRow" tablename="AccessGroupReportRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+</detailrecord>
+
+<detailrecord name="AccessGroupRoutineRow" tablename="AccessGroupRoutineRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+</detailrecord>
+
+<record name="Addressable" tablename="Addressable" inherits="Master" persistent="False" >
+    <field name="Address" type="string" length="60" />
+    <field name="City" type="string" linkto="City" />
+    <field name="Country" type="string" linkto="Country" />
+    <field name="Locality" type="string" length="60" />
+    <field name="LocalityCode" type="string" linkto="Locality" />
+    <field name="Phone" type="string" length="30" />
+    <field name="Province" type="string" length="60" />
+    <field name="ProvinceCode" type="string" linkto="Province" />
+    <field name="ZipCode" type="string" length="20" />
+    <field name="Latitude" type="value" />
+    <field name="Longitude" type="value" />
+</record>
+
+<record name="Attach" tablename="Attach" >
+    <field name="SerNr" type="integer" />
+    <field name="Type" type="integer" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="SourceId" type="string" length="255" /> <!-- deprecated -->
+    <field name="DestId" type="string" length="255" />
+    <field name="OriginRecordName" type="string" length="40" />
+    <field name="OriginId" type="string" length="255" />
+    <field name="Comment" type="string" length="255" />
+    <field name="Value" type="blob" />
+    <index name="Origin" >
+        <indexfield fieldname="OriginRecordName" />
+        <indexfield fieldname="OriginId" />
+    </index>
+</record>
+
+<record name="BufferSettings" tablename="BufferSettings" setting="true" >
+    <field name="Records" type="detail" recordname="BufferSettingsRow" />
+</record>
+
+<detailrecord name="BufferSettingsRow" tablename="BufferSettingsRow" >
+    <field name="RecordName" type="string" length="200" />
+    <field name="Expiration" type="time" />
+</detailrecord>
+
+<record name="Classifier" tablename="Classifier" inherits="Master" persistent="false" >
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="Type" type="string" length="20" />
+    <field name="Level" type="integer" />
+    <field name="PathToRoot" type="string" length="60" />
+</record>
+
+<record name="Clauses" tablename="Clauses" inherits="Master" >
+    <field name="Code" type="string" length="15" />
+    <field name="TextType" type="string" length="20" />
+    <field name="Text" type="memo" />
+    <field name="Comment" type="string" length="30" />
+</record>
+
+<record name="Company" tablename="Company" local="true" >
+    <!-- fields order is important-->
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="Host" type="string" length="60" />
+    <field name="Port" type="integer" />
+    <field name="User" type="string" length="60" />
+    <field name="Password" type="string" length="60" />
+    <field name="DefaultUser" type="string" length="20" />
+    <field name="DefaultUserPassword" type="string" length="60" />
+    <field name="ApplicationType" type="integer" />
+    <field name="DBName" type="string" length="60" />
+    <field name="OfficialSerNr" type="string" length="10" />
+    <field name="DBEngine" type="integer" />
+</record>
+
+<record name="Computer" tablename="Computer" inherits="Master" >
+    <field name="Code" type="string" length="5" />
+    <field name="Name" type="string" length="60" />
+    <field name="Office" type="string" linkto="Office" />
+    <field name="StockDepo" type="string" linkto="StockDepo" />
+    <field name="AllowedPayModes" type="set" length="60" linkto="PayMode" />
+    <field name="DefaultPayMode" type="string" linkto="PayMode" />
+    <field name="OfficialSerNr" type="string" length="20" />
+    <field name="DefaultBarTabType" type="string" length="5" />
+    <field name="EndOfDay" type="time" />
+    <field name="POSflag" type="boolean" />
+</record>
+
+<record name="Currency" tablename="Currency" inherits="Master" >
+    <field name="Code" type="string" length="3" />
+    <field name="Name" type="string" length="30" />
+    <field name="BankNotes" type="string" length="80" /> <!-- para guaranies es pesado este campo -->
+    <field name="RoundOff" type="integer" />
+    <field name="ConvertionBase" type="integer" />
+    <field name="ConvertionDirection" type="integer" />
+    <field name="FrFactor" type="integer" />
+    <field name="ToFactor" type="integer" />
+    <field name="RecAcc" type="string" linkto="Account" />    
+    <field name="PayAcc" type="string" linkto="Account" />    
+    <field name="TaxOfficeCode" type="string" length="5" />
+</record>
+
+<record name="DatabaseManagement" tablename="DatabaseManagement" setting="true" >
+    <field name="DBPasswordAdminEnabled" type="boolean" />
+    <field name="OldDBUser" type="string" length="30" />
+    <field name="OldDBPassword" type="string" length="30" />
+    <field name="NewDBUser" type="string" length="30" />
+    <field name="NewDBPassword" type="string" length="30" />
+    <field name="OldDBPasswordExpirationDate" type="date" />
+    <field name="PasswordChangesQty" type="integer" />
+    <field name="HexBlob" type="boolean" />
+    <field name="AddDropDatabase" type="boolean" />
+    <field name="AddDropTable" type="boolean" />
+    <field name="IgnoreTable" type="string" length="100" />
+    <field name="BackupPath" type="string" length="200" />
+    <field name="FixMySQLBackup" type="boolean" />
+    <field name="ExportOutput" type="memo" persistent="false" />
+    <field name="BackupFile" type="string" length="200" />
+    <field name="ImportIntoThisDB" type="boolean" />
+    <field name="ImpDBName" type="string" length="30" />
+    <field name="ImpHost" type="string" length="30" />
+    <field name="ImpPort" type="integer" />
+    <field name="ImpUser" type="string" length="30" />
+    <field name="ImpPassword" type="string" length="30" />
+    <field name="MySQLPath" type="string" length="100" />
+    <field name="MySQLMaxAllowedPacket" type="integer" persistent="false" />
+</record>
+
+<record name="DecimalSpec" tablename="DecimalSpec" inherits="Record" >
+    <field name="Currency" type="string" length="3" linkto="Currency" />
+    <field name="RecordName" type="string" length="60" />
+    <field name="FieldName" type="string" length="20" />
+    <field name="RowFieldName" type="string" length="20" />
+    <field name="ViewDecimals" type="integer" />
+    <field name="RoundDecimals" type="integer" />
+</record>
+
+<record name="Department" tablename="Department" inherits="Master" >
+    <field name="Code" type="string" length="10" />
+    <field name="DeptName" type="string" length="100" />
+</record>
+
+<record name="DesktopLayout" tablename="DesktopLayout" local="true" setting="true" >
+    <!-- fields order is important-->
+    <field name="ToolsBar_Visible" type="boolean" />
+    <field name="ToolsBar_Position" type="integer" />
+    <field name="ToolsBar_Offset" type="integer" />
+    <field name="PersonalBar_Visible" type="boolean" />
+    <field name="PersonalBar_Position" type="integer" />
+    <field name="PersonalBar_Offset" type="integer" />
+    <field name="SearchBar_Visible" type="boolean" />
+    <field name="SearchBar_Position" type="integer" />
+    <field name="SearchBar_Offset" type="integer" />
+    <field name="ModuleBar_Visible" type="boolean" />
+    <field name="ModuleBar_Position" type="integer" />
+    <field name="ModuleBar_Offset" type="integer" />
+</record>
+
+<record name="DetailRecord" tablename="DetailRecord" inherits="RawRecord" persistent="false" >
+    <field name="internalId" type="internalId" nullable="false" />
+    <field name="masterId" type="masterid" />
+    <field name="rowNr" type="integer" />
+    <field name="rowId" type="integer" />
+    <index name="masterId" >
+        <!-- this index can not be unique in order to allow inserting rows in the middle of a matrix-->
+        <indexfield fieldname="masterId" />
+        <indexfield fieldname="rowNr" />
+    </index>
+</record>
+
+<record name="DocumentLink" tablename="DocumentLink" inherits="Master" >
+    <field name="Code" type="string" length="60" />
+    <field name="Specs" type="detail" recordname="DocumentLinkSpecRow" />
+</record>
+
+<detailrecord name="DocumentLinkSpecRow" tablename="DocumentLinkSpecRow" >
+    <field name="DocumentSpecCode" type="string" length="30" linkto="DocumentSpec" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="Computer" type="string" length="10" />
+    <field name="Attribute" type="string" length="20" />
+    <field name="ClassName" type="string" length="60" />
+    <field name="Conditions" type="string" length="100" />
+</detailrecord>
+
+<record name="DocumentPrinter" tablename="DocumentPrinter" inherits="Master" local="true" >
+    <field name="Code" type="string" length="20" />
+    <field name="PrinterName" type="string" length="60" />
+    <field name="OpenPrinterDialog" type="boolean" />
+</record>
+
+<record name="DocumentSpec" tablename="DocumentSpec" inherits="Master" >
+    <field name="Code" type="string" length="30" />
+    <field name="Fields" type="detail" recordname="DocumentSpecFieldsRow" />
+    <field name="Labels" type="detail" recordname="DocumentSpecLabelsRow" />
+    <field name="Rects" type="detail" recordname="DocumentSpecRectsRow" />
+    <field name="Images" type="detail" recordname="DocumentSpecImagesRow" />
+    <field name="RecordName" type="string" length="20" persistent="false" />
+    <field name="Height" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="RowsPerPage" type="integer" />
+    <field name="ScreenDpi" type="integer" />
+    <field name="Copies" type="integer" />
+    <field name="OfficialCopies" type="integer" />
+    <field name="DontShowPreview" type="boolean" />
+    <field name="DontShowPrinterDialog" type="boolean" />
+    <field name="PrePrinted" type="boolean" />
+    <field name="ShowOnlyOnePreview" type="boolean" />
+</record>
+
+<detailrecord name="DocumentSpecFieldsRow" tablename="DocumentSpecFieldsRow" >
+    <field name="Name" type="string" length="50" />
+    <field name="Style" type="string" length="20" linkto="FontStyle" />
+    <field name="Alignment" type="integer" />
+    <field name="Decimals" type="integer" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Type" type="integer" />
+</detailrecord>
+
+<detailrecord name="DocumentSpecImagesRow" tablename="DocumentSpecImagesRow" >
+    <field name="Filename" type="string" length="255" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Height" type="integer" />
+</detailrecord>
+
+<detailrecord name="DocumentSpecLabelsRow" tablename="DocumentSpecLabelsRow" >
+    <field name="Text" type="string" length="255" />
+    <field name="Style" type="string" length="20" linkto="FontStyle" />
+    <field name="Alignment" type="integer" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+</detailrecord>
+
+<detailrecord name="DocumentSpecRectsRow" tablename="DocumentSpecRectsRow" >
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Height" type="integer" />
+</detailrecord>
+
+<record name="EventLog" tablename="EventLog" >
+    <field name="TableName" type="string" length="60" />
+    <field name="recInternalId" type="integer" />
+    <field name="oldId" type="string" length="100" />
+    <field name="newId" type="string" length="100" />
+    <field name="Action" type="integer" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="User" type="string" length="10" />
+    <field name="Data" type="memo" />
+    <index name="RecordDateTime" >
+        <indexfield fieldname="TableName" />
+        <indexfield fieldname="TransDate" />
+        <indexfield fieldname="TransTime" />
+    </index>
+    <index name="TableNameRecInternalId" >
+        <indexfield fieldname="TableName" />
+        <indexfield fieldname="recInternalId" />
+    </index>
+    <index name="NewIdDateTime" >
+        <indexfield fieldname="TableName" />
+        <indexfield fieldname="NewId" />
+        <indexfield fieldname="TransDate" />
+        <indexfield fieldname="TransTime" />
+    </index>
+</record>
+
+<record name="FontStyle" tablename="FontStyle" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Family" type="string" length="20" />
+    <field name="Size" type="integer" />
+    <field name="Color" type="string" length="20" />
+    <field name="Underline" type="boolean" />
+    <field name="Bold" type="boolean" />
+    <field name="PDFFont" type="string" length="30" />
+</record>
+
+<record name="FormTypeDef" tablename="FormTypeDef" inherits="Master" >
+    <field name="Code" type="string" length="50" />
+    <field name="Name" type="string" length="30" />
+    <field name="FormTypeDefRows" type="detail" recordname="FormTypeDefRow" />
+</record>
+
+<detailrecord name="FormTypeDefRow" tablename="FormTypeDefRow" >
+    <field name="Condition" type="string" length="100" />
+    <field name="FormType" type="string" length="5" />
+</detailrecord>
+
+<record name="HelpDocumentation" tablename="HelpDocumentation" inherits="Master" persistent="False" >
+    <field name="Record" type="string" length="100" />
+    <field name="Field" type="string" length="100" />
+    <field name="Detail" type="memo" />
+    <field name="Company" type="string" length="100" />
+    <field name="CompanyUserCode" type="string" length="20" />
+    <field name="CompanyUserName" type="string" length="60" />
+    <field name="URL" type="string" length="200" />
+</record>
+
+<record name="HTMLRecordView" tablename="HTMLRecordView" inherits="Master" >
+    <field name="RecordName" type="string" length="60" />
+    <field name="Clause" type="string" length="15" persistent="false" />
+    <field name="Field" type="integer" />
+    <field name="Message" type="memo" />
+    <field name="RecordRow" type="string" length="60" persistent="false" />
+    <field name="HTMLRecordViewRows" type="detail" recordname="HTMLRecordViewRow" persistent="false" />
+</record>
+
+<detailrecord name="HTMLRecordViewRow" tablename="HTMLRecordViewRow" persistent="False" >
+    <field name="Name" type="string" length="30" />
+    <field name="Comment" type="string" length="30" />
+</detailrecord>
+
+<record name="Label" tablename="Label" inherits="Classifier" >
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="Type" type="string" length="20" linkto="LabelType" />
+</record>
+
+<record name="LabelType" tablename="LabelType" inherits="Master" >
+    <field name="Name" type="string" length="60" />
+</record>
+
+<record name="LocalSettings" tablename="LocalSettings" local="true" setting="True" >
+    <field name="Computer" type="string" linkto="Computer" />
+    <field name="POSNet" type="string" length="10" />
+    <field name="UserMode" type="integer" />
+    <!-- no agregar mas campos a este registro, agregarlos en el record "Computer" -->
+</record>
+
+<record name="LoginDialog" tablename="LoginDialog" persistent="False" >
+    <field name="User" type="string" length="10" />
+    <field name="Password" type="string" length="255" />
+</record>
+
+<record name="LogSettings" tablename="LogSettings" setting="True" >
+    <field name="Enabled" type="boolean" />
+    <field name="Records" type="detail" recordname="LogSettingsRecordRow" />
+    <field name="Reports" type="detail" recordname="LogSettingsReportRow" />
+</record>
+
+<detailrecord name="LogSettingsRecordRow" tablename="LogSettingsRecordRow" >
+    <field name="RecordName" type="string" length="50" />
+    <field name="Mode" type="integer" />
+</detailrecord>
+
+<detailrecord name="LogSettingsReportRow" tablename="LogSettingsReportRow" >
+    <field name="ReportName" type="string" length="50" />
+    <field name="VersionsQty" type="integer" />
+</detailrecord>
+
+<record name="Mail" tablename="Mail" inherits="Numerable" >
+    <field name="User" type="string" length="10" />
+    <field name="Name" type="string" length="60" />
+    <field name="MailTo" type="string" length="100" />
+    <field name="MailCc" type="string" length="100" />
+    <field name="MailBcc" type="string" length="100" />
+    <field name="MailFrom" type="string" length="100" />
+    <field name="Subject" type="string" length="60" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="Status" type="integer" />
+    <field name="SentFlag" type="boolean" />
+    <field name="ReadFlag" type="boolean" />
+    <field name="ProcessedFlag" type="boolean" />
+    <field name="MessageBody" type="memo" />
+    <field name="RequestReadNotification" type="boolean" />
+    <field name="Mailing" type="integer" linkto="Mailing" />
+    <field name="EntityType" type="integer" />
+    <field name="Newsletter" type="integer" />
+    <field name="MailCode" type="string" length="20" />
+    <field name="Label" type="string" length="20" />
+    <field name="IgnoreImages" type="boolean" />
+    <field name="Invalid" type="boolean" />
+    <field name="MessageType" type="integer" />
+    <field name="CustCode" type="string" length="20" /> <!-- DO NOT USE linkto="Customer" BECAUSE GOES TO Suppliers as well -->
+    <field name="CustName" type="string" length="60" />
+    <!-- Campos para seguimiento de mails -->
+    <field name="Id" type="string" length="100" />
+    <field name="ParentId" type="string" length="100" />
+    <field name="ThreadId" type="string" length="100" />
+    <field name="OriginRecordName" type="string" length="100" />
+    <field name="OriginId" type="string" length="100" />
+    <!-- Campos para el linkeo con otros registros de OpenOrange-->
+    <index name="Origin" >
+        <indexfield fieldname="OriginRecordName" />
+        <indexfield fieldname="OriginId" />
+    </index>
+</record>
+
+<record name="MailAccount" tablename="MailAccount" inherits="Master" >
+    <field name="Mail" type="string" length="50" />
+    <field name="Name" type="string" length="30" />
+    <field name="User" type="string" length="20" linkto="User" />
+    <field name="Comment" type="string" length="30" />
+    <field name="POP3Server" type="string" length="100" />
+    <field name="SMTPServer" type="string" length="100" />
+    <field name="POP3User" type="string" length="50" />
+    <field name="SMTPUser" type="string" length="50" />
+    <field name="POP3Password" type="string" length="20" />
+    <field name="SMTPPassword" type="string" length="20" />
+    <field name="GoogleUser" type="string" length="50" />
+    <field name="GooglePassword" type="string" length="30" />
+    <field name="POP3Port" type="integer" />
+    <field name="ServerType" type="integer" />
+    <field name="SMTPPort" type="integer" />
+    <field name="SMTPReqSSL" type="boolean" />
+    <field name="SMTPReqAuth" type="boolean" />
+    <field name="DelFromServer" type="boolean" />
+    <field name="Token" type="string" length="50" />
+    <!--Firma del mail-->
+    <field name="AddSignature" type="boolean" />
+    <!--<field name="Name" type="string" length="30" />-->
+    <field name="Phone" type="string" length="20" />
+    <field name="CellPhone" type="string" length="20" />
+    <field name="Address" type="string" length="50" />
+    <!--Enviar automaticamente una copia al usuario-->
+    <field name="SendBCCCopy" type="string" length="50" />
+    <field name="City" type="string" length="30" />
+    <field name="Province" type="string" length="30" />
+    <field name="Country" type="string" length="50" />
+    <field name="Company" type="string" length="50" />
+    <field name="Site" type="string" length="50" />
+    <field name="OtherData" type="string" length="75" />
+    <!--/Firma del mail-->
+</record>
+
+<record name="Master" tablename="Master" inherits="Record" persistent="false" >
+    <field name="Code" type="string" length="20" />
+    <field name="Closed" type="Boolean" /> <!--this field is used to filter list and paste windows/-->
+    <index name="Code" unique="true" >
+        <indexfield fieldname="Code" />
+    </index>
+    <index name="ClosedCode" >
+        <indexfield fieldname="Closed" />
+        <indexfield fieldname="Code" />
+    </index>
+</record>
+
+<record name="Numerable" tablename="Numerable" inherits="Record" persistent="false" >
+    <field name="SerNr" type="integer" />
+    <field name="ToSerNr" type="integer" /> <!-- used in multipage transactions -->
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="Department" type="string" length="10" linkto="Department" />
+    <field name="Computer" type="string" linkto="Computer" />
+    <field name="FormType" type="string" linkto="FormTypeDef" />
+    <index name="SerNr" unique="true" >
+        <indexfield fieldname="SerNr" />
+    </index>
+    <index name="ToSerNr" unique="true" >
+        <indexfield fieldname="ToSerNr" />
+    </index>
+    <index name="Office" >
+        <!--used in SerNr resolution sernrs by Office -->
+        <indexfield fieldname="Office" />
+        <indexfield fieldname="SerNr" />
+    </index>
+    <index name="OfficeComputer" >
+        <!--used in SerNr resolution sernrs by office by POS -->
+        <!-- Added after experience gasstation py: different ranges by office by computer without this field very slow -->
+        <indexfield fieldname="Office" />
+        <indexfield fieldname="Computer" />
+        <indexfield fieldname="SerNr" />
+    </index>
+    <index name="TransDate" >
+        <indexfield fieldname="TransDate" />
+        <indexfield fieldname="TransTime" />
+    </index>
+</record>
+
+<record name="Office" tablename="Office" inherits="Addressable" >
+    <field name="Code" type="string" length="10" />
+    <field name="Name" type="string" length="60" />
+    <field name="ShortCode" type="string" length="5"/>     <!-- Cuando la empresa define codigos largos esto se usa para las exportaciones de impuestos -->
+    <field name="CreditPolicy" type="integer" />
+    <field name="SalesTarget" type="value" />
+    <field name="Salesmen" type="integer" />
+    <field name="PayMode" type="string" length="5" linkto="PayMode" />
+    <field name="Phone" type="string" length="20" />
+    <field name="Fax" type="string" length="20" />
+    <field name="Email" type="string" length="60" />
+    <field name="PriceDeal" type="string" length="10" linkto="PriceDeal" />
+    <field name="DiscountDeal" type="string" length="10" linkto="DiscountDeal" />
+    <field name="BranchLabel" type="string" length="60"/>       <!-- Nota that this has No link to !!!  -->
+</record>
+
+<record name="OOCase" tablename="OOCase" inherits="Numerable" >
+    <field name="Subject" type="string" length="255" />
+    <field name="Message" type="memo" persistent="false" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="OOCaseNr" type="integer" />
+    <field name="User" type="string" linkto="User" />
+    <field name="Closed" type="boolean" persistent="false" />
+</record>
+
+<record name="OOChatClient" tablename="OOChatClient" persistent="false" >
+    <field name="ToUsers" type="memo" length="255" />
+    <field name="Message" type="string" length="255" />
+</record>
+
+<record name="OurSettings" tablename="OurSettings" setting="true" >
+    <field name="Name" type="string" length="60" />
+    <field name="FantasyName" type="string" length="60" />
+    <field name="Address" type="string" length="60" />
+    <field name="City" type="string" length="60" />
+    <field name="Country" type="string" length="2" linkto="Country" />
+    <field name="Locality" type="string" length="60" />
+    <field name="LocalityCode" type="string" length="5" linkto="Locality" />
+    <field name="Phone" type="string" length="20" />
+    <field name="Province" type="string" length="60" />
+    <field name="ProvinceCode" type="string" length="10" linkto="Province" />
+    <field name="ZipCode" type="string" length="20" />
+    <field name="Phone" type="string" length="20" />
+    <field name="Fax" type="string" length="20" />
+    <field name="LegalInfo" type="string" length="255" />
+    <field name="Email" type="string" length="60" />
+    <field name="Logo" type="string" length="60" />
+    <field name="WebSite" type="string" length="30" />
+    <field name="Language" type="string" length="5" linkto="Language" />
+    <field name="BaseCur1" type="string" length="3" linkto="Currency" />
+    <field name="BaseCur2" type="string" length="3" linkto="Currency" />
+    <field name="DefOffice" type="string" length="10" linkto="Office" />
+    <field name="DefDepartment" type="string" length="10" linkto="Department" />
+    <field name="DefStockDepo" type="string" length="10" linkto="StockDepo" />
+    <field name="StartDate" type="date" />
+    <field name="OfficeDeterminator" type="integer" />
+    <field name="FinAccount" type="string" linkto="FinAccount" />
+    <field name="TaxRegNr" type="string" length="20" />
+</record>
+
+<record name="PasswordChange" tablename="PasswordChange" persistent="false" setting="true" >
+    <field name="OldPassword" type="string" length="64" />
+    <field name="NewPassword" type="string" length="64" />
+    <field name="NewPassword2" type="string" length="64" />
+</record>
+
+<record name="Period" tablename="Period" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Comment" type="string" length="60" />
+    <field name="FromDate" type="date" />
+    <field name="ToDate" type="date" />
+</record>
+
+<record name="RawRecord" tablename="RawRecord" persistent="false" >
+</record>
+
+<record name="Record" tablename="Record" inherits="RawRecord" persistent="false" >
+    <field name="internalId" type="internalid" nullable="false" />
+    <field name="attachFlag" type="boolean" />
+    <field name="syncVersion" type="integer" />
+</record>
+
+<record name="RecordCheckPolicy" tablename="RecordCheckPolicy" inherits="Master" >
+    <field name="Code" type="string" length="60" />
+    <field name="Enabled" type="boolean" />
+    <field name="FieldsList" type="detail" recordname="RecordCheckPolicyFieldsListRow" />
+    <field name="UpdateComputerOnConfirming" type="boolean" />
+    <field name="UpdateUserOnConfirming" type="boolean" />
+    <field name="Checks" type="detail" recordname="RecordCheckPolicyCheckRow" />
+</record>
+
+<detailrecord name="RecordCheckPolicyCheckRow" tablename="RecordCheckPolicyCheckRow" >
+    <field name="HeaderField" type="string" length="40" />
+    <field name="RowField" type="string" length="40" />
+    <field name="Condition" type="integer" />
+    <field name="Value" type="string" length="60" />
+    <field name="Message" type="string" length="100" />
+</detailrecord>
+
+<detailrecord name="RecordCheckPolicyFieldsListRow" tablename="RecordCheckPolicyFieldsListRow" >
+    <field name="HeaderField" type="string" length="40" />
+    <field name="RowField" type="string" length="40" />
+    <field name="NonBlank" type="boolean" />
+    <field name="NotEditable" type="boolean" />
+    <field name="Case" type="integer" />
+    <field name="Message" type="string" length="100" />
+    <field name="DontSave" type="boolean" />
+    <field name="MaxRows" type="integer" />
+    <field name="Default" type="string" length="30" />
+</detailrecord>
+
+<record name="RecordCommunication" tablename="RecordCommunication" inherits="Numerable" >
+    <field name="Person" type="string" linkto="Person" />
+    <field name="Name" type="string" length="255" />
+    <field name="Message" type="memo" />
+    <field name="OriginRecord" type="string" length="60" />
+    <field name="OriginId" type="string" length="255" />
+    <index name="Origin" >
+        <indexfield fieldname="OriginRecord" />
+        <indexfield fieldname="OriginId" />
+    </index>
+</record>
+
+<record name="SalesGroup" tablename="SalesGroup" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Comment" type="string" length="255" />
+    <field name="Discounts" type="detail" recordname="SalesGroupDiscount" />
+    <field name="MinGProfit" type="value" />
+</record>
+
+<detailrecord name="SalesGroupDiscount" tablename="SalesGroupDiscount" >
+    <field name="PriceDeal" type="string" length="10" />
+    <field name="ItemGroup" type="string" length="5" />
+    <field name="ArtCode" type="string" length="20" linkto="Item" />
+    <field name="MaxPercent" type="value" />
+</detailrecord>
+
+<record name="SchemaSettings" tablename="SchemaSettings" setting="true" >
+    <field name="Enabled" type="boolean" />
+    <field name="Schemas" type="detail" recordname="SchemaSettingsRow" />
+</record>
+
+<detailrecord name="SchemaSettingsRow" tablename="SchemaSettingsRow" >
+    <field name="TableName" type="string" length="30" />
+    <field name="Schema" type="string" length="60" />
+</detailrecord>
+
+<record name="SerNrControl" tablename="SerNrControl" >
+    <field name="DocType" type="integer" />
+    <field name="InvoiceType" type="integer" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="Computer" type="string" length="5" linkto="Computer" />
+    <field name="TransType" type="string" length="50" />
+    <field name="FromDate" type="date" />
+    <field name="ToDate" type="date" />
+    <field name="FromNr" type="integer" />
+    <field name="ToNr" type="integer" />
+    <field name="Comment" type="string" length="60" />
+    <field name="FormType" type="string" length="5" />
+    <field name="NoGenTrans" type="boolean" />
+    <field name="IsManualTransaction" type="boolean" />
+    <field name="OfficialPOSNr" type="integer" />
+</record>
+
+<record name="Shift" tablename="Shift" inherits="Master" >
+    <field name="Code" type="string" length="3" />
+    <field name="Name" type="string" length="60" />
+    <field name="StartTime" type="time" />
+    <field name="EndTime" type="time" />
+    <field name="Duration" type="value" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="PrevShift" type="string" length="5" linkto="Shift" />
+    <field name="NextShift" type="string" length="5" linkto="Shift" />
+    <field name="Department" type="string" length="5" linkto="Department" />
+    <field name="DontCloseWOpenTrans" type="boolean" />
+    <field name="Type" type="integer" />
+    <field name="Sun" type="boolean" />
+    <field name="Mon" type="boolean" />
+    <field name="Tue" type="boolean" />
+    <field name="Wen" type="boolean" />
+    <field name="Thu" type="boolean" />
+    <field name="Fri" type="boolean" />
+    <field name="Sat" type="boolean" />
+</record>
+
+<record name="SimpleMaster" tablename="SimpleMaster" inherits="Master" persistent="false" >
+    <field name="Code" type="string" length="30" />
+    <index name="Code" unique="true" >
+        <indexfield fieldname="Code" />
+    </index>
+    <index name="ClosedCode" >
+        <indexfield fieldname="Closed" />
+        <indexfield fieldname="Code" />
+    </index>
+</record>
+
+<!-- esto debe estar aca porque se utiliza desde core -->
+<record name="SynchronizationSettings" tablename="SynchronizationSettings" setting="true" >
+    <field name="SynchronizationPort" type="integer" />
+    <field name="LockNonTokenRecords" type="Boolean" />
+    <field name="syncVersion" type="integer" />
+    <field name="TokenRecords" type="detail" recordname="SynchronizationSettingsTokenRecordRow" />
+</record>
+
+<!-- esto debe estar aca porque se utiliza desde core -->
+<detailrecord name="SynchronizationSettingsTokenRecordRow" tablename="SynchronizationSettingsTokenRecordRow" >
+    <field name="TableName" type="string" length="60" />
+    <field name="syncVersion" type="integer" />
+</detailrecord>
+
+<record name="SystemManagement" tablename="SystemManagement" persistent="False" local="true" setting="true" >
+    <field name="DbServer" type="string" length="20" />
+    <field name="LogQueries" type="boolean" />
+    <field name="Skin" type="string" length="20" />
+    <field name="Language" type="string" length="20" />
+    <field name="AutoSyncTables" type="boolean" />
+    <field name="WebDir" type="string" length="200" />
+    <field name="UpdateLocalSettings" type="boolean" />
+    <field name="syncVersion" type="integer" />
+    <field name="AskBeforeChange" type="boolean" />
+    <field name="BeepOnQueries" type="boolean" />
+    <field name="DefaultCompany" type="string" length="30" />
+
+    <field name="Modules" type="detail" recordname="SystemManagementModuleRow" />
+    <field name="Companies" type="detail" recordname="SystemManagementCompanyRow" />
+</record>
+
+<detailrecord name="SystemManagementCompanyRow" tablename="SystemManagementCompanyRow" >
+    <!-- fields order is important-->
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="Host" type="string" length="60" />
+    <field name="Port" type="integer" />
+    <field name="User" type="string" length="60" />
+    <field name="Password" type="string" length="60" />
+    <field name="DefaultUser" type="string" length="20" />
+    <field name="DefaultUserPassword" type="string" length="60" />
+    <field name="ApplicationType" type="integer" />
+    <field name="DBName" type="string" length="60" />
+    <field name="OfficialSerNr" type="string" length="10" />
+    <field name="DBEngine" type="integer" />
+    
+    <field name="internalId" type="internalid" nullable="false" />
+    <field name="attachFlag" type="boolean" />
+    <field name="syncVersion" type="integer" />
+</detailrecord>
+
+<detailrecord name="SystemManagementModuleRow" tablename="SystemManagementModuleRow" >
+    <field name="Directory" type="string" length="100" />
+    <field name="Level" type="integer" />
+    <field name="Enabled" type="boolean" />
+    <field name="syncVersion" type="integer" />
+</detailrecord>
+
+<record name="Task" tablename="Task" inherits="Numerable" >
+    <field name="SerNr" type="integer" />
+    <field name="Comment" type="memo" />
+    <field name="Enabled" type="boolean" />
+    <field name="RoutineName" type="string" length="50" />
+    <field name="ScheduleMode" type="integer" />
+    <field name="LastRunDate" type="date" />
+    <field name="LastRunTime" type="time" />
+    <field name="LastBeginRunDate" type="date" />
+    <field name="LastBeginRunTime" type="time" />
+    <field name="DayTime" type="time" />
+    <field name="WeekDay" type="integer" />
+    <field name="MonthDay" type="integer" />
+    <field name="Interval" type="time" />
+    <field name="Background" type="boolean" />
+    <field name="User" type="string" length="20" />
+    <field name="RunOnTime" type="boolean" />
+    <field name="Running" type="boolean" persistent="false" /> <!--used internally by ejecutable-->
+</record>
+
+<record name="TraceRecorder" tablename="TraceRecorder" inherits="Record" >
+    <field name="Date" type="date" />
+    <field name="Time" type="time" />
+    <field name="User" type="string" length="10" linkto="User" />
+    <field name="Filename" type="string" length="255" persistent="false" />
+    <field name="FilenameFilter" type="string" length="255" persistent="false" />
+    <field name="Data" type="memo" />
+</record>
+
+<record name="UserReportSpec" tablename="UserReportSpec" >
+    <field name="User" type="string" length="10" />
+    <field name="ReportName" type="string" length="255" />
+    <field name="ReportLabel" type="string" length="255" />
+    <field name="Fields" type="detail" recordname="UserReportSpecFieldRow" />
+    <index name="Main" unique="True" >
+        <indexfield fieldname="User" />
+        <indexfield fieldname="ReportName" />
+    </index>
+</record>
+
+<detailrecord name="UserReportSpecFieldRow" tablename="UserReportSpecFieldRow" >
+    <field name="FieldName" type="string" length="30" />
+    <field name="FieldLabel" type="string" length="60" />
+    <field name="Type" type="string" length="20" />
+    <field name="Value" type="string" length="100" />
+    <field name="DateTemplate" type="integer" />
+</detailrecord>
+
+<record name="VersionSettings" tablename="VersionSettings" setting="true" >
+    <field name="CheckVersionEnabled" type="boolean" />
+    <field name="CheckScriptDirsEnabled" type="boolean" />
+    <field name="ShowPostInsteadAlerts" type="boolean" />
+    <field name="NewMode" type="boolean" />
+    <field name="Paths" type="detail" recordname="VersionSettingsPath" />
+    <field name="ScriptDirs" type="detail" recordname="VersionSettingsScriptDir" />
+    <field name="NoveltiesDisabled" type="boolean" />
+    <field name="NoveltiesUsers" type="string" length="255" />
+    <field name="Novelties" type="detail" recordname="VersionSettingsNoveltyRow" />
+</record>
+
+<detailrecord name="VersionSettingsNoveltyRow" tablename="VersionSettingsNoveltyRow" >
+    <field name="User" type="string" linkto="User" />
+    <field name="Revision" type="integer" />
+</detailrecord>
+
+<detailrecord name="VersionSettingsPath" tablename="VersionSettingsPath" >
+    <field name="Enabled" type="boolean" />
+    <field name="User" type="string" length="10" linkto="User" />
+    <field name="Path" type="string" length="200" />
+    <field name="Revision" type="integer" />
+    <field name="SVNUserName" type="string" length="100" />
+    <field name="SVNPassword" type="string" length="100" />
+</detailrecord>
+
+<detailrecord name="VersionSettingsScriptDir" tablename="VersionSettingsScriptDir" >
+    <field name="User" type="string" length="10" linkto="User" />
+    <field name="ScriptDir" type="string" length="200" />
+    <field name="Type" type="integer" />
+</detailrecord>
+
+<record name="VersionUpdates" tablename="VersionUpdates" inherits="Master" >
+    <field name="Code" type="string" length="60" />
+    <field name="Description" type="memo" />
+    <field name="User" type="string" linkto="User" />
+    <field name="RunDate" type="date" />
+    <field name="RunTime" type="time" />
+    <field name="Done" type="boolean" />
+    <field name="UpdateResult" type="memo" />
+    <field name="Success" type="boolean" />
+</record>
+
+<record name="WindowState" tablename="WindowState" >
+    <field name="User" type="string" length="10" />
+    <field name="WindowName" type="string" length="60" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Height" type="integer" />
+    <field name="ColumnNr" type="integer" />
+    <field name="Order" type="integer" />
+    <field name="ColumnWidths" type="string" length="255" />
+    <index name="UserWindowName" >
+        <indexfield fieldname="User" />
+        <indexfield fieldname="WindowName" />
+    </index>
+</record>
+
+<record name="X" tablename="X" persistent="false" >
+    <field name="Code" type="string" length="100" />
+    <field name="Name" type="string" length="100" />
+</record>
+
+</interface>

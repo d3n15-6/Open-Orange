@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<interface>
+<window name="AccessGroupWindow" recordname="AccessGroup" title="Access Group" >
+    <text label="Code" fieldname="Code" />
+    <text label="Description" fieldname="Comment" />
+    <tabs >
+        <tabpage label="Modules" name="ModulesPage" >
+            <text label="Initial Module" fieldname="InitialModule" pastewindow="XPasteWindow" />
+            <radiobutton label="Default Access Type" fieldname="ModulesAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Modules" name="Modules" >
+                <matrixcolumn label="Module" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Denied" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Records" name="RecordsPage" >
+            <radiobutton label="Default Access Type" fieldname="RecordsAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Records" name="Records" >
+                <matrixcolumn label="Record" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="150" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="100" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Read Only" value="1" />
+                    <combooption label="View Only" value="2" />
+                    <combooption label="Denied" value="3" />
+                </matrixcolumn>
+                <matrixcolumn label="Visibility" fieldname="Visibility" editor="combobox" width="200" >
+                    <combooption label="All Records" value="0" />
+                    <combooption label="Only Office Records" value="1" />
+                    <combooption label="Only Department Records" value="3" />
+                    <combooption label="Only User Records" value="2" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Reports" name="ReportsPage" >
+            <radiobutton label="Default Access Type" fieldname="ReportsAccessType" >
+                <radiooption label="View, Print and Export" value="0" />
+                <radiooption label="View and Print" value="1" />
+                <radiooption label="View Only" value="2" />
+                <radiooption label="Denied" value="3" />
+            </radiobutton>
+            <matrix fieldname="Reports" name="Report" >
+                <matrixcolumn label="Report" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="View, Print and Export" value="0" />
+                    <combooption label="View and Print" value="1" />
+                    <combooption label="View Only" value="2" />
+                    <combooption label="Denied" value="3" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Routines" name="RoutinesPage" >
+            <radiobutton label="Default Access Type" fieldname="RoutinesAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Routines" name="Routines" >
+                <matrixcolumn label="Routine" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Denied" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Others" name="OthersPage" >
+            <radiobutton label="Default Access Type" fieldname="CustomsAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Customs" name="Customs" >
+                <matrixcolumn label="Functionality" fieldname="Name" editor="text" pastewindow="FunctionalityPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Denied" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+    </tabs>
+    <action label="Users in Group" methodname="showUsers" />
+</window>
+
+<window name="AttachWindow" recordname="Attach" title="Attachments" >
+    <text label="Origin Record Name" fieldname="OriginRecordName" />
+    <text label="Origin" fieldname="OriginId" />
+    <text label="Source" fieldname="SourceId" />
+    <text label="Destination" fieldname="DestId" />
+    <date label="Date" fieldname="TransDate" />
+    <text label="Comment" fieldname="Comment" />
+    <memo label="Value" fieldname="Value" />
+    <radiobutton label="Link Type" fieldname="Type" >
+        <radiooption label="File" value="0" />
+        <radiooption label="Record" value="1" />
+        <radiooption label="Embedded Image" value="2" />
+        <radiooption label="Note" value="3" />
+    </radiobutton>
+</window>
+
+<window name="AttachNoteWindow" recordname="Attach" title="Attach Note" >
+    <text label="Title" fieldname="Comment" width="300" />
+    <memo label="Text" fieldname="Value" height="200" width="400" />
+    <integer label="Number" fieldname="internalId" readonly="True" />
+    <line>
+        <pushbutton label="Cancel" name="cancelNote" width="100" />
+        <pushbutton label="OK" name="okNote" width="100" />
+    </line>
+</window>
+
+<window name="BufferSettingsWindow" recordname="BufferSettings" title="BufferSettings" >
+    <matrix fieldname="Records" name="Records" >
+        <matrixcolumn label="Record Name" fieldname="RecordName" editor="text" pastewindow="XPasteWindow" width="100" />
+        <matrixcolumn label="Expiration" fieldname="Expiration" editor="time" />
+    </matrix>
+</window>
+
+<window name="ClausesWindow" recordname="Clauses" title="Clauses" >
+    <text label="Code" fieldname="Code" />
+    <text label="Comment" fieldname="Comment" />
+    <text label="Type" fieldname="TextType" />
+    <memo label="Text" fieldname="Text" richtext="false" height="300" width="600" />
+</window>
+
+<window name="CompanyWindow" recordname="Company" title="Company" >
+    <text label="Code" fieldname="Code" width="200" />
+    <text label="Description" fieldname="Name" width="200" />
+    <text label="Database" fieldname="DBName" width="200" />
+    <text label="Host" fieldname="Host" width="200" />
+    <line>
+        <integer label="Port" fieldname="Port" width="060" />
+        <pushbutton label="Check Connectivity" name="portscan" />
+    </line>
+    <line>
+        <column>
+        </column>
+        <column>
+            <label text="MySql Server Access" />
+        </column>
+    </line>
+    <text label="User" fieldname="User" width="200" />
+    <text label="Password" fieldname="Password" width="200" password="true" />
+    <line>
+        <column>
+        </column>
+        <column>
+            <label text="Default Database Access" />
+        </column>
+    </line>
+    <combobox label="Database Engine" fieldname="DBEngine" width="200" >
+        <combooption label="MySQL" value="0" />
+	<!--combooption value="1" label="PostgreSQL -not available yet-"/-->
+        <!--combooption value="2" label="ODBC -not available yet-"/-->
+        <combooption label="Oracle -not available yet-" value="3" />
+        <combooption label="Embedded (SQLite) -not available yet-" value="4" />
+    </combobox>
+    <text label="User" fieldname="DefaultUser" width="200" />
+    <text label="Password" fieldname="DefaultUserPassword" width="200" password="true" md5="true" />
+    <combobox label="Connections Type" fieldname="ApplicationType" width="200" >
+        <combooption label="to Data Base Server" value="0" />
+        <combooption label="to OpenOrange Server" value="1" />
+    </combobox>
+    <action label="Import Database from MySQL File" methodname="importDatabase" />
+    <action label="Create Database" methodname="createDatabase" />
+</window>
+
+<window name="ComputerWindow" recordname="Computer" title="Computer" >
+    <text label="Code" fieldname="Code" />
+    <text label="Description" fieldname="Name" width="200" />
+    <tabs >
+        <tabpage label="Default" name="Defaults" >
+            <text label="Stock Location" fieldname="StockDepo" pastewindow="StockDepoPasteWindow" />
+            <text label="Office" fieldname="Office" pastewindow="OfficePasteWindow" />
+            <text label="Payment Form" fieldname="DefaultPayMode" pastewindow="PayModePasteWindow" />
+            <text label="BarTab Type" fieldname="DefaultBarTabType" pastewindow="BarTabTypePasteWindow" />
+        </tabpage>
+        <tabpage label="Other" name="Other" >
+            <text label="Allowed Payment Forms" fieldname="AllowedPayModes" pastewindow="PayModePasteWindow" />
+            <checkbox label="Point of Sale" fieldname="POSflag" />
+            <text label="Official Nr" fieldname="OfficialSerNr" />
+            <time label="End of Day" fieldname="EndOfDay" />
+            <checkbox label="Closed" fieldname="Closed" />
+        </tabpage>
+    </tabs>
+</window>
+
+<window name="CurrencyWindow" recordname="Currency" title="Currency" >
+    <text label="Code" fieldname="Code" />
+    <text label="Name" fieldname="Name" />
+    <tabs >
+        <tabpage label="General" name="GeneralPage" >
+              <line>
+                  <integer label="Decimals" fieldname="RoundOff" />
+              </line>
+              <text label="Bank Notes" fieldname="BankNotes" />
+              <line>
+                  <column>
+                      <radiobutton label="Conversion to Currency" fieldname="ConvertionBase" >
+                          <radiooption label="Base 1" value="0" />
+                          <radiooption label="Base 2" value="1" />
+                      </radiobutton>
+                  </column>
+                  <column>
+                      <integer label="This Currency" fieldname="FrFactor" />
+                      <integer label="Base Currency" fieldname="ToFactor" />
+                  </column>
+              </line>    
+              <radiobutton label="Exchange Rate implies" fieldname="ConvertionDirection" >
+                  <radiooption label="Units of the base currency for one unit of this currency" value="0" />
+                  <radiooption label="Units of this currency for one unit of the base currency" value="1" />
+              </radiobutton>
+        </tabpage>
+        <tabpage label="Accountancy" name="AccountancyPage" >    
+              <text label="Accounts Receivable" fieldname="RecAcc" pastewindow="AccountPasteWindow" />    
+              <text label="Accounts Payable" fieldname="PayAcc" pastewindow="AccountPasteWindow" />
+              <text label="Local Legal Code" fieldname="TaxOfficeCode" />
+        </tabpage>
+    </tabs>
+
+</window>
+
+<window name="DatabaseManagementWindow" recordname="DatabaseManagement" title="Database Management" >
+    <tabs name="Options" >
+        <tabpage label="Password Change" name="PasswordChangePage" >
+            <checkbox label="Enabled" fieldname="DBPasswordAdminEnabled" />
+            <label text="Old" />
+            <text label="User" fieldname="OldDBUser" />
+            <text label="Password" fieldname="OldDBPassword" password="true" />
+            <label text="New" />
+            <text label="User" fieldname="NewDBUser" />
+            <text label="Password" fieldname="NewDBPassword" password="true" />
+            <pushbutton label="Create/Update User and Password" name="createNewDBUser" />
+            <date label="Expiration Date" fieldname="OldDBPasswordExpirationDate" />
+            <line>
+                <integer label="Counter" fieldname="PasswordChangesQty" readonly="true" />
+                <pushbutton label="Reset" name="resetPasswordChangesQty" />
+            </line>
+        </tabpage>
+        <tabpage label="Export Database" name="ExportPage" >
+            <checkbox label="HexBlob" fieldname="HexBlob" />
+            <checkbox label="DropDatabase" fieldname="AddDropDatabase" />
+            <checkbox label="DropTable" fieldname="AddDropTable" />
+            <text label="IgnoreTable" fieldname="IgnoreTable" />
+            <line>
+                <text label="MySQL Path" fieldname="MySQLPath" />
+                <pushbutton label="Find" name="getMySQLPath" height="20" />
+            </line>
+            <line>
+                <text label="Backup Path" fieldname="BackupPath" />
+                <pushbutton label="..." name="getExportFolder" height="20" />
+            </line>
+            <pushbutton label="Export" name="exportDatabase" width="150" />
+            <memo label="Output" fieldname="ExportOutput" richtext="false" />
+        </tabpage>
+        <tabpage label="Import Database" name="ImportPage" >
+            <line>
+                <text label="Backup File" fieldname="BackupFile" />
+                <pushbutton label="..." name="getBackupFile" height="20" />
+            </line>
+            <checkbox label="Import Into This Database" fieldname="ImportIntoThisDB" />
+            <line>
+                <text label="Host" fieldname="ImpHost" />
+                <integer label="Port" fieldname="ImpPort" />
+            </line>
+            <text label="Database Name" fieldname="ImpDBName" />
+            <text label="User" fieldname="ImpUser" />
+            <text label="Password" fieldname="ImpPassword" password="True" />
+            <checkbox label="Fix MySQL Backup" fieldname="FixMySQLBackup" />
+            <pushbutton label="Import" name="importDatabase" width="150" />
+        </tabpage>
+        <tabpage label="Parameters" name="ParametersPage" >
+            <integer label="MySQL Max Allowed Packet" fieldname="MySQLMaxAllowedPacket" />
+        </tabpage>
+    </tabs>
+</window>
+
+<window name="DecimalSpecWindow" recordname="DecimalSpec" title="Decimal Definition" >
+    <text label="Currency" fieldname="Currency" pastewindow="CurrencyPasteWindow" />
+    <text label="Record" fieldname="RecordName" />
+    <text label="Field" fieldname="FieldName" />
+    <text label="Matrix Field" fieldname="RowFieldName" />
+    <integer label="View Decimals" fieldname="ViewDecimals" />
+    <integer label="Round Off Decimals" fieldname="RoundDecimals" />
+</window>
+
+<window name="DepartmentWindow" recordname="Department" title="Department" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <text label="Name" fieldname="DeptName" />
+    </column>
+</window>
+
+<window name="DocumentLinkWindow" recordname="DocumentLink" title="Document Link" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <tabs name="DocumentsTab" >
+            <tabpage label="New" name="NewDocumentsPage" >
+                <matrix fieldname="Specs" name="NewMatrix" >
+                    <matrixcolumn label="Code" fieldname="DocumentSpecCode" editor="text" pastewindow="DocumentSpecPasteWindow" width="100" />
+                    <matrixcolumn label="Class" fieldname="ClassName" editor="text" />
+                    <matrixcolumn label="Conditions" fieldname="Conditions" editor="text" width="250" />
+                </matrix>
+            </tabpage>
+            <tabpage label="Old" name="OldDocumentsPage" >
+                <matrix fieldname="Specs" name="OldMatrix" >
+                    <matrixcolumn label="Code" fieldname="DocumentSpecCode" editor="text" pastewindow="DocumentSpecPasteWindow" width="150" />
+                    <matrixcolumn label="Office" fieldname="Office" editor="text" pastewindow="OfficePasteWindow" />
+                    <matrixcolumn label="Computer" fieldname="Computer" editor="text" />
+                    <matrixcolumn label="Attribute" fieldname="Attribute" editor="text" />
+                    <matrixcolumn label="Class Name" fieldname="ClassName" editor="text" width="140" />
+                </matrix>
+            </tabpage>
+        </tabs>
+    </column>
+</window>
+
+<window name="DocumentPrinterWindow" recordname="DocumentPrinter" title="Printers per Document" >
+    <text label="Document" fieldname="Code" pastewindow="DocumentSpecPasteWindow" />
+    <text label="Printer" fieldname="PrinterName" />
+    <checkbox label="Open Printer Dialog" fieldname="OpenPrinterDialog" />
+</window>
+
+<window name="DocumentSpecWindow" recordname="DocumentSpec" title="Document" >
+    <line>
+        <text label="Code" fieldname="Code" />
+    </line>
+    <pushbutton label="Add fields" name="addDocFields" height="20" />
+    <tabs >
+        <tabpage label="Fields" name="FieldsPage" >
+            <matrix fieldname="Fields" name="Fields" height="400" >
+                <matrixcolumn label="Fieldname" fieldname="Name" editor="text" />
+                <matrixcolumn label="Style" fieldname="Style" editor="text" pastewindow="FontStylePasteWindow" />
+                <matrixcolumn label="Alignment" fieldname="Alignment" editor="combobox" >
+                    <combooption label="Left" value="0" />
+                    <combooption label="Centered" value="1" />
+                    <combooption label="Right" value="2" />
+                </matrixcolumn>
+                <matrixcolumn label="Decimals" fieldname="Decimals" editor="integer" />
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+                <matrixcolumn label="Width" fieldname="Width" editor="integer" />
+                <matrixcolumn label="Type" fieldname="Type" editor="combobox" >
+                    <combooption label="Header" value="0" />
+                    <combooption label="Matrix" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Labels" name="LabelsPage" >
+            <matrix fieldname="Labels" name="Labels" height="400" >
+                <matrixcolumn label="Text" fieldname="Text" editor="text" />
+                <matrixcolumn label="Style" fieldname="Style" editor="text" pastewindow="FontStylePasteWindow" />
+                <matrixcolumn label="Alignment" fieldname="Alignment" editor="combobox" >
+                    <combooption label="Left" value="0" />
+                    <combooption label="Centered" value="1" />
+                    <combooption label="Right" value="2" />
+                </matrixcolumn>
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Rectangle" name="RectanglePage" >
+            <matrix fieldname="Rects" name="Rects" height="400" >
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+                <matrixcolumn label="Width" fieldname="Width" editor="integer" />
+                <matrixcolumn label="Height" fieldname="Height" editor="integer" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Images" name="ImagesPage" >
+            <matrix fieldname="Images" name="Images" height="400" >
+                <matrixcolumn label="File" fieldname="Filename" editor="text" />
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+                <matrixcolumn label="Width" fieldname="Width" editor="integer" />
+                <matrixcolumn label="Height" fieldname="Height" editor="integer" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Other" name="OtherInfoPage" >
+            <line>
+                <column>
+                    <checkbox label="Don't Show Print Preview" fieldname="DontShowPreview" />
+                    <checkbox label="Don't Show Printer Dialog" fieldname="DontShowPrinterDialog" />
+                    <checkbox label="Show Only One Preview" fieldname="ShowOnlyOnePreview" />
+                    <checkbox label="Pre-Printed" fieldname="PrePrinted" />
+                    <radiobutton label="Official Copies" fieldname="OfficialCopies" >
+                        <radiooption label="Only Original" value="1" />
+                        <radiooption label="Original and Duplicate Copies" value="2" />
+                        <radiooption label="Triplicate Copies" value="3" />
+                        <radiooption label="Quadruple Copies" value="4" />
+                    </radiobutton>
+                </column>
+                <column>
+                    <integer label="Number of Copies per Official Copy" fieldname="Copies" />
+                    <integer label="Screen DPI" fieldname="ScreenDpi" />
+                    <integer label="Width" fieldname="Width" />
+                    <integer label="Height" fieldname="Height" />
+                    <integer label="Rows per Page" fieldname="RowsPerPage" />
+                </column>
+            </line>
+        </tabpage>
+    </tabs>
+    <action label="Move Up" methodname="moveUp" shortcut="CTRL+SHIFT+W" />
+    <action label="Move Right" methodname="moveLeft" shortcut="CTRL+SHIFT+A" />
+    <action label="Move Left" methodname="moveRight" shortcut="CTRL+SHIFT+D" />
+    <action label="Move Down" methodname="moveDown" shortcut="CTRL+SHIFT+S" />
+    <action label="Increase Width" methodname="moreWidth" shortcut="CTRL+SHIFT+X" />
+    <action label="Decrease Width" methodname="lessWidth" shortcut="CTRL+SHIFT+Z" />
+    <action label="Increase Height" methodname="moreHeight" shortcut="CTRL+SHIFT+C" />
+    <action label="Decrease Height" methodname="lessHeight" shortcut="CTRL+SHIFT+V" />
+    <action label="Align Left" methodname="alignLeft" shortcut="CTRL+SHIFT+Q" />
+    <action label="Center" methodname="alignCenter" shortcut="CTRL+SHIFT+T" />
+    <action label="Align Right" methodname="alignRight" shortcut="CTRL+SHIFT+E" />
+    <action label="Scale" methodname="scale" />
+</window>
+
+<window name="FontStyleWindow" recordname="FontStyle" title="Font Styles" >
+    <text label="Code" fieldname="Code" />
+    <text label="Family" fieldname="Family" />
+    <integer label="Size" fieldname="Size" />
+    <text label="Colour" fieldname="Color" pastewindow="ItemColorPasteWindow" />
+    <checkbox label="Underline" fieldname="Underline" />
+    <checkbox label="Bold" fieldname="Bold" />
+    <combobox label="PDF Font" fieldname="PDFFont" width="200" >
+        <combooption label="Courier" value="Courier" />
+        <combooption label="Courier Bold" value="Courier-Bold" />
+        <combooption label="Courier Bold Italic" value="Courier-BoldOblique" />
+        <combooption label="Courier Italic" value="Courier-Oblique" />
+        <combooption label="Helvetica" value="Helvetica" />
+        <combooption label="Helvetica Bold" value="Helvetica-Bold" />
+        <combooption label="Helvetica Bold Italic" value="Helvetica-BoldOblique" />
+        <combooption label="Helvetica Italic" value="Helvetica-Oblique" />
+        <combooption label="Symbol" value="Symbol" />
+        <combooption label="Times Bold" value="Times-Bold" />
+        <combooption label="Times Bold Italic" value="Times-BoldItalic" />
+        <combooption label="Times Italic" value="Times-Italic" />
+        <combooption label="Times Roman" value="Times-Roman" />
+        <combooption label="Zapf Dingbats" value="ZapfDingbats" />
+        <combooption label="3 of 9 BarCode" value="barcode" />
+    </combobox>
+</window>
+
+<window name="FormTypeDefWindow" recordname="FormTypeDef" title="Form Type Definition" >
+    <text label="Code" fieldname="Code" pastewindow="XPasteWindow" />
+    <text label="Name" fieldname="Name" />
+    <matrix fieldname="FormTypeDefRows" name="FormTypeDefRows" >
+        <matrixcolumn label="Condition" fieldname="Condition" editor="text" width="200" />
+        <matrixcolumn label="Form Type" fieldname="FormType" editor="text" />
+    </matrix>
+</window>
+
+<window name="HelpDocumentationWindow" recordname="HelpDocumentation" title="Help Documentation" >
+    <text label="URL" fieldname="URL" readonly="True" forecolor="blue" />
+    <text label="Company" fieldname="Company" readonly="True" />
+    <line>
+        <text label="User" fieldname="CompanyUserCode" width="060" readonly="True" />
+        <text label="" fieldname="CompanyUserName" width="182" readonly="True" />
+    </line>
+    <text label="Record" fieldname="Record" readonly="True" />
+    <text label="Fieldname" fieldname="Field" readonly="True" />
+    <memo label="Detail" fieldname="Detail" richtext="True" />
+    <pushbutton label="Send" name="Send" />
+</window>
+
+<window name="HTMLRecordViewWindow" recordname="HTMLRecordView" title="HTML Template" >
+    <text label="Code" fieldname="Code" />
+    <text label="Apply to Record" fieldname="RecordName" pastewindow="GroupTablePasteWindow" />
+    <line>
+        <text label="Record" fieldname="RecordRow" pastewindow="GroupTablePasteWindow" />
+        <pushbutton label="Reload Fields" name="Reload" />
+    </line>
+    <matrix fieldname="HTMLRecordViewRows" name="HTMLRecordViewRows" >
+        <matrixcolumn label="Name" fieldname="Name" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="180" />
+    </matrix>
+    <line>
+        <text label="" fieldname="Clause" pastewindow="ClausesPasteWindow" />
+        <pushbutton label="Add Clause" name="AddClause" />
+    </line>
+    <tabs >
+        <tabpage label="Message" name="MessagePage" >
+            <memo label="" fieldname="Message" richtext="true" height="200" width="600" />
+        </tabpage>
+        <tabpage label="Font Code" name="FontCodePage" >
+            <memo label="" fieldname="Message" richtext="false" height="200" width="600" />
+        </tabpage>
+    </tabs>
+    <action label="Import HTML Document" methodname="importHTML" />
+</window>
+
+<window name="LabelWindow" recordname="Label" title="Label" >
+    <tabs >
+        <tabpage label="General" name="GeneralPage" >
+            <text label="Code" fieldname="Code" />
+            <text label="Name" fieldname="Name" />
+            <text label="Type" fieldname="Type" pastewindow="LabelTypePasteWindow" />
+            <text label="Implies" fieldname="PathToRoot" pastewindow="LabelPasteWindow" />
+            <integer label="Level" fieldname="Level" />
+            <checkbox label="Closed" fieldname="Closed" />
+        </tabpage>
+        <tabpage label="Tree" name="TreePage" >
+            <listview name="ClassifierListView" height="400" width="400" />
+        </tabpage>
+    </tabs>
+</window>
+
+<window name="LabelTypeWindow" recordname="LabelType" title="Label Type" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <text label="Name" fieldname="Name" />
+    </column>
+</window>
+
+<window name="LocalSettingsWindow" recordname="LocalSettings" title="Local Settings" >
+    <text label="Computer" fieldname="Computer" pastewindow="ComputerPasteWindow" />
+    <!-- NO FIELD SHOULD BE ADDED TO THIS REGISTER YOU CAN SET THEM IN THE COMPUTER REGISTER -->
+    <text label="POSNet" fieldname="POSNet" pastewindow="POSNetPasteWindow" />
+    <radiobutton label="User Mode" fieldname="UserMode" >
+        <radiooption label="Normal User" value="0" />
+        <radiooption label="Developer" value="1" />
+    </radiobutton>
+</window>
+
+<window name="LoginDialogWindow" recordname="LoginDialog" modal="true" title="Login" >
+    <text label="User" fieldname="User" />
+    <text label="Password" fieldname="Password" password="true" md5="true" />
+    <line>
+        <pushbutton label="Login" name="login" />
+        <pushbutton label="Cancel" name="cancel" />
+    </line>
+</window>
+
+<window name="LogSettingsWindow" recordname="LogSettings" title="Record Logging Options" >
+    <checkbox label="Enabled" fieldname="Enabled" />
+    <tabs >
+        <tabpage label="Records" name="RecordsPage" >
+            <matrix fieldname="Records" >
+                <matrixcolumn label="Record" fieldname="RecordName" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Mode" fieldname="Mode" editor="combobox" width="250" >
+                    <combooption label="No Logging" value="0" />
+                    <combooption label="Simple" value="1" />
+                    <combooption label="Version Logging" value="2" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Reports" name="ReportsPage" >
+            <matrix fieldname="Reports" >
+                <matrixcolumn label="Report" fieldname="ReportName" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Number of Versions" fieldname="VersionsQty" editor="integer" width="100" />
+            </matrix>
+        </tabpage>
+    </tabs>
+</window>
+
+<window name="MailWindow" recordname="Mail" title="Message" >
+    <line>
+        <pushbutton label="Send" name="MessageSend" width="100" />
+        <pushbutton label="Reply" name="MessageReply" width="100" />
+        <pushbutton label="Forward" name="MessageForward" width="100" />
+        <combobox label="Status" fieldname="Status" readonly="True" >
+            <combooption label="Received" value="0" />
+            <combooption label="Sent" value="1" />
+            <combooption label="Draft" value="2" />
+        </combobox>
+        <checkbox label="Request Read Notification" fieldname="RequestReadNotification" />
+    </line>
+    <tabs >
+        <tabpage label="Address" name="AddressPage" >
+            <line>
+                <column>
+                    <text label="From" fieldname="MailFrom" width="300" forecolor="#0000CC" readonly="True" />
+                    <text label="To..." fieldname="MailTo" pastewindow="PersonMailPasteWindow" width="300" forecolor="#006600" />
+                    <text label="CC" fieldname="MailCc" pastewindow="PersonMailPasteWindow" width="300" forecolor="#006600" />
+                    <text label="BCC" fieldname="MailBcc" pastewindow="PersonMailPasteWindow" width="300" forecolor="#808080" />
+                </column>
+                <column>
+                    <pushbutton label="Add Contact" name="addContact" />
+                </column>
+            </line>
+        </tabpage>
+        <tabpage label="Contacts" name="ContactsPage" >
+            <line>
+                <column>
+                    <line>
+                        <text label="Customer" fieldname="CustCode" pastewindow="CustomerPasteWindow" width="080" />
+                        <text label="" fieldname="CustName" readonly="True" />
+                    </line>
+                    <text label="To..." fieldname="MailTo" pastewindow="PersonMailPasteWindow" forecolor="#006600" />
+                    <text label="CC" fieldname="MailCc" pastewindow="PersonMailPasteWindow" forecolor="#006600" />
+                    <text label="BCC" fieldname="MailBcc" pastewindow="PersonMailPasteWindow" forecolor="#808080" />
+                </column>
+                <column>
+                    <radiobutton label="Entity" fieldname="EntityType" >
+                        <radiooption label="Customer" value="0" />
+                        <radiooption label="Supplier" value="1" />
+                        <radiooption label="Contact" value="2" />
+                    </radiobutton>
+                </column>
+            </line>
+        </tabpage>
+    </tabs>
+    <line>
+        <text label="Subject" fieldname="Subject" width="400" />
+        <pushbutton label="Generate Transaction" name="genTrans" />
+    </line>
+    <tabs >
+        <tabpage label="Message" name="MessagePage" >
+            <memo label="" fieldname="MessageBody" richtext="true" height="300" width="600" />
+        </tabpage>
+        <tabpage label="Font Code" name="FontCodePage" >
+            <memo label="" fieldname="MessageBody" richtext="false" height="300" width="600" />
+        </tabpage>
+        <tabpage label="Others" name="OthersPage" >
+            <line>
+                <column>
+                    <integer label="Mailing" fieldname="Mailing" />
+                    <checkbox label="Ignore Images" fieldname="IgnoreImages" />
+                    <integer label="Newsletter" fieldname="Newsletter" />
+                    <text label="Label" fieldname="Label" pastewindow="LabelPasteWindow" />
+                    <text label="Id Message" fieldname="Id" />
+                    <text label="In Answer to" fieldname="ParentId" width="080" />
+                    <text label="Thread Id" fieldname="ThreadId" width="080" />
+                    <text label="Origin Id" fieldname="OriginId" width="080" readonly="true" />
+                    <text label="Origin Record Name" fieldname="OriginRecordName" width="080" readonly="true" />
+                </column>
+                <column>
+                    <radiobutton label="Type of Message" fieldname="MessageType" >
+                        <radiooption label="Mail" value="0" />
+                        <radiooption label="SMS" value="1" />
+                    </radiobutton>
+                    <integer label="Number" fieldname="SerNr" pastewindow="SerialNrPasteWindow" />
+                    <date label="Date" fieldname="TransDate" />
+                    <time label="Time" fieldname="TransTime" />
+                    <text label="User" fieldname="User" width="080" readonly="True" />
+                    <line>
+                        <text label="Account" fieldname="MailCode" pastewindow="MailAccountPasteWindow" width="080" />
+                        <text label="" fieldname="Name" />
+                    </line>
+                </column>
+            </line>
+        </tabpage>
+    </tabs>
+    <line>
+        <checkbox label="Send" fieldname="SentFlag" />
+        <checkbox label="Read" fieldname="ReadFlag" />
+        <checkbox label="Processed" fieldname="ProcessedFlag" />
+    </line>
+    <action label="Import HTML Document" methodname="importHTML" />
+    <action label="Add Signature" methodname="addSignature" />
+</window>
+
+<window name="MailAccountWindow" recordname="MailAccount" title="Email Account" >
+    <text label="Code" fieldname="Code" />
+    <text label="User" fieldname="User" />
+    <text label="Address" fieldname="Mail" />
+    <text label="Send BCC Copy" fieldname="SendBCCCopy" />
+    <text label="Name" fieldname="Name" />
+    <text label="Comment" fieldname="Comment" />
+    <tabs >
+        <tabpage label="POP3 and IMAP" name="POP3Page" >
+            <text label="User Name" fieldname="POP3User" />
+            <text label="Password" fieldname="POP3Password" password="true" />
+            <text label="Server" fieldname="POP3Server" />
+            <radiobutton label="Server Type" fieldname="ServerType" >
+                <radiooption label="POP3" value="0" />
+                <radiooption label="IMAP" value="1" />
+            </radiobutton>
+            <integer label="Port" fieldname="POP3Port" />
+            <checkbox label="Delete from Server after downloading" fieldname="DelFromServer" />
+        </tabpage>
+        <tabpage label="SMTP" name="SMTPPage" >
+            <checkbox label="Requires Authentication" fieldname="SMTPReqAuth" />
+            <checkbox label="Requires SSL" fieldname="SMTPReqSSL" />
+            <text label="User Name" fieldname="SMTPUser" />
+            <text label="Password" fieldname="SMTPPassword" password="true" />
+            <text label="Server" fieldname="SMTPServer" />
+            <integer label="Port" fieldname="SMTPPort" />
+        </tabpage>
+        <tabpage label="Google" name="GooglePage" >
+            <text label="User Name" fieldname="GoogleUser" />
+            <text label="Password" fieldname="GooglePassword" password="true" />
+        </tabpage>
+        <tabpage label="Token" name="TokenPage" >
+            <text label="Token" fieldname="Token" />
+        </tabpage>
+        <tabpage label="Signature" name="SignaturePage" >
+            <checkbox label="Add Signature" fieldname="AddSignature" />
+            <text label="Name" fieldname="Name" />
+            <text label="Phone" fieldname="Phone" />
+            <text label="Cell Phone" fieldname="CellPhone" />
+            <line>
+                <text label="Address" fieldname="Address" />
+                <text label="City" fieldname="City" />
+            </line>
+            <line>
+                <text label="Province" fieldname="Province" />
+                <text label="Country" fieldname="Country" />
+            </line>
+            <text label="Company" fieldname="Company" />
+            <text label="Site" fieldname="Site" />
+            <text label="Other Data" fieldname="OtherData" />
+        </tabpage>
+    </tabs>
+</window>
+
+<window name="OfficeWindow" recordname="Office" title="Branch Office" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <text label="Name" fieldname="Name" />
+        <!-- Para los codigos cortos en las exportaciones de impuestos    -->
+        <text label="ShortCode" fieldname="ShortCode" />
+        <tabs >
+            <tabpage label="Address" name="AddressPage" >
+                <text label="Address" fieldname="Address" />
+                <text label="City" fieldname="City" pastewindow="CityPasteWindow" optionchars="2" />
+                <line>
+                    <text label="Province" fieldname="ProvinceCode" pastewindow="ProvincePasteWindow" width="080" />
+                    <text label="" fieldname="Province" readonly="True" />
+                    <text label="Country" fieldname="Country" pastewindow="CountryPasteWindow" />
+                </line>
+                <line>
+                    <text label="Locality Code" fieldname="LocalityCode" pastewindow="LocalityPasteWindow" width="50" />
+                    <text label="Locality" fieldname="Locality" readonly="True" />
+                </line>
+                <line>
+                    <text label="ZipCode" fieldname="ZipCode" pastewindow="ZipCodePasteWindow" width="65" />
+                    <pushbutton label="Obtain ZipCode" name="getZipCode" height="20" />
+                    <pushbutton label="View on Map" name="openWeb" height="20" getsfocus="false" />
+                </line>
+                <value label="Latitude" fieldname="Latitude" width="100" decimals="7" />
+                <value label="Longitude" fieldname="Longitude" width="100" decimals="7" />
+            </tabpage>
+            <tabpage label="Caracteristics" name="CaracteristicsPage" >
+                <text label="Payment Form" fieldname="PayMode" pastewindow="PayModePasteWindow" />
+                <integer label="Salesman" fieldname="Salesmen" />
+                <value label="Sales Objective" fieldname="SalesTarget" />
+                <text label="Branch Label" fieldname="BranchLabel" pastewindow="BranchLabelPasteWindow" />
+                <text label="Price Deal" fieldname="PriceDeal" pastewindow="PriceDealPasteWindow" />
+                <text label="Discount Deal" fieldname="DiscountDeal" pastewindow="DiscountDealPasteWindow" />
+            </tabpage>
+        </tabs>
+    </column>
+</window>
+
+<window name="OOCaseWindow" recordname="OOCase" title="OpenOrange Case" >
+    <pushbutton label="Show Cases" name="showListWindow" />
+    <line>
+        <integer label="Number" fieldname="No." />
+        <integer label="OpenOrange Case No." fieldname="OOCaseNr" readonly="true" />
+        <date label="Date" fieldname="TransDate" readonly="true" />
+        <checkbox label="Closed" fieldname="Closed" readonly="true" />
+    </line>
+    <text label="Subject" fieldname="Subject" width="600" />
+    <memo label="Message" fieldname="Message" width="600" />
+    <reportview name="CaseDetail" height="200" width="600" />
+</window>
+
+<window name="OOChatClientWindow" recordname="OOChatClient" title="Chat" >
+    <reportview name="MessageHistory" height="200" width="300" />
+    <text label="" fieldname="Message" height="80" width="300" />
+    <action label="send window link" methodname="sendWindowLink" shortcut="ctrl+l" />
+</window>
+
+<window name="OurSettingsWindow" recordname="OurSettings" title="Company Data" >
+    <column>
+        <text label="Legal Name" fieldname="Name" />
+        <text label="Commercial Name" fieldname="FantasyName" />
+        <text label="Ruc" fieldname="TaxRegNr" />
+        <tabs >
+            <tabpage label="Address" name="AddressPage" >
+                <text label="Address" fieldname="Address" />
+                <text label="City" fieldname="City" pastewindow="CityPasteWindow" optionchars="2" />
+                <line>
+                    <text label="Province" fieldname="ProvinceCode" pastewindow="ProvincePasteWindow" width="080" />
+                    <text label="" fieldname="Province" readonly="True" />
+                    <text label="Country" fieldname="Country" pastewindow="CountryPasteWindow" />
+                </line>
+                <line>
+                    <text label="Locality Code" fieldname="LocalityCode" pastewindow="LocalityPasteWindow" width="50" />
+                    <text label="Locality" fieldname="Locality" readonly="True" />
+                </line>
+                <line>
+                    <text label="ZipCode" fieldname="ZipCode" pastewindow="ZipCodePasteWindow" width="65" />
+                </line>
+                <text label="Phone" fieldname="Phone" />
+                <text label="Fax" fieldname="Fax" />
+                <text label="Email" fieldname="Email" />
+                <text label="Web Site" fieldname="WebSite" />
+                <date label="Start Activities" fieldname="StartDate" />
+                <text label="Legal Info" fieldname="LegalInfo" />
+            </tabpage>
+            <tabpage label="Other Data" name="OtherDataPage" >
+                <text label="Language" fieldname="Language" pastewindow="LanguagePasteWindow" />
+                <!-- should go to taxsettings <text label="VAT Reg.Nr." fieldname="TaxRegNr"/>    -->
+                <text label="Base Currency 1" fieldname="BaseCur1" pastewindow="CurrencyPasteWindow" />
+                <text label="Base Currency 2" fieldname="BaseCur2" pastewindow="CurrencyPasteWindow" />
+                <text label="Logo" fieldname="Logo" />
+                <text label="Financial Account" fieldname="FinAccount" pastewindow="FinAccountPasteWindow" />
+                <!-- this setting is totally lost here !! -->
+            </tabpage>
+            <tabpage label="Default" name="DefaultPage" >
+                <combobox label="Office is Determined by" fieldname="OfficeDeterminator" >
+                    <combooption label="User" value="0" />
+                    <combooption label="Computer" value="1" />
+                </combobox>
+                <text label="Branch" fieldname="DefOffice" pastewindow="OfficePasteWindow" />
+                <text label="Department" fieldname="DefDepartment" pastewindow="DepartmentPasteWindow" />
+                <text label="Stock Location" fieldname="DefStockDepo" pastewindow="StockDepoPasteWindow" />
+            </tabpage>
+        </tabs>
+    </column>
+</window>
+
+<window name="PasswordChangeWindow" recordname="PasswordChange" title="Cambio de Clave" >
+    <text label="Old Password" fieldname="OldPassword" password="true" md5="true" />
+    <text label="New Password" fieldname="NewPassword" password="true" md5="true" />
+    <text label="Repeat New Password" fieldname="NewPassword2" password="true" md5="true" />
+    <pushbutton label="Accept" name="Accept" />
+</window>
+
+<window name="PeriodWindow" recordname="Period" title="Standard Period" >
+    <text label="Code" fieldname="Code" />
+    <text label="Comment" fieldname="Comment" />
+    <date label="From Date" fieldname="FromDate" />
+    <date label="To Date" fieldname="ToDate" />
+</window>
+
+<window name="RecordCheckPolicyWindow" recordname="RecordCheckPolicy" title="Record Check Policy" >
+    <text label="Table" fieldname="Code" pastewindow="XPasteWindow" />
+    <checkbox label="Enabled" fieldname="Enabled" />
+    <tabs width="600" >
+        <tabpage label="Editable" name="EditablePage" >
+            <matrix fieldname="FieldsList" name="EditableMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Not Editable" fieldname="NotEditable" editor="checkbox" width="080" />
+            </matrix>
+        </tabpage>
+        <tabpage label="On Save" name="OnSavePage" >
+            <matrix fieldname="FieldsList" name="OnSaveMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Non Blank" fieldname="NonBlank" editor="checkbox" width="080" />
+                <matrixcolumn label="Don't save" fieldname="DontSave" editor="checkbox" width="080" />
+                <matrixcolumn label="Message" fieldname="Message" editor="text" width="150" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Uppercase/Lowercase" name="CasePage" >
+            <matrix fieldname="FieldsList" name="CaseMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Case" fieldname="Case" editor="combobox" width="100" >
+                    <combooption label="Normal" value="0" />
+                    <combooption label="Upper" value="1" />
+                    <combooption label="Lower" value="2" />
+                    <combooption label="Title" value="3" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Defaults" name="DefaultsPage" >
+            <matrix fieldname="FieldsList" name="DefaultsMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Default" fieldname="Default" editor="text" width="150" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Checks" name="CheckPage" >
+            <matrix fieldname="Checks" name="ChecksMatrix" >
+                <matrixcolumn label="Header Field" fieldname="HeaderField" editor="text" width="100" />
+                <matrixcolumn label="Row Field" fieldname="RowField" editor="text" width="100" />
+                <matrixcolumn label="Condition" fieldname="Condition" editor="combobox" width="150" >
+                    <combooption label="-" value="0" />
+                    <combooption label="Is Equal To" value="1" />
+                    <combooption label="Is Less Than" value="2" />
+                    <combooption label="Is More Than" value="3" />
+                    <combooption label="Is Equal or Less Than" value="4" />
+                    <combooption label="Is Equal or More Than" value="5" />
+                    <combooption label="Contains" value="6" />
+                    <combooption label="Not Equal To" value="7" />
+                </matrixcolumn>
+                <matrixcolumn label="Value" fieldname="Value" editor="text" width="100" />
+                <matrixcolumn label="Message" fieldname="Message" editor="text" width="150" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Transaction" name="TransactionPage" >
+            <checkbox label="Update Computer On Confirming" fieldname="UpdateComputerOnConfirming" />
+            <checkbox label="Update User On Confirming" fieldname="UpdateUserOnConfirming" />
+        </tabpage>
+    </tabs>
+</window>
+
+<window name="RecordCommunicationWindow" recordname="RecordCommunication" title="Record Communication" >
+    <integer label="No." fieldname="SerNr" />
+    <text label="Person" fieldname="Person" pastewindow="PersonPasteWindow" />
+    <text label="Name" fieldname="Name" />
+    <date label="Date" fieldname="TransDate" />
+    <time label="Time" fieldname="TransTime" />
+    <memo label="Message" fieldname="Message" />
+    <text label="Origin Type" fieldname="OriginRecord" />
+    <text label="Origin Id" fieldname="OriginId" />
+</window>
+
+<window name="SalesGroupWindow" recordname="SalesGroup" title="Sales Group" >
+    <text label="Code" fieldname="Code" />
+    <text label="Description" fieldname="Comment" />
+    <value label="Minimun GProfit Allowed" fieldname="MinGProfit" />
+    <matrix fieldname="Discounts" name="Discounts" >
+        <matrixcolumn label="Price Deal" fieldname="PriceDeal" editor="text" pastewindow="PriceDealPasteWindow" width="100" />
+        <matrixcolumn label="Item Group" fieldname="ItemGroup" editor="text" pastewindow="ItemGroupPasteWindow" width="100" />
+        <matrixcolumn label="Item" fieldname="ArtCode" editor="text" pastewindow="ItemPasteWindow" width="100" />
+        <matrixcolumn label="Max. %" fieldname="MaxPercent" editor="value" width="70" />
+    </matrix>
+</window>
+
+<window name="SchemaSettingsWindow" recordname="SchemaSettings" title="Schema Settings" >
+    <checkbox label="Enabled" fieldname="Enabled" />
+    <matrix fieldname="Schemas" name="SchemaSettingsRow" >
+        <matrixcolumn label="Table Name" fieldname="TableName" editor="text" />
+        <matrixcolumn label="Schema" fieldname="Schema" editor="text" />
+    </matrix>
+</window>
+
+<window name="SerNrControlWindow" recordname="SerNrControl" title="Serial Number Control" >
+    <text label="Transaction Type" fieldname="TransType" pastewindow="XPasteWindow" />
+    <line>
+        <column>
+            <integer label="From Number" fieldname="FromNr" />
+            <integer label="To Number" fieldname="ToNr" />
+        </column>
+        <column>
+            <date label="From Date" fieldname="FromDate" />
+            <date label="To Date" fieldname="ToDate" />
+        </column>
+    </line>
+    <text label="Description" fieldname="Comment" />
+    <combobox label="Invoice Type" fieldname="InvoiceType" >
+        <combooption label="None" value="-1" />
+        <combooption label="Invoice" value="0" />
+        <combooption label="Credit Note" value="1" />
+        <combooption label="Debit Note" value="2" />
+        <combooption label="All" value="3" />
+    </combobox>
+    <combobox label="Document Type" fieldname="DocType" >
+        <combooption label="Indistinct" value="-1" />
+        <combooption label="Invoice A" value="0" />
+        <combooption label="Invoice B" value="1" />
+        <combooption label="Invoice C" value="2" />
+        <combooption label="Invoice E" value="3" />
+        <combooption label="Invoice Z" value="4" />
+        <combooption label="Invoice M" value="5" />
+        <combooption label="Invoice L" value="6" />
+        <combooption label="Invoice I" value="7" />
+    </combobox>
+    <text label="Office" fieldname="Office" pastewindow="OfficePasteWindow" />
+    <integer label="Official POS Nr" fieldname="OfficialPOSNr" />
+    <text label="Computer" fieldname="Computer" pastewindow="ComputerPasteWindow" />
+    <text label="Form Type" fieldname="FormType" pastewindow="FormTypeDefPasteWindow" />
+    <checkbox label="Do not Generate Nominal Ledger Transaction" fieldname="NoGenTrans" />
+    <checkbox label="Is Transaction Manual" fieldname="IsManualTransaction" />
+    <action label="Check Last Numbers" methodname="checkLastNumbers" />
+</window>
+
+<window name="ShiftWindow" recordname="Shift" title="Shift" >
+    <line>
+        <column>
+            <text label="Code" fieldname="Code" />
+            <text label="Name" fieldname="Name" />
+            <time label="Start Time" fieldname="StartTime" />
+            <time label="End Time" fieldname="EndTime" />
+            <value label="Duration" fieldname="Duration" />
+            <text label="Branch" fieldname="Office" pastewindow="OfficePasteWindow" />
+            <text label="Previous" fieldname="PrevShift" pastewindow="ShiftPasteWindow" />
+            <text label="Next" fieldname="NextShift" pastewindow="ShiftPasteWindow" />
+            <text label="Department" fieldname="Department" pastewindow="DepartmentPasteWindow" />
+            <checkbox label="Don't Close with Open Transactions" fieldname="DontCloseWOpenTrans" />
+        </column>
+        <column>
+            <checkbox label="Sunday" fieldname="Sun" />
+            <checkbox label="Monday" fieldname="Mon" />
+            <checkbox label="Tuesday" fieldname="Tue" />
+            <checkbox label="Wednesday" fieldname="Wen" />
+            <checkbox label="Thursday" fieldname="Thu" />
+            <checkbox label="Friday" fieldname="Fri" />
+            <checkbox label="Saturday" fieldname="Sat" />
+            <radiobutton label="Type" fieldname="Type" >
+                <radiooption label="First" value="0" />
+                <radiooption label="Intermediate" value="1" />
+                <radiooption label="Last" value="2" />
+            </radiobutton>
+        </column>
+    </line>
+</window>
+
+<!-- esto debe estar aca porque se utiliza desde core -->
+<window name="SynchronizationSettingsWindow" recordname="SynchronizationSettings" title="Synchronization Settings" >
+    <column>
+        <integer label="Port" fieldname="SynchronizationPort" />
+        <checkbox label="Bloquear Registros sin token" fieldname="LockNonTokenRecords" />
+    </column>
+    <matrix fieldname="TokenRecords" name="TokenRecords" >
+        <matrixcolumn label="Tablas controladas" fieldname="TableName" editor="text" width="150" />
+    </matrix>
+    <action label="Preparar tablas para Token" methodname="prepareTokenRecords" />
+</window>
+
+<window name="SystemManagementWindow" recordname="SystemManagement" title="System Management" >
+    <tabs >
+        <tabpage label="settings.xml" name="settingsxmlPage" >
+            <line>
+                <text label="Server Type" fieldname="DbServer" />
+                <checkbox label="Log Queries" fieldname="LogQueries" />
+            </line>
+            <line>
+                <text label="Skin" fieldname="Skin" />
+                <combobox label="Language" fieldname="Language" >
+                    <combooption label="Spanish" value="es" />
+                    <combooption label="Portuguese" value="pt" />
+                    <combooption label="English" value="en" />
+                    <combooption label="Korean" value="ko" />
+                    <combooption label="Russian" value="ru" />
+                </combobox>
+            </line>
+            <text label="Web Folder" fieldname="WebDir" />
+            <text label="Default Company" fieldname="DefaultCompany" pastewindow="CompanyPasteWindow" />
+            <checkbox label="Automatic Tables Sync." fieldname="AutoSyncTables" />
+            <checkbox label="Beep on Queries" fieldname="BeepOnQueries" />
+            <matrix fieldname="Modules" name="Modules" >
+                <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="40" />
+                <matrixcolumn label="Directory" fieldname="Directory" editor="text" width="200" />
+                <matrixcolumn label="Level" fieldname="Level" editor="integer" width="50" />
+            </matrix>
+        </tabpage>
+        <tabpage label="company.data" name="companydataPage" >
+            <tabs >
+                <tabpage label="Code" name="CompanyPage" >
+                    <matrix fieldname="Companies" name="CompaniesMatrix" width="600" height="400" >
+                        <matrixcolumn label="Code" fieldname="Code" editor="text" width="150" />
+                        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+                        <matrixcolumn label="DBName" fieldname="DBName" editor="text" width="150" />
+                        <matrixcolumn label="Host" fieldname="Host" editor="text" width="150" />
+                        <matrixcolumn label="Port" fieldname="Port" editor="integer" />
+                        <matrixcolumn label="User" fieldname="User" editor="text" />
+                        <matrixcolumn label="Password" fieldname="Password" editor="text" width="150" password="true" />
+                        <matrixcolumn label="Application Type" fieldname="ApplicationType" editor="combobox" width="100" >
+                            <combooption label="to Data Base Server" value="0" />
+                            <combooption label="to OpenOrange Server" value="1" />
+                        </matrixcolumn>
+                        <matrixcolumn label="Default User" fieldname="DefaultUser" editor="text" width="150" />
+                        <matrixcolumn label="Default User Password" fieldname="DefaultUserPassword" editor="text" width="150" password="true" />
+                        <matrixcolumn label="Official Nr." fieldname="OfficialSerNr" editor="text" />
+                        <matrixcolumn label="internalId" fieldname="internalId" editor="integer" />
+                        <matrixcolumn label="attachFlag" fieldname="attachFlag" editor="integer" />
+                        <matrixcolumn label="syncVersion" fieldname="syncVersion" editor="integer" />
+                        <matrixcolumn label="DBEngine" fieldname="DBEngine" editor="combobox" width="200" >
+                            <combooption label="MySQL" value="0" />
+                            <combooption label="Oracle -not available yet-" value="3" />
+                            <combooption label="Embedded (SQLite -not available yet-" value="4" />
+                        </matrixcolumn>
+                    </matrix>
+                </tabpage>
+            </tabs>
+        </tabpage>
+    </tabs>
+    <action label="Load Companies" methodname="loadCompanies" />
+    <action label="Sort Companies" methodname="sortCompanies" />
+    <action label="Truncate Log File" methodname="truncateLogFile" />
+    <action label="Set Query Logging" methodname="setQueryLogging" />
+    <action label="Show Triggers" methodname="showStoreProcs" />
+    <action label="Refresh Triggers" methodname="loadTriggers" />
+</window>
+
+<window name="TaskWindow" recordname="Task" title="Task" >
+    <line>
+        <column>
+            <integer label="Number" fieldname="SerNr" />
+            <memo label="Description" fieldname="Comment" height="50" />
+            <checkbox label="Enabled" fieldname="Enabled" />
+            <checkbox label="Background" fieldname="Background" />
+            <checkbox label="Run on Time" fieldname="RunOnTime" />
+            <checkbox label="Running" fieldname="Running" readonly="True" />
+            <text label="Routine" fieldname="RoutineName" />
+            <text label="User" fieldname="User" pastewindow="UserPasteWindow" />
+            <combobox label="Type" fieldname="ScheduleMode" width="200" >
+                <combooption label="Daily" value="0" />
+                <combooption label="Weekly" value="1" />
+                <combooption label="Monthly" value="2" />
+                <combooption label="Continuous (From the Time it Begins)" value="3" />
+                <combooption label="By Intervals" value="4" />
+            </combobox>
+            <tabs >
+                <tabpage label="Last Run" name="LastRunPage" >
+                    <line>
+                        <date label="Start" fieldname="LastBeginRunDate" />
+                        <time label=" " fieldname="LastBeginRunTime" />
+                    </line>
+                    <line>
+                        <date label="End" fieldname="LastRunDate" />
+                        <time label=" " fieldname="LastRunTime" />
+                    </line>
+                </tabpage>
+            </tabs>
+        </column>
+        <column>
+            <tabs width="250" >
+                <tabpage label="Daily" name="DailyPage" >
+                    <time label="Time" fieldname="DayTime" />
+                </tabpage>
+            </tabs>
+            <tabs width="250" >
+                <tabpage label="Weekly" name="WeeklyPage" >
+                    <combobox label="Weekday" fieldname="WeekDay" >
+                        <combooption label="Monday" value="0" />
+                        <combooption label="Tuesday" value="1" />
+                        <combooption label="Wednesday" value="2" />
+                        <combooption label="Thursday" value="3" />
+                        <combooption label="Friday" value="4" />
+                        <combooption label="Saturday" value="5" />
+                        <combooption label="Sunday" value="6" />
+                    </combobox>
+                </tabpage>
+            </tabs>
+            <tabs width="250" >
+                <tabpage label="Monthly" name="MonthlyPage" >
+                    <integer label="Day of month" fieldname="MonthDay" />
+                </tabpage>
+            </tabs>
+            <tabs width="250" >
+                <tabpage label="By Intervals" name="ByIntervalsPage" >
+                    <time label="Run Every" fieldname="Interval" />
+                </tabpage>
+            </tabs>
+        </column>
+    </line>
+</window>
+
+<window name="TraceRecorderWindow" recordname="TraceRecorder" title="Trace Recorder" >
+    <line>
+        <date label="Date" fieldname="Date" />
+        <time label="Time" fieldname="Time" />
+        <text label="User" fieldname="User" />
+    </line>
+    <line>
+        <pushbutton label="Start" name="start" />
+        <pushbutton label="Next" name="next" />
+    </line>
+    <line>
+        <column>
+            <combobox label="" fieldname="FilenameFilter" width="300" >
+            </combobox>
+            <reportview name="Viewer" height="500" width="300" />
+        </column>
+        <column>
+            <text label="" fieldname="Filename" width="700" />
+            <reportview name="FileViewer" height="500" width="700" />
+        </column>
+    </line>
+</window>
+
+<window name="UserReportSpecWindow" recordname="UserReportSpec" title="User Report Specification" >
+    <text label="User" fieldname="User" pastewindow="UserPasteWindow" readonly="True" />
+    <!-- <text label="Report Name" fieldname="ReportName" readonly="True"/> -->
+    <text label="Label" fieldname="ReportLabel" readonly="True" />
+    <tabs >
+        <tabpage label="Fields" name="FieldPage">
+            <matrix fieldname="Fields" name="Fields" >
+                <!-- <matrixcolumn label="Field Name" fieldname="FieldName" editor="text" /> -->
+                <matrixcolumn label="Label" fieldname="FieldLabel" editor="text" width="150" />
+                <!-- <matrixcolumn label="Type" fieldname="Type" editor="text" readonly="True"/> -->
+                <matrixcolumn label="Value" fieldname="Value" editor="text" />
+                <matrixcolumn label="Template" fieldname="DateTemplate" editor="combobox" width="150" >
+                    <combooption label="Fixed Value" value="0" />
+                    <combooption label="Today" value="1" />
+                    <combooption label="Start of Month" value="2" />
+                    <combooption label="End of Month" value="3" />
+                    <combooption label="Start of Year" value="4" />
+                    <combooption label="End of Year" value="5" />
+                    <combooption label="Beginning of Time" value="6" />
+                </matrixcolumn>
+            </matrix>
+            <pushbutton label="Update" name="updateFieldSpecs" height="20" />
+        </tabpage>
+    </tabs>
+    <action label="Change Size" methodname="changeSize" />
+</window>
+
+<window name="VersionSettingsWindow" recordname="VersionSettings" title="Version Settings" >
+    <checkbox label="SVN Check Enabled" fieldname="CheckVersionEnabled" />
+    <checkbox label="New Updating Mode" fieldname="NewMode" />
+    <checkbox label="Script Dirs Check Enabled" fieldname="CheckScriptDirsEnabled" />
+    <checkbox label="Show Post Messages instead of Alerts" fieldname="ShowPostInsteadAlerts" />
+    <tabs >
+        <tabpage label="SVN" name="SVNPage" >
+            <matrix fieldname="Paths" name="Paths" >
+                <matrixcolumn label="Enabled" fieldname="Enabled" editor="checkbox" width="030" />
+                <matrixcolumn label="User" fieldname="User" editor="text" pastewindow="UserPasteWindow" />
+                <matrixcolumn label="Path" fieldname="Path" editor="text" width="200" />
+                <matrixcolumn label="Revision" fieldname="Revision" editor="integer" />
+                <matrixcolumn label="User Name" fieldname="SVNUserName" editor="text" />
+                <matrixcolumn label="Password" fieldname="SVNPassword" editor="text" />
+            </matrix>
+        </tabpage>
+        <tabpage label="ScriptDirs" name="ScriptDirsPage" >
+            <matrix fieldname="ScriptDirs" name="ScriptDirs" >
+                <matrixcolumn label="User" fieldname="User" editor="text" pastewindow="UserPasteWindow" />
+                <matrixcolumn label="ScriptDirs" fieldname="ScriptDir" editor="text" width="200" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Novelties" name="NoveltiesPage" >
+            <checkbox label="Disable" fieldname="NoveltiesDisabled" />
+            <text label="Users" fieldname="NoveltiesUsers" />
+            <matrix fieldname="Novelties" name="NoveltiesMatrix" >
+                <matrixcolumn label="User" fieldname="User" editor="text" />
+                <matrixcolumn label="Revision" fieldname="Revision" editor="integer" />
+            </matrix>
+        </tabpage>
+    </tabs>
+    <action label="Update" methodname="update" />
+</window>
+
+<window name="VersionUpdatesWindow" recordname="VersionUpdates" title="Version Updates" >
+    <text label="Code" fieldname="Code" />
+    <line>
+        <column>
+            <memo label="Description" fieldname="Description" />
+        </column>
+        <column>
+            <text label="User" fieldname="User" />
+            <line>
+                <date label="Date" fieldname="RunDate" />
+                <time label="Time" fieldname="RunTime" />
+            </line>
+            <line>
+                <checkbox label="Done" fieldname="Done" />
+                <checkbox label="Success" fieldname="Success" />
+            </line>
+        </column>
+    </line>
+    <memo label="Update Result" fieldname="UpdateResult" width="600" />
+</window>
+
+<window name="WindowStateWindow" recordname="WindowState" title="Window State" >
+    <text label="User" fieldname="User" pastewindow="UserPasteWindow" />
+    <text label="Window" fieldname="WindowName" />
+    <integer label="X" fieldname="X" />
+    <integer label="Y" fieldname="Y" />
+    <integer label="Width" fieldname="Width" />
+    <integer label="Height" fieldname="Height" />
+    <integer label="Column" fieldname="ColumnNr" />
+    <integer label="Sort" fieldname="Order" />
+</window>
+
+<window name="XWindow" recordname="X" title="Table" >
+    <column>
+        <text fieldname="Code" />
+        <text fieldname="Name" />
+    </column>
+</window>
+
+</interface>
