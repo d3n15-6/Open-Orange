@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="AccessGroupWindow" recordname="AccessGroup" title="Access Group" >
+    <text label="Code" fieldname="Code" />
+    <text label="Description" fieldname="Comment" />
+    <tabs >
+        <tabpage label="Modules" name="ModulesPage" >
+            <text label="Initial Module" fieldname="InitialModule" pastewindow="XPasteWindow" />
+            <radiobutton label="Default Access Type" fieldname="ModulesAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Modules" name="Modules" >
+                <matrixcolumn label="Module" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Denied" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Records" name="RecordsPage" >
+            <radiobutton label="Default Access Type" fieldname="RecordsAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Records" name="Records" >
+                <matrixcolumn label="Record" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="150" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="100" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Read Only" value="1" />
+                    <combooption label="View Only" value="2" />
+                    <combooption label="Denied" value="3" />
+                </matrixcolumn>
+                <matrixcolumn label="Visibility" fieldname="Visibility" editor="combobox" width="200" >
+                    <combooption label="All Records" value="0" />
+                    <combooption label="Only Office Records" value="1" />
+                    <combooption label="Only Department Records" value="3" />
+                    <combooption label="Only User Records" value="2" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Reports" name="ReportsPage" >
+            <radiobutton label="Default Access Type" fieldname="ReportsAccessType" >
+                <radiooption label="View, Print and Export" value="0" />
+                <radiooption label="View and Print" value="1" />
+                <radiooption label="View Only" value="2" />
+                <radiooption label="Denied" value="3" />
+            </radiobutton>
+            <matrix fieldname="Reports" name="Report" >
+                <matrixcolumn label="Report" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="View, Print and Export" value="0" />
+                    <combooption label="View and Print" value="1" />
+                    <combooption label="View Only" value="2" />
+                    <combooption label="Denied" value="3" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Routines" name="RoutinesPage" >
+            <radiobutton label="Default Access Type" fieldname="RoutinesAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Routines" name="Routines" >
+                <matrixcolumn label="Routine" fieldname="Name" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Denied" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Others" name="OthersPage" >
+            <radiobutton label="Default Access Type" fieldname="CustomsAccessType" >
+                <radiooption label="By Default Without Access" value="0" />
+                <radiooption label="By Default With Total Access" value="1" />
+            </radiobutton>
+            <matrix fieldname="Customs" name="Customs" >
+                <matrixcolumn label="Functionality" fieldname="Name" editor="text" pastewindow="FunctionalityPasteWindow" width="200" />
+                <matrixcolumn label="Access" fieldname="Access" editor="combobox" width="200" >
+                    <combooption label="Allowed" value="0" />
+                    <combooption label="Denied" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+    </tabs>
+    <action label="Users in Group" methodname="showUsers" />
+</window>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="MailListWindow" title="Messages" >
+    <matrix name="Mail" recordname="Mail" windowname="MailWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Date" fieldname="TransDate" editor="date" />
+        <matrixcolumn label="Time" fieldname="TransTime" editor="time" />
+        <matrixcolumn label="From" fieldname="MailFrom" editor="text" width="150" />
+        <matrixcolumn label="To" fieldname="MailTo" editor="text" width="150" />
+        <matrixcolumn label="Subject" fieldname="Subject" editor="text" width="200" />
+        <matrixcolumn label="Sent" fieldname="SentFlag" editor="checkbox" />
+        <matrixcolumn label="Mailing" fieldname="Mailing" editor="integer" />
+    </matrix>
+</listwindow>

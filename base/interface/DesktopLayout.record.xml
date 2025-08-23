@@ -1,0 +1,15 @@
+<record name="DesktopLayout" tablename="DesktopLayout" local="true" setting="true" >
+    <!-- fields order is important-->
+    <field name="ToolsBar_Visible" type="boolean" />
+    <field name="ToolsBar_Position" type="integer" />
+    <field name="ToolsBar_Offset" type="integer" />
+    <field name="PersonalBar_Visible" type="boolean" />
+    <field name="PersonalBar_Position" type="integer" />
+    <field name="PersonalBar_Offset" type="integer" />
+    <field name="SearchBar_Visible" type="boolean" />
+    <field name="SearchBar_Position" type="integer" />
+    <field name="SearchBar_Offset" type="integer" />
+    <field name="ModuleBar_Visible" type="boolean" />
+    <field name="ModuleBar_Position" type="integer" />
+    <field name="ModuleBar_Offset" type="integer" />
+</record>

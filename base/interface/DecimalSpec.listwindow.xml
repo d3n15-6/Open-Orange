@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="DecimalSpecListWindow" title="Decimal Definitions" >
+    <matrix name="DecimalSpecs" recordname="DecimalSpec" windowname="DecimalSpecWindow" >
+        <matrixcolumn label="Currency" fieldname="Currency" editor="text" />
+        <matrixcolumn label="Record" fieldname="RecordName" editor="text" />
+        <matrixcolumn label="Field" fieldname="FieldName" editor="text" />
+        <matrixcolumn label="Row Field" fieldname="RowFieldName" editor="text" />
+        <matrixcolumn label="View" fieldname="ViewDecimals" editor="integer" />
+        <matrixcolumn label="Round Off" fieldname="RoundDecimals" editor="integer" />
+    </matrix>
+</listwindow>

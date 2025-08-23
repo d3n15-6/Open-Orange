@@ -1,0 +1,7 @@
+<detailrecord name="DocumentSpecLabelsRow" tablename="DocumentSpecLabelsRow" >
+    <field name="Text" type="string" length="255" />
+    <field name="Style" type="string" length="20" linkto="FontStyle" />
+    <field name="Alignment" type="integer" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+</detailrecord>

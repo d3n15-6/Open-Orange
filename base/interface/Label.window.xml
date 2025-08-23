@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="LabelWindow" recordname="Label" title="Label" >
+    <tabs >
+        <tabpage label="General" name="GeneralPage" >
+            <text label="Code" fieldname="Code" />
+            <text label="Name" fieldname="Name" />
+            <text label="Type" fieldname="Type" pastewindow="LabelTypePasteWindow" />
+            <text label="Implies" fieldname="PathToRoot" pastewindow="LabelPasteWindow" />
+            <integer label="Level" fieldname="Level" />
+            <checkbox label="Closed" fieldname="Closed" />
+        </tabpage>
+        <tabpage label="Tree" name="TreePage" >
+            <listview name="ClassifierListView" height="400" width="400" />
+        </tabpage>
+    </tabs>
+</window>

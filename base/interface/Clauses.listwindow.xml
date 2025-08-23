@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="ClausesListWindow" title="Clauses" >
+    <matrix name="Clauses" recordname="Clauses" windowname="ClausesWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Type" fieldname="TextType" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="250" />
+    </matrix>
+</listwindow>

@@ -1,0 +1,6 @@
+<record name="Clauses" tablename="Clauses" inherits="Master" >
+    <field name="Code" type="string" length="15" />
+    <field name="TextType" type="string" length="20" />
+    <field name="Text" type="memo" />
+    <field name="Comment" type="string" length="30" />
+</record>

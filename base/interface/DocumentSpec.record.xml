@@ -1,0 +1,18 @@
+<record name="DocumentSpec" tablename="DocumentSpec" inherits="Master" >
+    <field name="Code" type="string" length="30" />
+    <field name="Fields" type="detail" recordname="DocumentSpecFieldsRow" />
+    <field name="Labels" type="detail" recordname="DocumentSpecLabelsRow" />
+    <field name="Rects" type="detail" recordname="DocumentSpecRectsRow" />
+    <field name="Images" type="detail" recordname="DocumentSpecImagesRow" />
+    <field name="RecordName" type="string" length="20" persistent="false" />
+    <field name="Height" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="RowsPerPage" type="integer" />
+    <field name="ScreenDpi" type="integer" />
+    <field name="Copies" type="integer" />
+    <field name="OfficialCopies" type="integer" />
+    <field name="DontShowPreview" type="boolean" />
+    <field name="DontShowPrinterDialog" type="boolean" />
+    <field name="PrePrinted" type="boolean" />
+    <field name="ShowOnlyOnePreview" type="boolean" />
+</record>

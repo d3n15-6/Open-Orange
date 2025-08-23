@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="FontStyleWindow" recordname="FontStyle" title="Font Styles" >
+    <text label="Code" fieldname="Code" />
+    <text label="Family" fieldname="Family" />
+    <integer label="Size" fieldname="Size" />
+    <text label="Colour" fieldname="Color" pastewindow="ItemColorPasteWindow" />
+    <checkbox label="Underline" fieldname="Underline" />
+    <checkbox label="Bold" fieldname="Bold" />
+    <combobox label="PDF Font" fieldname="PDFFont" width="200" >
+        <combooption label="Courier" value="Courier" />
+        <combooption label="Courier Bold" value="Courier-Bold" />
+        <combooption label="Courier Bold Italic" value="Courier-BoldOblique" />
+        <combooption label="Courier Italic" value="Courier-Oblique" />
+        <combooption label="Helvetica" value="Helvetica" />
+        <combooption label="Helvetica Bold" value="Helvetica-Bold" />
+        <combooption label="Helvetica Bold Italic" value="Helvetica-BoldOblique" />
+        <combooption label="Helvetica Italic" value="Helvetica-Oblique" />
+        <combooption label="Symbol" value="Symbol" />
+        <combooption label="Times Bold" value="Times-Bold" />
+        <combooption label="Times Bold Italic" value="Times-BoldItalic" />
+        <combooption label="Times Italic" value="Times-Italic" />
+        <combooption label="Times Roman" value="Times-Roman" />
+        <combooption label="Zapf Dingbats" value="ZapfDingbats" />
+        <combooption label="3 of 9 BarCode" value="barcode" />
+    </combobox>
+</window>

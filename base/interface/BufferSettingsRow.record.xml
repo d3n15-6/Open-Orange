@@ -1,0 +1,4 @@
+<detailrecord name="BufferSettingsRow" tablename="BufferSettingsRow" >
+    <field name="RecordName" type="string" length="200" />
+    <field name="Expiration" type="time" />
+</detailrecord>

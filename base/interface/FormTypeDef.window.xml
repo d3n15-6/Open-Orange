@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="FormTypeDefWindow" recordname="FormTypeDef" title="Form Type Definition" >
+    <text label="Code" fieldname="Code" pastewindow="XPasteWindow" />
+    <text label="Name" fieldname="Name" />
+    <matrix fieldname="FormTypeDefRows" name="FormTypeDefRows" >
+        <matrixcolumn label="Condition" fieldname="Condition" editor="text" width="200" />
+        <matrixcolumn label="Form Type" fieldname="FormType" editor="text" />
+    </matrix>
+</window>

@@ -1,0 +1,4 @@
+<record name="DocumentLink" tablename="DocumentLink" inherits="Master" >
+    <field name="Code" type="string" length="60" />
+    <field name="Specs" type="detail" recordname="DocumentLinkSpecRow" />
+</record>

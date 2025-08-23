@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="DocumentPrinterListWindow" title="Printers per Document" >
+    <matrix name="DocumentPrinter" recordname="DocumentPrinter" windowname="DocumentPrinterWindow" >
+        <matrixcolumn label="Document" fieldname="Code" editor="text" />
+        <matrixcolumn label="Printer" fieldname="PrinterName" editor="text" />
+    </matrix>
+</listwindow>

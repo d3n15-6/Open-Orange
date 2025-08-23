@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="CompanyWindow" recordname="Company" title="Company" >
+    <text label="Code" fieldname="Code" width="200" />
+    <text label="Description" fieldname="Name" width="200" />
+    <text label="Database" fieldname="DBName" width="200" />
+    <text label="Host" fieldname="Host" width="200" />
+    <line>
+        <integer label="Port" fieldname="Port" width="060" />
+        <pushbutton label="Check Connectivity" name="portscan" />
+    </line>
+    <line>
+        <column>
+        </column>
+        <column>
+            <label text="MySql Server Access" />
+        </column>
+    </line>
+    <text label="User" fieldname="User" width="200" />
+    <text label="Password" fieldname="Password" width="200" password="true" />
+    <line>
+        <column>
+        </column>
+        <column>
+            <label text="Default Database Access" />
+        </column>
+    </line>
+    <combobox label="Database Engine" fieldname="DBEngine" width="200" >
+        <combooption label="MySQL" value="0" />
+	<!--combooption value="1" label="PostgreSQL -not available yet-"/-->
+        <!--combooption value="2" label="ODBC -not available yet-"/-->
+        <combooption label="Oracle -not available yet-" value="3" />
+        <combooption label="Embedded (SQLite) -not available yet-" value="4" />
+    </combobox>
+    <text label="User" fieldname="DefaultUser" width="200" />
+    <text label="Password" fieldname="DefaultUserPassword" width="200" password="true" md5="true" />
+    <combobox label="Connections Type" fieldname="ApplicationType" width="200" >
+        <combooption label="to Data Base Server" value="0" />
+        <combooption label="to OpenOrange Server" value="1" />
+    </combobox>
+    <action label="Import Database from MySQL File" methodname="importDatabase" />
+    <action label="Create Database" methodname="createDatabase" />
+</window>

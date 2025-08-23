@@ -1,0 +1,12 @@
+<record name="Computer" tablename="Computer" inherits="Master" >
+    <field name="Code" type="string" length="5" />
+    <field name="Name" type="string" length="60" />
+    <field name="Office" type="string" linkto="Office" />
+    <field name="StockDepo" type="string" linkto="StockDepo" />
+    <field name="AllowedPayModes" type="set" length="60" linkto="PayMode" />
+    <field name="DefaultPayMode" type="string" linkto="PayMode" />
+    <field name="OfficialSerNr" type="string" length="20" />
+    <field name="DefaultBarTabType" type="string" length="5" />
+    <field name="EndOfDay" type="time" />
+    <field name="POSflag" type="boolean" />
+</record>

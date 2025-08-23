@@ -1,0 +1,4 @@
+<record name="Department" tablename="Department" inherits="Master" >
+    <field name="Code" type="string" length="10" />
+    <field name="DeptName" type="string" length="100" />
+</record>

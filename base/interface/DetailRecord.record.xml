@@ -1,0 +1,11 @@
+<record name="DetailRecord" tablename="DetailRecord" inherits="RawRecord" persistent="false" >
+    <field name="internalId" type="internalId" nullable="false" />
+    <field name="masterId" type="masterid" />
+    <field name="rowNr" type="integer" />
+    <field name="rowId" type="integer" />
+    <index name="masterId" >
+        <!-- this index can not be unique in order to allow inserting rows in the middle of a matrix-->
+        <indexfield fieldname="masterId" />
+        <indexfield fieldname="rowNr" />
+    </index>
+</record>

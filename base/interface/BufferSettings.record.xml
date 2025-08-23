@@ -1,0 +1,3 @@
+<record name="BufferSettings" tablename="BufferSettings" setting="true" >
+    <field name="Records" type="detail" recordname="BufferSettingsRow" />
+</record>

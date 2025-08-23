@@ -1,0 +1,16 @@
+<record name="AccessGroup" tablename="AccessGroup" inherits="Master" >
+    <field name="Code" type="string" length="5" />
+    <field name="Comment" type="string" length="60" />
+    <field name="InitialModule" type="string" length="60" />
+    <field name="SuperUser" type="boolean" />
+    <field name="ModulesAccessType" type="integer" />
+    <field name="RecordsAccessType" type="integer" />
+    <field name="ReportsAccessType" type="integer" />
+    <field name="RoutinesAccessType" type="integer" />
+    <field name="CustomsAccessType" type="integer" />
+    <field name="Modules" type="detail" recordname="AccessGroupModuleRow" />
+    <field name="Records" type="detail" recordname="AccessGroupRecordRow" />
+    <field name="Reports" type="detail" recordname="AccessGroupReportRow" />
+    <field name="Routines" type="detail" recordname="AccessGroupRoutineRow" />
+    <field name="Customs" type="detail" recordname="AccessGroupCustomRow" />
+</record>

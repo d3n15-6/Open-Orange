@@ -1,0 +1,7 @@
+<record name="Classifier" tablename="Classifier" inherits="Master" persistent="false" >
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="Type" type="string" length="20" />
+    <field name="Level" type="integer" />
+    <field name="PathToRoot" type="string" length="60" />
+</record>

@@ -1,0 +1,9 @@
+<record name="HelpDocumentation" tablename="HelpDocumentation" inherits="Master" persistent="False" >
+    <field name="Record" type="string" length="100" />
+    <field name="Field" type="string" length="100" />
+    <field name="Detail" type="memo" />
+    <field name="Company" type="string" length="100" />
+    <field name="CompanyUserCode" type="string" length="20" />
+    <field name="CompanyUserName" type="string" length="60" />
+    <field name="URL" type="string" length="200" />
+</record>

@@ -1,0 +1,6 @@
+<record name="LocalSettings" tablename="LocalSettings" local="true" setting="True" >
+    <field name="Computer" type="string" linkto="Computer" />
+    <field name="POSNet" type="string" length="10" />
+    <field name="UserMode" type="integer" />
+    <!-- no agregar mas campos a este registro, agregarlos en el record "Computer" -->
+</record>

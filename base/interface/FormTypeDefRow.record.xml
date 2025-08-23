@@ -1,0 +1,4 @@
+<detailrecord name="FormTypeDefRow" tablename="FormTypeDefRow" >
+    <field name="Condition" type="string" length="100" />
+    <field name="FormType" type="string" length="5" />
+</detailrecord>

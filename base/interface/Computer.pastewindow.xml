@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="ComputerPasteWindow" title="Computers" >
+    <matrix name="Computer" recordname="Computer" pastefieldname="Code" windowname="ComputerWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>

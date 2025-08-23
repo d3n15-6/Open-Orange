@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="LocalSettingsWindow" recordname="LocalSettings" title="Local Settings" >
+    <text label="Computer" fieldname="Computer" pastewindow="ComputerPasteWindow" />
+    <!-- NO FIELD SHOULD BE ADDED TO THIS REGISTER YOU CAN SET THEM IN THE COMPUTER REGISTER -->
+    <text label="POSNet" fieldname="POSNet" pastewindow="POSNetPasteWindow" />
+    <radiobutton label="User Mode" fieldname="UserMode" >
+        <radiooption label="Normal User" value="0" />
+        <radiooption label="Developer" value="1" />
+    </radiobutton>
+</window>

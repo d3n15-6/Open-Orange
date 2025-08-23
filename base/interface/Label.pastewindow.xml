@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="LabelPasteWindow" title="Label" >
+    <matrix name="Etiquetas" recordname="Label" pastefieldname="Code" windowname="LabelWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="220" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="250" />
+        <matrixcolumn label="Type" fieldname="Type" editor="text" />
+        <matrixcolumn label="Level" fieldname="Level" editor="integer" />
+    </matrix>
+</listwindow>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="DepartmentListWindow" title="Departments" >
+    <matrix name="Departamentos" recordname="Department" windowname="DepartmentWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="DeptName" editor="text" width="200" />
+    </matrix>
+</listwindow>

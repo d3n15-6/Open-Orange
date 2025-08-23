@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="HTMLRecordViewWindow" recordname="HTMLRecordView" title="HTML Template" >
+    <text label="Code" fieldname="Code" />
+    <text label="Apply to Record" fieldname="RecordName" pastewindow="GroupTablePasteWindow" />
+    <line>
+        <text label="Record" fieldname="RecordRow" pastewindow="GroupTablePasteWindow" />
+        <pushbutton label="Reload Fields" name="Reload" />
+    </line>
+    <matrix fieldname="HTMLRecordViewRows" name="HTMLRecordViewRows" >
+        <matrixcolumn label="Name" fieldname="Name" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="180" />
+    </matrix>
+    <line>
+        <text label="" fieldname="Clause" pastewindow="ClausesPasteWindow" />
+        <pushbutton label="Add Clause" name="AddClause" />
+    </line>
+    <tabs >
+        <tabpage label="Message" name="MessagePage" >
+            <memo label="" fieldname="Message" richtext="true" height="200" width="600" />
+        </tabpage>
+        <tabpage label="Font Code" name="FontCodePage" >
+            <memo label="" fieldname="Message" richtext="false" height="200" width="600" />
+        </tabpage>
+    </tabs>
+    <action label="Import HTML Document" methodname="importHTML" />
+</window>

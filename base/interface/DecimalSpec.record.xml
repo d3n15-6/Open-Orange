@@ -1,0 +1,8 @@
+<record name="DecimalSpec" tablename="DecimalSpec" inherits="Record" >
+    <field name="Currency" type="string" length="3" linkto="Currency" />
+    <field name="RecordName" type="string" length="60" />
+    <field name="FieldName" type="string" length="20" />
+    <field name="RowFieldName" type="string" length="20" />
+    <field name="ViewDecimals" type="integer" />
+    <field name="RoundDecimals" type="integer" />
+</record>

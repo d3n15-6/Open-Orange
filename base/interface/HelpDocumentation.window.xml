@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="HelpDocumentationWindow" recordname="HelpDocumentation" title="Help Documentation" >
+    <text label="URL" fieldname="URL" readonly="True" forecolor="blue" />
+    <text label="Company" fieldname="Company" readonly="True" />
+    <line>
+        <text label="User" fieldname="CompanyUserCode" width="060" readonly="True" />
+        <text label="" fieldname="CompanyUserName" width="182" readonly="True" />
+    </line>
+    <text label="Record" fieldname="Record" readonly="True" />
+    <text label="Fieldname" fieldname="Field" readonly="True" />
+    <memo label="Detail" fieldname="Detail" richtext="True" />
+    <pushbutton label="Send" name="Send" />
+</window>

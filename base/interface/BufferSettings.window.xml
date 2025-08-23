@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="BufferSettingsWindow" recordname="BufferSettings" title="BufferSettings" >
+    <matrix fieldname="Records" name="Records" >
+        <matrixcolumn label="Record Name" fieldname="RecordName" editor="text" pastewindow="XPasteWindow" width="100" />
+        <matrixcolumn label="Expiration" fieldname="Expiration" editor="time" />
+    </matrix>
+</window>

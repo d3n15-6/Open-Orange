@@ -1,0 +1,5 @@
+<record name="LogSettings" tablename="LogSettings" setting="True" >
+    <field name="Enabled" type="boolean" />
+    <field name="Records" type="detail" recordname="LogSettingsRecordRow" />
+    <field name="Reports" type="detail" recordname="LogSettingsReportRow" />
+</record>

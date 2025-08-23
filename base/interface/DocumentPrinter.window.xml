@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="DocumentPrinterWindow" recordname="DocumentPrinter" title="Printers per Document" >
+    <text label="Document" fieldname="Code" pastewindow="DocumentSpecPasteWindow" />
+    <text label="Printer" fieldname="PrinterName" />
+    <checkbox label="Open Printer Dialog" fieldname="OpenPrinterDialog" />
+</window>

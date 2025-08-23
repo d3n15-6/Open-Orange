@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="FunctionalityPasteWindow" title="Functionality" >
+    <matrix name="FunctionalityPasteWindow" recordname="X" pastefieldname="Code" windowname="" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="250" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="450" />
+    </matrix>
+</listwindow>

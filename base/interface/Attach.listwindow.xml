@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="AttachListWindow" title="Attachments" >
+    <matrix name="Attachs" recordname="Attach" windowname="AttachWindow" >
+        <matrixcolumn label="Record" fieldname="OriginRecordName" editor="text" />
+        <matrixcolumn label="Id" fieldname="OriginId" editor="text" />
+        <matrixcolumn label="Source" fieldname="SourceId" editor="text" />
+        <matrixcolumn label="Destination" fieldname="DestId" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" />
+        <matrixcolumn label="Type" fieldname="Type" editor="integer" />
+    </matrix>
+</listwindow>

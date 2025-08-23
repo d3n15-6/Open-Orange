@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="ClausesWindow" recordname="Clauses" title="Clauses" >
+    <text label="Code" fieldname="Code" />
+    <text label="Comment" fieldname="Comment" />
+    <text label="Type" fieldname="TextType" />
+    <memo label="Text" fieldname="Text" richtext="false" height="300" width="600" />
+</window>

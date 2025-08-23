@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="LabelListWindow" title="Labels" >
+    <matrix name="Etiquetas" recordname="Label" windowname="LabelWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Type" fieldname="Type" editor="text" />
+        <matrixcolumn label="Hierarchy" fieldname="PathToRoot" editor="text" />
+        <matrixcolumn label="Level" fieldname="Level" editor="integer" />
+    </matrix>
+</listwindow>

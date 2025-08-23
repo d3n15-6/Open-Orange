@@ -1,0 +1,6 @@
+<detailrecord name="DocumentSpecRectsRow" tablename="DocumentSpecRectsRow" >
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Height" type="integer" />
+</detailrecord>

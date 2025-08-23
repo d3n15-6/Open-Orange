@@ -1,0 +1,5 @@
+<detailrecord name="AccessGroupRecordRow" tablename="AccessGroupRecordRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+    <field name="Visibility" type="integer" />
+</detailrecord>

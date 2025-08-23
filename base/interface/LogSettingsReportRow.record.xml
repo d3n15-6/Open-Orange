@@ -1,0 +1,4 @@
+<detailrecord name="LogSettingsReportRow" tablename="LogSettingsReportRow" >
+    <field name="ReportName" type="string" length="50" />
+    <field name="VersionsQty" type="integer" />
+</detailrecord>

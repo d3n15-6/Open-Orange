@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="DecimalSpecWindow" recordname="DecimalSpec" title="Decimal Definition" >
+    <text label="Currency" fieldname="Currency" pastewindow="CurrencyPasteWindow" />
+    <text label="Record" fieldname="RecordName" />
+    <text label="Field" fieldname="FieldName" />
+    <text label="Matrix Field" fieldname="RowFieldName" />
+    <integer label="View Decimals" fieldname="ViewDecimals" />
+    <integer label="Round Off Decimals" fieldname="RoundDecimals" />
+</window>

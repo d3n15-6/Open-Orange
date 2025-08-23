@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="CurrencyWindow" recordname="Currency" title="Currency" >
+    <text label="Code" fieldname="Code" />
+    <text label="Name" fieldname="Name" />
+    <tabs >
+        <tabpage label="General" name="GeneralPage" >
+              <line>
+                  <integer label="Decimals" fieldname="RoundOff" />
+              </line>
+              <text label="Bank Notes" fieldname="BankNotes" />
+              <line>
+                  <column>
+                      <radiobutton label="Conversion to Currency" fieldname="ConvertionBase" >
+                          <radiooption label="Base 1" value="0" />
+                          <radiooption label="Base 2" value="1" />
+                      </radiobutton>
+                  </column>
+                  <column>
+                      <integer label="This Currency" fieldname="FrFactor" />
+                      <integer label="Base Currency" fieldname="ToFactor" />
+                  </column>
+              </line>    
+              <radiobutton label="Exchange Rate implies" fieldname="ConvertionDirection" >
+                  <radiooption label="Units of the base currency for one unit of this currency" value="0" />
+                  <radiooption label="Units of this currency for one unit of the base currency" value="1" />
+              </radiobutton>
+        </tabpage>
+        <tabpage label="Accountancy" name="AccountancyPage" >    
+              <text label="Accounts Receivable" fieldname="RecAcc" pastewindow="AccountPasteWindow" />    
+              <text label="Accounts Payable" fieldname="PayAcc" pastewindow="AccountPasteWindow" />
+              <text label="Local Legal Code" fieldname="TaxOfficeCode" />
+        </tabpage>
+    </tabs>
+
+</window>

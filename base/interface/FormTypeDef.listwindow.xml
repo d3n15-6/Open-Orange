@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="FormTypeDefListWindow" title="Form Type Definition" >
+    <matrix name="FormTypeDef" recordname="FormTypeDef" windowname="FormTypeDefWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+    </matrix>
+</listwindow>

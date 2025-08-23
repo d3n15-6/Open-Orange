@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="ComputerWindow" recordname="Computer" title="Computer" >
+    <text label="Code" fieldname="Code" />
+    <text label="Description" fieldname="Name" width="200" />
+    <tabs >
+        <tabpage label="Default" name="Defaults" >
+            <text label="Stock Location" fieldname="StockDepo" pastewindow="StockDepoPasteWindow" />
+            <text label="Office" fieldname="Office" pastewindow="OfficePasteWindow" />
+            <text label="Payment Form" fieldname="DefaultPayMode" pastewindow="PayModePasteWindow" />
+            <text label="BarTab Type" fieldname="DefaultBarTabType" pastewindow="BarTabTypePasteWindow" />
+        </tabpage>
+        <tabpage label="Other" name="Other" >
+            <text label="Allowed Payment Forms" fieldname="AllowedPayModes" pastewindow="PayModePasteWindow" />
+            <checkbox label="Point of Sale" fieldname="POSflag" />
+            <text label="Official Nr" fieldname="OfficialSerNr" />
+            <time label="End of Day" fieldname="EndOfDay" />
+            <checkbox label="Closed" fieldname="Closed" />
+        </tabpage>
+    </tabs>
+</window>

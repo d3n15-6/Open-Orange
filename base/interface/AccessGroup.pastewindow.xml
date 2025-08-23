@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="AccessGroupPasteWindow" title="User Access Groups" >
+    <matrix name="AccessGroups" recordname="AccessGroup" pastefieldname="Code" windowname="AccessGroupWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Comment" editor="text" width="250" />
+    </matrix>
+</listwindow>

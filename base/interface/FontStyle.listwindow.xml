@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="FontStyleListWindow" title="Font Styles" >
+    <matrix recordname="FontStyle" windowname="FontStyleWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" width="150" />
+        <matrixcolumn label="Family" fieldname="Family" editor="text" width="150" />
+        <matrixcolumn label="Size" fieldname="Size" editor="integer" width="100" />
+        <matrixcolumn label="Underline" fieldname="Underline" editor="combobox" width="60" >
+            <combooption label="Underline" value="1" />
+            <combooption label="" value="0" />
+        </matrixcolumn>
+        <matrixcolumn label="Bold" fieldname="Bold" editor="combobox" width="60" >
+            <combooption label="Bold" value="1" />
+            <combooption label="" value="0" />
+        </matrixcolumn>
+    </matrix>
+</listwindow>

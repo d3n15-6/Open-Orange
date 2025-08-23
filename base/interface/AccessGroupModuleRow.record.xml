@@ -1,0 +1,4 @@
+<detailrecord name="AccessGroupModuleRow" tablename="AccessGroupModuleRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+</detailrecord>

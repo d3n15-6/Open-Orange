@@ -1,0 +1,4 @@
+<detailrecord name="LogSettingsRecordRow" tablename="LogSettingsRecordRow" >
+    <field name="RecordName" type="string" length="50" />
+    <field name="Mode" type="integer" />
+</detailrecord>

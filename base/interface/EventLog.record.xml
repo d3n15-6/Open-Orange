@@ -1,0 +1,26 @@
+<record name="EventLog" tablename="EventLog" >
+    <field name="TableName" type="string" length="60" />
+    <field name="recInternalId" type="integer" />
+    <field name="oldId" type="string" length="100" />
+    <field name="newId" type="string" length="100" />
+    <field name="Action" type="integer" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="User" type="string" length="10" />
+    <field name="Data" type="memo" />
+    <index name="RecordDateTime" >
+        <indexfield fieldname="TableName" />
+        <indexfield fieldname="TransDate" />
+        <indexfield fieldname="TransTime" />
+    </index>
+    <index name="TableNameRecInternalId" >
+        <indexfield fieldname="TableName" />
+        <indexfield fieldname="recInternalId" />
+    </index>
+    <index name="NewIdDateTime" >
+        <indexfield fieldname="TableName" />
+        <indexfield fieldname="NewId" />
+        <indexfield fieldname="TransDate" />
+        <indexfield fieldname="TransTime" />
+    </index>
+</record>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="CurrencyListWindow" title="Currencies" >
+    <matrix name="Monedas" recordname="Currency" windowname="CurrencyWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="120" />
+    </matrix>
+</listwindow>

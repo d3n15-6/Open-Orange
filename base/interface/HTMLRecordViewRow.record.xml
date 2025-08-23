@@ -1,0 +1,4 @@
+<detailrecord name="HTMLRecordViewRow" tablename="HTMLRecordViewRow" persistent="False" >
+    <field name="Name" type="string" length="30" />
+    <field name="Comment" type="string" length="30" />
+</detailrecord>

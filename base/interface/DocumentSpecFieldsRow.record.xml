@@ -1,0 +1,10 @@
+<detailrecord name="DocumentSpecFieldsRow" tablename="DocumentSpecFieldsRow" >
+    <field name="Name" type="string" length="50" />
+    <field name="Style" type="string" length="20" linkto="FontStyle" />
+    <field name="Alignment" type="integer" />
+    <field name="Decimals" type="integer" />
+    <field name="X" type="integer" />
+    <field name="Y" type="integer" />
+    <field name="Width" type="integer" />
+    <field name="Type" type="integer" />
+</detailrecord>

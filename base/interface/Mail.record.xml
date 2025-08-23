@@ -1,0 +1,38 @@
+<record name="Mail" tablename="Mail" inherits="Numerable" >
+    <field name="User" type="string" length="10" />
+    <field name="Name" type="string" length="60" />
+    <field name="MailTo" type="string" length="100" />
+    <field name="MailCc" type="string" length="100" />
+    <field name="MailBcc" type="string" length="100" />
+    <field name="MailFrom" type="string" length="100" />
+    <field name="Subject" type="string" length="60" />
+    <field name="TransDate" type="date" />
+    <field name="TransTime" type="time" />
+    <field name="Status" type="integer" />
+    <field name="SentFlag" type="boolean" />
+    <field name="ReadFlag" type="boolean" />
+    <field name="ProcessedFlag" type="boolean" />
+    <field name="MessageBody" type="memo" />
+    <field name="RequestReadNotification" type="boolean" />
+    <field name="Mailing" type="integer" linkto="Mailing" />
+    <field name="EntityType" type="integer" />
+    <field name="Newsletter" type="integer" />
+    <field name="MailCode" type="string" length="20" />
+    <field name="Label" type="string" length="20" />
+    <field name="IgnoreImages" type="boolean" />
+    <field name="Invalid" type="boolean" />
+    <field name="MessageType" type="integer" />
+    <field name="CustCode" type="string" length="20" /> <!-- DO NOT USE linkto="Customer" BECAUSE GOES TO Suppliers as well -->
+    <field name="CustName" type="string" length="60" />
+    <!-- Campos para seguimiento de mails -->
+    <field name="Id" type="string" length="100" />
+    <field name="ParentId" type="string" length="100" />
+    <field name="ThreadId" type="string" length="100" />
+    <field name="OriginRecordName" type="string" length="100" />
+    <field name="OriginId" type="string" length="100" />
+    <!-- Campos para el linkeo con otros registros de OpenOrange-->
+    <index name="Origin" >
+        <indexfield fieldname="OriginRecordName" />
+        <indexfield fieldname="OriginId" />
+    </index>
+</record>

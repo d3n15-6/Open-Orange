@@ -1,0 +1,4 @@
+<detailrecord name="AccessGroupCustomRow" tablename="AccessGroupCustomRow" >
+    <field name="Name" type="string" length="60" />
+    <field name="Access" type="integer" />
+</detailrecord>

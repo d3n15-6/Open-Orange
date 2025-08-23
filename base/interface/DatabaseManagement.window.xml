@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="DatabaseManagementWindow" recordname="DatabaseManagement" title="Database Management" >
+    <tabs name="Options" >
+        <tabpage label="Password Change" name="PasswordChangePage" >
+            <checkbox label="Enabled" fieldname="DBPasswordAdminEnabled" />
+            <label text="Old" />
+            <text label="User" fieldname="OldDBUser" />
+            <text label="Password" fieldname="OldDBPassword" password="true" />
+            <label text="New" />
+            <text label="User" fieldname="NewDBUser" />
+            <text label="Password" fieldname="NewDBPassword" password="true" />
+            <pushbutton label="Create/Update User and Password" name="createNewDBUser" />
+            <date label="Expiration Date" fieldname="OldDBPasswordExpirationDate" />
+            <line>
+                <integer label="Counter" fieldname="PasswordChangesQty" readonly="true" />
+                <pushbutton label="Reset" name="resetPasswordChangesQty" />
+            </line>
+        </tabpage>
+        <tabpage label="Export Database" name="ExportPage" >
+            <checkbox label="HexBlob" fieldname="HexBlob" />
+            <checkbox label="DropDatabase" fieldname="AddDropDatabase" />
+            <checkbox label="DropTable" fieldname="AddDropTable" />
+            <text label="IgnoreTable" fieldname="IgnoreTable" />
+            <line>
+                <text label="MySQL Path" fieldname="MySQLPath" />
+                <pushbutton label="Find" name="getMySQLPath" height="20" />
+            </line>
+            <line>
+                <text label="Backup Path" fieldname="BackupPath" />
+                <pushbutton label="..." name="getExportFolder" height="20" />
+            </line>
+            <pushbutton label="Export" name="exportDatabase" width="150" />
+            <memo label="Output" fieldname="ExportOutput" richtext="false" />
+        </tabpage>
+        <tabpage label="Import Database" name="ImportPage" >
+            <line>
+                <text label="Backup File" fieldname="BackupFile" />
+                <pushbutton label="..." name="getBackupFile" height="20" />
+            </line>
+            <checkbox label="Import Into This Database" fieldname="ImportIntoThisDB" />
+            <line>
+                <text label="Host" fieldname="ImpHost" />
+                <integer label="Port" fieldname="ImpPort" />
+            </line>
+            <text label="Database Name" fieldname="ImpDBName" />
+            <text label="User" fieldname="ImpUser" />
+            <text label="Password" fieldname="ImpPassword" password="True" />
+            <checkbox label="Fix MySQL Backup" fieldname="FixMySQLBackup" />
+            <pushbutton label="Import" name="importDatabase" width="150" />
+        </tabpage>
+        <tabpage label="Parameters" name="ParametersPage" >
+            <integer label="MySQL Max Allowed Packet" fieldname="MySQLMaxAllowedPacket" />
+        </tabpage>
+    </tabs>
+</window>

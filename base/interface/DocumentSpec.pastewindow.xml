@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="DocumentSpecPasteWindow" title="Document" >
+    <matrix recordname="DocumentSpec" pastefieldname="Code" windowname="DocumentSpecWindow" >
+        <matrixcolumn label="Document" fieldname="Code" editor="text" width="150" />
+    </matrix>
+</listwindow>

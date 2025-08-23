@@ -1,0 +1,8 @@
+<detailrecord name="DocumentLinkSpecRow" tablename="DocumentLinkSpecRow" >
+    <field name="DocumentSpecCode" type="string" length="30" linkto="DocumentSpec" />
+    <field name="Office" type="string" length="10" linkto="Office" />
+    <field name="Computer" type="string" length="10" />
+    <field name="Attribute" type="string" length="20" />
+    <field name="ClassName" type="string" length="60" />
+    <field name="Conditions" type="string" length="100" />
+</detailrecord>

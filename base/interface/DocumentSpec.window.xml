@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="DocumentSpecWindow" recordname="DocumentSpec" title="Document" >
+    <line>
+        <text label="Code" fieldname="Code" />
+    </line>
+    <pushbutton label="Add fields" name="addDocFields" height="20" />
+    <tabs >
+        <tabpage label="Fields" name="FieldsPage" >
+            <matrix fieldname="Fields" name="Fields" height="400" >
+                <matrixcolumn label="Fieldname" fieldname="Name" editor="text" />
+                <matrixcolumn label="Style" fieldname="Style" editor="text" pastewindow="FontStylePasteWindow" />
+                <matrixcolumn label="Alignment" fieldname="Alignment" editor="combobox" >
+                    <combooption label="Left" value="0" />
+                    <combooption label="Centered" value="1" />
+                    <combooption label="Right" value="2" />
+                </matrixcolumn>
+                <matrixcolumn label="Decimals" fieldname="Decimals" editor="integer" />
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+                <matrixcolumn label="Width" fieldname="Width" editor="integer" />
+                <matrixcolumn label="Type" fieldname="Type" editor="combobox" >
+                    <combooption label="Header" value="0" />
+                    <combooption label="Matrix" value="1" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Labels" name="LabelsPage" >
+            <matrix fieldname="Labels" name="Labels" height="400" >
+                <matrixcolumn label="Text" fieldname="Text" editor="text" />
+                <matrixcolumn label="Style" fieldname="Style" editor="text" pastewindow="FontStylePasteWindow" />
+                <matrixcolumn label="Alignment" fieldname="Alignment" editor="combobox" >
+                    <combooption label="Left" value="0" />
+                    <combooption label="Centered" value="1" />
+                    <combooption label="Right" value="2" />
+                </matrixcolumn>
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Rectangle" name="RectanglePage" >
+            <matrix fieldname="Rects" name="Rects" height="400" >
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+                <matrixcolumn label="Width" fieldname="Width" editor="integer" />
+                <matrixcolumn label="Height" fieldname="Height" editor="integer" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Images" name="ImagesPage" >
+            <matrix fieldname="Images" name="Images" height="400" >
+                <matrixcolumn label="File" fieldname="Filename" editor="text" />
+                <matrixcolumn label="X" fieldname="X" editor="integer" />
+                <matrixcolumn label="Y" fieldname="Y" editor="integer" />
+                <matrixcolumn label="Width" fieldname="Width" editor="integer" />
+                <matrixcolumn label="Height" fieldname="Height" editor="integer" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Other" name="OtherInfoPage" >
+            <line>
+                <column>
+                    <checkbox label="Don't Show Print Preview" fieldname="DontShowPreview" />
+                    <checkbox label="Don't Show Printer Dialog" fieldname="DontShowPrinterDialog" />
+                    <checkbox label="Show Only One Preview" fieldname="ShowOnlyOnePreview" />
+                    <checkbox label="Pre-Printed" fieldname="PrePrinted" />
+                    <radiobutton label="Official Copies" fieldname="OfficialCopies" >
+                        <radiooption label="Only Original" value="1" />
+                        <radiooption label="Original and Duplicate Copies" value="2" />
+                        <radiooption label="Triplicate Copies" value="3" />
+                        <radiooption label="Quadruple Copies" value="4" />
+                    </radiobutton>
+                </column>
+                <column>
+                    <integer label="Number of Copies per Official Copy" fieldname="Copies" />
+                    <integer label="Screen DPI" fieldname="ScreenDpi" />
+                    <integer label="Width" fieldname="Width" />
+                    <integer label="Height" fieldname="Height" />
+                    <integer label="Rows per Page" fieldname="RowsPerPage" />
+                </column>
+            </line>
+        </tabpage>
+    </tabs>
+    <action label="Move Up" methodname="moveUp" shortcut="CTRL+SHIFT+W" />
+    <action label="Move Right" methodname="moveLeft" shortcut="CTRL+SHIFT+A" />
+    <action label="Move Left" methodname="moveRight" shortcut="CTRL+SHIFT+D" />
+    <action label="Move Down" methodname="moveDown" shortcut="CTRL+SHIFT+S" />
+    <action label="Increase Width" methodname="moreWidth" shortcut="CTRL+SHIFT+X" />
+    <action label="Decrease Width" methodname="lessWidth" shortcut="CTRL+SHIFT+Z" />
+    <action label="Increase Height" methodname="moreHeight" shortcut="CTRL+SHIFT+C" />
+    <action label="Decrease Height" methodname="lessHeight" shortcut="CTRL+SHIFT+V" />
+    <action label="Align Left" methodname="alignLeft" shortcut="CTRL+SHIFT+Q" />
+    <action label="Center" methodname="alignCenter" shortcut="CTRL+SHIFT+T" />
+    <action label="Align Right" methodname="alignRight" shortcut="CTRL+SHIFT+E" />
+    <action label="Scale" methodname="scale" />
+</window>

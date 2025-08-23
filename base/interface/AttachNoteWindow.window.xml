@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="AttachNoteWindow" recordname="Attach" title="Attach Note" >
+    <text label="Title" fieldname="Comment" width="300" />
+    <memo label="Text" fieldname="Value" height="200" width="400" />
+    <integer label="Number" fieldname="internalId" readonly="True" />
+    <line>
+        <pushbutton label="Cancel" name="cancelNote" width="100" />
+        <pushbutton label="OK" name="okNote" width="100" />
+    </line>
+</window>

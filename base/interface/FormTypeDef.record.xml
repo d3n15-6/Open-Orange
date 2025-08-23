@@ -1,0 +1,5 @@
+<record name="FormTypeDef" tablename="FormTypeDef" inherits="Master" >
+    <field name="Code" type="string" length="50" />
+    <field name="Name" type="string" length="30" />
+    <field name="FormTypeDefRows" type="detail" recordname="FormTypeDefRow" />
+</record>

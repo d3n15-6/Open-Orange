@@ -1,0 +1,9 @@
+<record name="FontStyle" tablename="FontStyle" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Family" type="string" length="20" />
+    <field name="Size" type="integer" />
+    <field name="Color" type="string" length="20" />
+    <field name="Underline" type="boolean" />
+    <field name="Bold" type="boolean" />
+    <field name="PDFFont" type="string" length="30" />
+</record>

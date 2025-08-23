@@ -1,0 +1,3 @@
+<record name="LabelType" tablename="LabelType" inherits="Master" >
+    <field name="Name" type="string" length="60" />
+</record>

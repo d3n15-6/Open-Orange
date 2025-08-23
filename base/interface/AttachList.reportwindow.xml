@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="RecordName" type="string" length="30" />
+    </reportrecord>
+    <reportwindow name="AttachListReportWindow" title="Attach List" >
+        <text label="Record Name" fieldname="RecordName" pastewindow="XPasteWindow" />
+    </reportwindow>
+</reportuserinput>

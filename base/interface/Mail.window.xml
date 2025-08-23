@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="MailWindow" recordname="Mail" title="Message" >
+    <line>
+        <pushbutton label="Send" name="MessageSend" width="100" />
+        <pushbutton label="Reply" name="MessageReply" width="100" />
+        <pushbutton label="Forward" name="MessageForward" width="100" />
+        <combobox label="Status" fieldname="Status" readonly="True" >
+            <combooption label="Received" value="0" />
+            <combooption label="Sent" value="1" />
+            <combooption label="Draft" value="2" />
+        </combobox>
+        <checkbox label="Request Read Notification" fieldname="RequestReadNotification" />
+    </line>
+    <tabs >
+        <tabpage label="Address" name="AddressPage" >
+            <line>
+                <column>
+                    <text label="From" fieldname="MailFrom" width="300" forecolor="#0000CC" readonly="True" />
+                    <text label="To..." fieldname="MailTo" pastewindow="PersonMailPasteWindow" width="300" forecolor="#006600" />
+                    <text label="CC" fieldname="MailCc" pastewindow="PersonMailPasteWindow" width="300" forecolor="#006600" />
+                    <text label="BCC" fieldname="MailBcc" pastewindow="PersonMailPasteWindow" width="300" forecolor="#808080" />
+                </column>
+                <column>
+                    <pushbutton label="Add Contact" name="addContact" />
+                </column>
+            </line>
+        </tabpage>
+        <tabpage label="Contacts" name="ContactsPage" >
+            <line>
+                <column>
+                    <line>
+                        <text label="Customer" fieldname="CustCode" pastewindow="CustomerPasteWindow" width="080" />
+                        <text label="" fieldname="CustName" readonly="True" />
+                    </line>
+                    <text label="To..." fieldname="MailTo" pastewindow="PersonMailPasteWindow" forecolor="#006600" />
+                    <text label="CC" fieldname="MailCc" pastewindow="PersonMailPasteWindow" forecolor="#006600" />
+                    <text label="BCC" fieldname="MailBcc" pastewindow="PersonMailPasteWindow" forecolor="#808080" />
+                </column>
+                <column>
+                    <radiobutton label="Entity" fieldname="EntityType" >
+                        <radiooption label="Customer" value="0" />
+                        <radiooption label="Supplier" value="1" />
+                        <radiooption label="Contact" value="2" />
+                    </radiobutton>
+                </column>
+            </line>
+        </tabpage>
+    </tabs>
+    <line>
+        <text label="Subject" fieldname="Subject" width="400" />
+        <pushbutton label="Generate Transaction" name="genTrans" />
+    </line>
+    <tabs >
+        <tabpage label="Message" name="MessagePage" >
+            <memo label="" fieldname="MessageBody" richtext="true" height="300" width="600" />
+        </tabpage>
+        <tabpage label="Font Code" name="FontCodePage" >
+            <memo label="" fieldname="MessageBody" richtext="false" height="300" width="600" />
+        </tabpage>
+        <tabpage label="Others" name="OthersPage" >
+            <line>
+                <column>
+                    <integer label="Mailing" fieldname="Mailing" />
+                    <checkbox label="Ignore Images" fieldname="IgnoreImages" />
+                    <integer label="Newsletter" fieldname="Newsletter" />
+                    <text label="Label" fieldname="Label" pastewindow="LabelPasteWindow" />
+                    <text label="Id Message" fieldname="Id" />
+                    <text label="In Answer to" fieldname="ParentId" width="080" />
+                    <text label="Thread Id" fieldname="ThreadId" width="080" />
+                    <text label="Origin Id" fieldname="OriginId" width="080" readonly="true" />
+                    <text label="Origin Record Name" fieldname="OriginRecordName" width="080" readonly="true" />
+                </column>
+                <column>
+                    <radiobutton label="Type of Message" fieldname="MessageType" >
+                        <radiooption label="Mail" value="0" />
+                        <radiooption label="SMS" value="1" />
+                    </radiobutton>
+                    <integer label="Number" fieldname="SerNr" pastewindow="SerialNrPasteWindow" />
+                    <date label="Date" fieldname="TransDate" />
+                    <time label="Time" fieldname="TransTime" />
+                    <text label="User" fieldname="User" width="080" readonly="True" />
+                    <line>
+                        <text label="Account" fieldname="MailCode" pastewindow="MailAccountPasteWindow" width="080" />
+                        <text label="" fieldname="Name" />
+                    </line>
+                </column>
+            </line>
+        </tabpage>
+    </tabs>
+    <line>
+        <checkbox label="Send" fieldname="SentFlag" />
+        <checkbox label="Read" fieldname="ReadFlag" />
+        <checkbox label="Processed" fieldname="ProcessedFlag" />
+    </line>
+    <action label="Import HTML Document" methodname="importHTML" />
+    <action label="Add Signature" methodname="addSignature" />
+</window>

@@ -1,0 +1,13 @@
+<record name="Addressable" tablename="Addressable" inherits="Master" persistent="False" >
+    <field name="Address" type="string" length="60" />
+    <field name="City" type="string" linkto="City" />
+    <field name="Country" type="string" linkto="Country" />
+    <field name="Locality" type="string" length="60" />
+    <field name="LocalityCode" type="string" linkto="Locality" />
+    <field name="Phone" type="string" length="30" />
+    <field name="Province" type="string" length="60" />
+    <field name="ProvinceCode" type="string" linkto="Province" />
+    <field name="ZipCode" type="string" length="20" />
+    <field name="Latitude" type="value" />
+    <field name="Longitude" type="value" />
+</record>

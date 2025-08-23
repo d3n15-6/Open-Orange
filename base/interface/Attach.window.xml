@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="AttachWindow" recordname="Attach" title="Attachments" >
+    <text label="Origin Record Name" fieldname="OriginRecordName" />
+    <text label="Origin" fieldname="OriginId" />
+    <text label="Source" fieldname="SourceId" />
+    <text label="Destination" fieldname="DestId" />
+    <date label="Date" fieldname="TransDate" />
+    <text label="Comment" fieldname="Comment" />
+    <memo label="Value" fieldname="Value" />
+    <radiobutton label="Link Type" fieldname="Type" >
+        <radiooption label="File" value="0" />
+        <radiooption label="Record" value="1" />
+        <radiooption label="Embedded Image" value="2" />
+        <radiooption label="Note" value="3" />
+    </radiobutton>
+</window>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="CompanyPasteWindow" title="Company" >
+    <matrix name="Empresas" recordname="Company" pastefieldname="Code" windowname="CompanyWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Description" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Data Base Name" fieldname="DBName" editor="text" width="100" />
+        <matrixcolumn label="Host" fieldname="Host" editor="text" width="100" />
+        <matrixcolumn label="Port" fieldname="Port" editor="text" width="060" />
+    </matrix>
+</listwindow>

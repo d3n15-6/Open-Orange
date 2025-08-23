@@ -1,0 +1,8 @@
+<record name="HTMLRecordView" tablename="HTMLRecordView" inherits="Master" >
+    <field name="RecordName" type="string" length="60" />
+    <field name="Clause" type="string" length="15" persistent="false" />
+    <field name="Field" type="integer" />
+    <field name="Message" type="memo" />
+    <field name="RecordRow" type="string" length="60" persistent="false" />
+    <field name="HTMLRecordViewRows" type="detail" recordname="HTMLRecordViewRow" persistent="false" />
+</record>

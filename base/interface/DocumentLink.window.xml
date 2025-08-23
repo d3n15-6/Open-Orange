@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="DocumentLinkWindow" recordname="DocumentLink" title="Document Link" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <tabs name="DocumentsTab" >
+            <tabpage label="New" name="NewDocumentsPage" >
+                <matrix fieldname="Specs" name="NewMatrix" >
+                    <matrixcolumn label="Code" fieldname="DocumentSpecCode" editor="text" pastewindow="DocumentSpecPasteWindow" width="100" />
+                    <matrixcolumn label="Class" fieldname="ClassName" editor="text" />
+                    <matrixcolumn label="Conditions" fieldname="Conditions" editor="text" width="250" />
+                </matrix>
+            </tabpage>
+            <tabpage label="Old" name="OldDocumentsPage" >
+                <matrix fieldname="Specs" name="OldMatrix" >
+                    <matrixcolumn label="Code" fieldname="DocumentSpecCode" editor="text" pastewindow="DocumentSpecPasteWindow" width="150" />
+                    <matrixcolumn label="Office" fieldname="Office" editor="text" pastewindow="OfficePasteWindow" />
+                    <matrixcolumn label="Computer" fieldname="Computer" editor="text" />
+                    <matrixcolumn label="Attribute" fieldname="Attribute" editor="text" />
+                    <matrixcolumn label="Class Name" fieldname="ClassName" editor="text" width="140" />
+                </matrix>
+            </tabpage>
+        </tabs>
+    </column>
+</window>

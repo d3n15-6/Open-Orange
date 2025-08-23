@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="LogSettingsWindow" recordname="LogSettings" title="Record Logging Options" >
+    <checkbox label="Enabled" fieldname="Enabled" />
+    <tabs >
+        <tabpage label="Records" name="RecordsPage" >
+            <matrix fieldname="Records" >
+                <matrixcolumn label="Record" fieldname="RecordName" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Mode" fieldname="Mode" editor="combobox" width="250" >
+                    <combooption label="No Logging" value="0" />
+                    <combooption label="Simple" value="1" />
+                    <combooption label="Version Logging" value="2" />
+                </matrixcolumn>
+            </matrix>
+        </tabpage>
+        <tabpage label="Reports" name="ReportsPage" >
+            <matrix fieldname="Reports" >
+                <matrixcolumn label="Report" fieldname="ReportName" editor="text" pastewindow="XPasteWindow" width="200" />
+                <matrixcolumn label="Number of Versions" fieldname="VersionsQty" editor="integer" width="100" />
+            </matrix>
+        </tabpage>
+    </tabs>
+</window>

@@ -1,0 +1,25 @@
+<record name="DatabaseManagement" tablename="DatabaseManagement" setting="true" >
+    <field name="DBPasswordAdminEnabled" type="boolean" />
+    <field name="OldDBUser" type="string" length="30" />
+    <field name="OldDBPassword" type="string" length="30" />
+    <field name="NewDBUser" type="string" length="30" />
+    <field name="NewDBPassword" type="string" length="30" />
+    <field name="OldDBPasswordExpirationDate" type="date" />
+    <field name="PasswordChangesQty" type="integer" />
+    <field name="HexBlob" type="boolean" />
+    <field name="AddDropDatabase" type="boolean" />
+    <field name="AddDropTable" type="boolean" />
+    <field name="IgnoreTable" type="string" length="100" />
+    <field name="BackupPath" type="string" length="200" />
+    <field name="FixMySQLBackup" type="boolean" />
+    <field name="ExportOutput" type="memo" persistent="false" />
+    <field name="BackupFile" type="string" length="200" />
+    <field name="ImportIntoThisDB" type="boolean" />
+    <field name="ImpDBName" type="string" length="30" />
+    <field name="ImpHost" type="string" length="30" />
+    <field name="ImpPort" type="integer" />
+    <field name="ImpUser" type="string" length="30" />
+    <field name="ImpPassword" type="string" length="30" />
+    <field name="MySQLPath" type="string" length="100" />
+    <field name="MySQLMaxAllowedPacket" type="integer" persistent="false" />
+</record>

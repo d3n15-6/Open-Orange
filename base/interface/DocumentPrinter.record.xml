@@ -1,0 +1,5 @@
+<record name="DocumentPrinter" tablename="DocumentPrinter" inherits="Master" local="true" >
+    <field name="Code" type="string" length="20" />
+    <field name="PrinterName" type="string" length="60" />
+    <field name="OpenPrinterDialog" type="boolean" />
+</record>

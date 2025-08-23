@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="DepartmentWindow" recordname="Department" title="Department" >
+    <column>
+        <text label="Code" fieldname="Code" />
+        <text label="Name" fieldname="DeptName" />
+    </column>
+</window>

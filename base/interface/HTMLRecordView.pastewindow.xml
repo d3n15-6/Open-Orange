@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="HTMLRecordViewPasteWindow" title="HTML Templates" >
+    <matrix name="HTMLRecordViews" recordname="HTMLRecordView" pastefieldname="Code" windowname="HTMLRecordViewWindow" >
+        <matrixcolumn label="Record" fieldname="RecordName" editor="text" />
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+    </matrix>
+</listwindow>

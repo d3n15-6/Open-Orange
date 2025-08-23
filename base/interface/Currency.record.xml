@@ -1,0 +1,13 @@
+<record name="Currency" tablename="Currency" inherits="Master" >
+    <field name="Code" type="string" length="3" />
+    <field name="Name" type="string" length="30" />
+    <field name="BankNotes" type="string" length="80" /> <!-- para guaranies es pesado este campo -->
+    <field name="RoundOff" type="integer" />
+    <field name="ConvertionBase" type="integer" />
+    <field name="ConvertionDirection" type="integer" />
+    <field name="FrFactor" type="integer" />
+    <field name="ToFactor" type="integer" />
+    <field name="RecAcc" type="string" linkto="Account" />    
+    <field name="PayAcc" type="string" linkto="Account" />    
+    <field name="TaxOfficeCode" type="string" length="5" />
+</record>
