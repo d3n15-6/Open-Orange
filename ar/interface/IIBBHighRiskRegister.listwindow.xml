@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="IIBBHighRiskRegisterListWindow" title="IIBB High Risk Register" >
+    <matrix name="IIBBHighRiskRegister" recordname="IIBBHighRiskRegister" windowname="IIBBHighRiskRegisterWindow" >
+        <matrixcolumn label="CUIT" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="150" />
+        <matrixcolumn label="From" fieldname="FrDate" editor="date" />
+        <matrixcolumn label="To" fieldname="ToDate" editor="date" />
+        <matrixcolumn label="GrpPercep" fieldname="GrpPercep" editor="text" />
+        <matrixcolumn label="AliPercep" fieldname="AliPercep" editor="value" />
+        <matrixcolumn label="GrpRetenc" fieldname="GrpRetenc" editor="text" />
+        <matrixcolumn label="AliRetenc" fieldname="AliRetenc" editor="value" />
+    </matrix>
+</listwindow>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="StartDate" type="date" />
+        <field name="EndDate" type="date" />
+        <field name="Type" type="integer" />
+        <field name="PresentDate" type="date" />
+        <field name="PayMode" type="string" length="5" />
+    </routinerecord>
+    <routinewindow name="ExportCitiWindow" title="Generate Tax Office CITI Files" >
+        <column>
+            <period label="Period" fromfieldname="StartDate" tofieldname="EndDate" />
+            <radiobutton label="Type" fieldname="Type" >
+                <radiooption label="Purchase" value="0" />
+                <radiooption label="Sales" value="1" />
+                <radiooption label="Both" value="2" />
+            </radiobutton>
+        </column>
+    </routinewindow>
+</routineuserinput>

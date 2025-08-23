@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput>
+    <reportrecord>
+        <field name="PaymentNr" type="integer"/>
+    </reportrecord>
+    <reportwindow name="PaymentRetentionsResumeReportWindow" title="Payment Retentions Resume">
+        <integer label="Payment Nr." fieldname="PaymentNr"/>
+    </reportwindow>
+</reportuserinput>

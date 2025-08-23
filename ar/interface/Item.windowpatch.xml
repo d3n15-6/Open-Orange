@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<windowpatch name="ItemWindow">
+    <patch mode="addafter" name="LuxGoodTaxMethod">
+        <checkbox label="No Percibir IIBB" fieldname="DontPerceptIIBB"/>
+    </patch>
+</windowpatch>

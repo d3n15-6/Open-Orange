@@ -1,0 +1,4 @@
+<detailrecord name="RetencionAffectedAccRow" tablename="RetencionAffectedAccRow" >
+    <field name="Account" type="string" linkto="Account" />
+    <field name="Name" type="string" length="60" />
+</detailrecord>

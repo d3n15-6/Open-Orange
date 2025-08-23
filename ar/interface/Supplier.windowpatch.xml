@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<windowpatch name="SupplierWindow" >
+    <patch mode="replace" name="LegalPage" >
+        <tabpage label="Legal" name="LegalPage" >
+            <line>
+                <column>
+                    <text label="VAT Reg.Nr." fieldname="TaxRegNr" />
+                    <pushbutton label="Control" name="checkTaxRegnr" height="20" />
+                    <date label="VAT RegNr Due" fieldname="TaxRegNrDueDate" />
+                    <text label="VAT Code" fieldname="VATCode" pastewindow="VATCodePasteWindow" />
+                    <combobox label="IIBB Condition" fieldname="TaxReg2Type" >
+                        <combooption label="Local" value="0" />
+                        <combooption label="Convenio" value="1" />
+                        <combooption label="No Inscripto" value="2" />
+                    </combobox>
+                    <text label="Sales Tax Number" fieldname="TaxRegNr1" />
+                    <text label="Withholdings" fieldname="Withholdings" pastewindow="RetencionPasteWindow" width="150" />
+                    <checkbox label="Always Hold VAT and Prof." fieldname="TRT5Retention" />
+                    <line>
+                        <text label="Retention Cat." fieldname="TaxCat1" />
+                        <pushbutton label="OnLine Group Update" name="getRetencGroup" height="20" />
+                    </line>
+                    <text label="CAI" fieldname="CAI" />
+                    <date label="Due CAI" fieldname="DueCAIDate" />
+                    <text label="Supplier Code" fieldname="TheirCode" />
+                </column>
+                <column>
+                    <combobox label="Document Type" fieldname="IDType" >
+                        <combooption label="None" value="0" />
+                        <combooption label="VAT Reg.Nr." value="1" />
+                        <combooption label="Identification Nr" value="2" />
+                        <combooption label="Police Id" value="3" />
+                        <combooption label="Passport" value="4" />
+                        <combooption label="LC" value="5" />
+                        <combooption label="LE" value="6" />
+                        <combooption label="Social Security Nr" value="4" />
+                    </combobox>
+                    <radiobutton label="Inscription" fieldname="TaxRegType" >
+                        <radiooption label="Resp. Insc." value="0" />
+                        <radiooption label="Con. Final" value="1" />
+                        <radiooption label="IVA No Resp." value="2" />
+                        <radiooption label="Exempt" value="3" />
+                        <radiooption label="Resp. No Insc." value="4" />
+                        <radiooption label="Monotributo" value="5" />
+                    </radiobutton>
+                    <radiobutton label="Purchase Type" fieldname="PurchaseType" >
+                        <radiooption label="Services" value="0" />
+                        <radiooption label="Goods" value="1" />
+                        <radiooption label="Fixed Assets" value="2" />
+                    </radiobutton>
+                </column>
+            </line>
+        </tabpage>
+    </patch>
+</windowpatch>

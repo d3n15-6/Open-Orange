@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="Deliveries" type="string" length="200" />
+        <field name="Invoices" type="string" length="200" />
+    </routinerecord>
+    <routinewindow name="ExportCOTWindow" title="Generar Archivos COT" >
+        <column>
+            <text label="Deliveries" fieldname="Deliveries" pastewindow="DeliveryPasteWindow" width="400" />
+            <text label="Invoices" fieldname="Invoices" pastewindow="InvoicePasteWindow" width="400" />
+        </column>
+    </routinewindow>
+</routineuserinput>

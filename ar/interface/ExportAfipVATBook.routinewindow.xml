@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="Option" type="integer" />
+    </routinerecord>
+    <routinewindow name="ExportAfipVATBookWindow" title="Exportaci&#243;n Libros IVA" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+        <radiobutton label="Libro" fieldname="Option" >
+            <radiooption label="IVA Ventas (Default)" value="1" />
+            <radiooption label="IVA Compras" value="2" />
+        </radiobutton>
+    </routinewindow>
+</routineuserinput>

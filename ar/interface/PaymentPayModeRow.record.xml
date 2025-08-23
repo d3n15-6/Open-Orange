@@ -1,0 +1,3 @@
+<detailrecord name="PaymentPayModeRow" inherits="PaymentPayModeRow" tablename="PaymentPayModeRow" >
+    <field name="RetentionToNr" type="integer" />
+</detailrecord>

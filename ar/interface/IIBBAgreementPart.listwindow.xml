@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="IIBBAgreementPartListWindow" title="IIBB Agreement Participation" >
+    <matrix name="IIBBAgreementPart" recordname="IIBBAgreementPart" windowname="IIBBAgreementPartWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Province" fieldname="Province" editor="text" />
+        <matrixcolumn label="Coefficient" fieldname="Coefficient" editor="value" />
+    </matrix>
+</listwindow>

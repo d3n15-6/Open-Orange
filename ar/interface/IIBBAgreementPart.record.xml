@@ -1,0 +1,10 @@
+<record name="IIBBAgreementPart" tablename="IIBBAgreementPart" inherits="Master" >
+    <field name="Code" type="string" linkto="Customer" />
+    <field name="Name" type="string" length="60" />
+    <field name="Province" type="string" linkto="Province" />
+    <field name="Coefficient" type="value" />
+    <index name="Main" unique="True" >
+        <indexfield fieldname="Code" />
+        <indexfield fieldname="Province" />
+    </index>
+</record>

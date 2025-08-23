@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="SupplierCAIControlListWindow" title="Control de CAI de proveedores" >
+    <matrix name="SupplierCAIControl" recordname="SupplierCAIControl" windowname="SupplierCAIControlWindow" >
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Code" fieldname="SupCode" editor="text" />
+        <matrixcolumn label="Customer" fieldname="SupName" editor="text" />
+        <matrixcolumn label="CAI" fieldname="CAI" editor="text" />
+        <matrixcolumn label="From" fieldname="FrNumber" editor="text" />
+        <matrixcolumn label="To" fieldname="ToNumber" editor="text" />
+        <matrixcolumn label="Due Date" fieldname="DueCAI" editor="date" />
+    </matrix>
+</listwindow>

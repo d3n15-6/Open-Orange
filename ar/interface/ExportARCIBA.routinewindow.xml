@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="Option" type="integer" />
+        <field name="Jurisdiction" type="string" length="20" />
+        <field name="excludePercepCreditNote" type="integer" />
+    </routinerecord>
+    <routinewindow name="ExportARCIBAWindow" title="Exportaci&#243;n AFIP - ARCIBA" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+        <line>
+            <column>
+                <radiobutton label="Type" fieldname="Option" >
+                    <radiooption label="Withholding" value="0" />
+                    <radiooption label="Percepcion" value="1" />
+                </radiobutton>
+                <checkbox label="Exclude Credit Notes " fieldname="excludePercepCreditNote" />
+            </column>
+            <column>
+                <text label="Cod. Prov. para Capital Federal (vacio = CF)" fieldname="Jurisdiction" pastewindow="ProvincePasteWindow" />
+            </column>
+        </line>
+    </routinewindow>
+</routineuserinput>

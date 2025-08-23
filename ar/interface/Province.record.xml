@@ -1,0 +1,3 @@
+<record name="Province" tablename="Province" inherits="Province" >
+    <field name="IIBBCalcType" type="integer" />
+</record>

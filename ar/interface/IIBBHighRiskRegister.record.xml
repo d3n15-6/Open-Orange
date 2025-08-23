@@ -1,0 +1,14 @@
+<record name="IIBBHighRiskRegister" tablename="IIBBHighRiskRegister" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="Name" type="string" length="60" />
+    <field name="FirstString" type="string" length="8" />
+    <field name="FrDate" type="date" />
+    <field name="ToDate" type="date" />
+    <field name="Type" type="string" length="1" />
+    <field name="ABStatus" type="string" length="1" />
+    <field name="AliStatus" type="string" length="1" />
+    <field name="AliPercep" type="value" />
+    <field name="AliRetenc" type="value" />
+    <field name="GrpPercep" type="string" length="2" />
+    <field name="GrpRetenc" type="string" length="2" />
+</record>

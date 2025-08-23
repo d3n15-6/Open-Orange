@@ -1,0 +1,52 @@
+<record name="FiscalPrinter" tablename="FiscalPrinter" inherits="Master" >
+    <field name="Code" type="string" length="10" />
+    <field name="Name" type="string" length="60" />
+    <field name="UnixPort" type="string" length="20" />
+    <field name="PrinterModel" type="integer" />
+    <field name="BaudRate" type="integer" />
+    <field name="WinPort" type="integer" />
+    <field name="PacketNr" type="integer" />
+    <field name="F1" type="integer" />
+    <field name="DeliveryCopies" type="integer" />
+    <field name="BaseCur" type="integer" />
+
+    <field name="ChangeSerNr" type="boolean" />
+    <field name="OKAndInsert" type="boolean" />
+    <field name="OpenNewWn" type="boolean" />
+    <field name="F6" type="boolean" />
+    <field name="ResumeItemDiscounts" type="boolean" />
+    <field name="PrintOnlyApproved" type="boolean" />
+    <field name="StandarizeOfficialNumbers" type="boolean" />
+    <field name="DennyAmountToCustomer" type="boolean" />
+    <field name="DennyCustCode" type="string" length="20" />
+    <field name="DennyAmount" type="value" />
+    <field name="HideItemDiscounts" type="boolean" />
+    <field name="PrintOnConfirming" type="boolean" />
+
+    <field name="AllowZeroRow" type="boolean" />
+    <field name="PrintSerial" type="boolean" />
+    <field name="PrintDispatch" type="boolean" />
+    <field name="printVATPrice" type="boolean" />
+    <field name="WrapItemDescription" type="boolean" />
+    <field name="OpenDrawer" type="boolean" />
+
+
+    <field name="PointOfSales" type="string" length="4" />
+    <field name="InvType" type="integer" persistent="false" />
+    <field name="ForceInvoiceTicket" type="boolean" />
+    <field name="ExitType" type="integer" persistent="false" />
+    <field name="Header1" type="string" length="200" />
+    <field name="Header2" type="string" length="200" />
+    <field name="Header3" type="string" length="200" />
+    <field name="Footer1" type="string" length="200" />
+    <field name="Footer2" type="string" length="200" />
+    <field name="Footer3" type="string" length="200" />
+    <field name="Footer4" type="string" length="200" />
+
+    <field name="ticketflag" type="integer" persistent="false" />
+    <field name="epsonflag" type="integer" persistent="false" />
+    <field name="PaperCutterf" type="integer" persistent="false" />
+    <field name="caiflag" type="boolean" />
+    <field name="DecimalsPrecision" type="integer" />
+    <field name="PrintOnlyTodayTrans" type="boolean" />
+</record>

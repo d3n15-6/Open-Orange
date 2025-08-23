@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="ItemGroup" type="string" length="20" />
+        <field name="Percent" type="value" />
+        <field name="Option" type="integer" />
+    </routinerecord>
+    <routinewindow name="UpdateIIBBDataWindow" title="Update Data" >
+        <column>
+            <radiobutton label="Option" fieldname="Option" >
+                <radiooption label="Title Case Customer Data" value="0" />
+                <radiooption label="Title Case Supplier Data" value="1" />
+                <radiooption label="Paste Provinces in Supplier" value="2" />
+                <radiooption label="Paste Provinces in Customer" value="3" />
+            </radiobutton>
+        </column>
+    </routinewindow>
+</routineuserinput>

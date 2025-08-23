@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+    </routinerecord>
+    <routinewindow name="ExportGanSocRoutineWindow" width="350" title="Exportacion Ganancias Sociedades" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+    </routinewindow>
+</routineuserinput>

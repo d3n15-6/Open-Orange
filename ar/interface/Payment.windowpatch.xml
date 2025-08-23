@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<windowpatch name="PaymentWindow" >
+    <patch mode="addafter" name="PaymentsPage" >
+        <tabpage label="Retentions" name="RetentionPaymentPage" >
+            <matrix fieldname="PayModes" name="PayRetentionMatrix" >
+                <matrixcolumn label="Payment Form" fieldname="PayMode" editor="text" pastewindow="PayModePasteWindow" width="100" />
+                <matrixcolumn label="Description" fieldname="Comment" editor="text" width="200" />
+                <matrixcolumn label="Invoice" fieldname="RetentionToNr" editor="text" readonly="True" />
+                <matrixcolumn label="Paid" fieldname="Amount" editor="value" width="100" />
+            </matrix>
+        </tabpage>
+    </patch>
+    <patch mode="addafter" name="Printed" >
+        <pushbutton label="Paste Withholdings" name="PasteRetentions" height="20" />
+    </patch>
+</windowpatch>

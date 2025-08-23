@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="IIBBTaxGroupRegisterListWindow" title="IIBB Tax Group Register" >
+    <matrix name="IIBBTaxGroupRegister" recordname="IIBBTaxGroupRegister" windowname="IIBBTaxGroupRegisterWindow" >
+        <matrixcolumn label="CUIT" fieldname="Code" editor="text" />
+        <matrixcolumn label="GrpPercep" fieldname="GrpPercep" editor="text" />
+        <matrixcolumn label="GrpRetenc" fieldname="GrpRetenc" editor="text" />
+    </matrix>
+</listwindow>

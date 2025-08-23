@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="IIBBHighRiskRegisterWindow" recordname="IIBBHighRiskRegister" title="IIBB High Risk Register" >
+    <text label="Code" fieldname="Code" />
+    <text label="Name" fieldname="Name" />
+    <date label="From Date" fieldname="FrDate" />
+    <date label="To Date" fieldname="ToDate" />
+    <text label="Type" fieldname="Type" />
+    <text label="ABStatus" fieldname="ABStatus" />
+    <text label="AliStatus" fieldname="AliStatus" />
+    <line>
+        <text label="GrpPercep" fieldname="GrpPercep" />
+        <value label="AliPercep" fieldname="AliPercep" />
+    </line>
+    <line>
+        <text label="GrpRetenc" fieldname="GrpRetenc" />
+        <value label="AliRetenc" fieldname="AliRetenc" />
+    </line>
+    <text label="FirstString" fieldname="FirstString" />
+</window>

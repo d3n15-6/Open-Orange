@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="RetencionListWindow" title="Withholding" >
+    <matrix name="Retencion" recordname="Retencion" windowname="RetencionWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Comment" fieldname="Comment" editor="text" width="300" />
+        <matrixcolumn label="Type" fieldname="Type" editor="combobox" width="100" >
+            <combooption label="Withholding" value="0" />
+            <combooption label="Percepcion" value="1" />
+            <combooption label="Other" value="2" />
+        </matrixcolumn>
+        <matrixcolumn label="Tax" fieldname="RetType" editor="combobox" width="100" >
+            <combooption label="Profits" value="0" />
+            <combooption label="Ing.Brutos" value="1" />
+            <combooption label="VAT" value="2" />
+            <combooption label="Cleaning" value="3" />
+            <combooption label="SUSS" value="4" />
+            <combooption label="Security Agency" value="5" />
+        </matrixcolumn>
+        <matrixcolumn label="Sales Tax Code" fieldname="TaxCode" editor="text" width="100" />
+    </matrix>
+</listwindow>

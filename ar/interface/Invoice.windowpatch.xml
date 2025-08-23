@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<windowpatch name="InvoiceWindow" >
+    <!-- Opciones de Impresora Fiscal -->
+    <patch mode="add" >
+        <action label="__________________________" methodname="separator" />
+    </patch>
+    <patch mode="add" >
+        <action label="Print Fiscal Invoice" methodname="sendPrintFiscalInvoice" />
+    </patch>
+    <patch mode="add" >
+        <action label="Cancel Fiscal Document" methodname="sendCancelFiscalInvoice" />
+    </patch>
+    <patch mode="add" >
+        <action label="Print No-Fiscal Document" methodname="sendPrintNonFiscalInvoice" />
+        <!-- 
+        Esta opción me parece que no funciona porque no se encuentra el método por ningun lado
+        -->
+    </patch>
+    <patch mode="add" >
+        <action label="Print Ticket" methodname="sendPrintTicket" shortcut="CTRL+SHIFT+P" />
+    </patch>
+</windowpatch>

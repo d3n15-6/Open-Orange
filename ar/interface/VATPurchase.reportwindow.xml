@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="Provinceflag" type="boolean" />
+        <field name="AddVATBases" type="boolean" />
+        <field name="AddVAT" type="boolean" />
+        <field name="ShowWithhold" type="boolean" />
+        <field name="ShowPerception" type="boolean" />
+        <field name="PreIVAflag" type="boolean" />
+        <field name="JoinIVAGan" type="boolean" />
+        <field name="CAIFlag" type="boolean" />
+        <field name="LuxTax" type="boolean" />
+        <field name="Inscflag" type="boolean" />
+        <field name="BSMflag" type="boolean" />
+        <field name="SurplusVAT" type="boolean" />
+        <field name="ShowInvDate" type="boolean" />
+        <field name="ShowSupCode" type="boolean" />
+        <field name="FromPage" type="integer" />
+        <field name="Pages" type="integer" />
+        <field name="Base" type="integer" />
+        <field name="OnPage" type="integer" />
+        <field name="WithOK" type="boolean" />
+        <field name="WithOutOK" type="boolean" />
+        <field name="Office" type="string" length="10" />
+        <field name="GroupCode" type="set" length="40" />
+        <field name="NameLen" type="integer" />
+        <field name="Labels" type="string" length="80" />
+        <field name="ExLabels" type="string" length="80" />
+    </reportrecord>
+    <reportwindow name="VATPurchaseWindow" title="VAT Purchase Book" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+        <tabs >
+            <tabpage label="Opciones" name="OptionPage" >
+                <label text="Mostrar" />
+                <checkbox label="CAI" fieldname="CAIFlag" />
+                <checkbox label="Fecha Factura" fieldname="ShowInvDate" />
+                <checkbox label="Una sola columna de IVA" fieldname="AddVAT" />
+                <checkbox label="Una sola columna con IVA Base" fieldname="AddVATBases" />
+                <checkbox label="Una sola columna para Perc. de IIBB y Gan." fieldname="JoinIVAGan" />
+                <checkbox label="Retenciones" fieldname="ShowWithhold" />
+                <checkbox label="Percepciones" fieldname="ShowPerception" />
+                <checkbox label="Ingresos Brutos por Provincia" fieldname="Provinceflag" />
+                <checkbox label="Percepciones de IVA por tipo" fieldname="PreIVAflag" />
+                <checkbox label="IVA no computable" fieldname="SurplusVAT" />
+                <checkbox label="Impuestos Internos" fieldname="LuxTax" />
+                <checkbox label="Codigo de Proveedor" fieldname="ShowSupCode" />
+                <label text="Res&#250;menes" />
+                <checkbox label="Bienes/Servicios/Mercaderias" fieldname="BSMflag" />
+                <checkbox label="Debitos/Creditos" fieldname="Inscflag" />
+                <label text="NOTA" />
+                <label text="Facturas sin pais 'ar' no producen IVA" align="left" />
+            </tabpage>
+            <tabpage label="Filtros" name="FilterPage" >
+                <text label="Branch" fieldname="Office" pastewindow="OfficePasteWindow" />
+                <text label="Supplier Group" fieldname="GroupCode" pastewindow="SupplierGroupPasteWindow" width="080" />
+                <text label="Label in header" fieldname="Labels" pastewindow="LabelPasteWindow" />
+                <text label="Excluir Etiqueta" fieldname="ExLabels" pastewindow="LabelPasteWindow" />
+                <label name="IncludePage" text="Incluir" />
+                <checkbox label="Aprobadas" fieldname="WithOK" />
+                <checkbox label="No Aprobadas" fieldname="WithOutOK" />
+            </tabpage>
+            <tabpage label="Format" name="FormatPage" >
+                <radiobutton label="Currency" fieldname="Base" >
+                    <radiooption label="Base 1" value="0" />
+                    <radiooption label="Base 2" value="1" />
+                </radiobutton>
+                <integer label="Filas por P&#225;gina" fieldname="OnPage" width="40" />
+                <integer label="Number from Page" fieldname="FromPage" width="40" />
+                <integer label="Name Length" fieldname="NameLen" width="40" />
+            </tabpage>
+        </tabs>
+    </reportwindow>
+</reportuserinput>

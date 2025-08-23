@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="ExistingOnly" type="boolean" />
+        <field name="Type" type="integer" />
+    </reportrecord>
+    <reportwindow name="IIBBHighRiskRegisterListReportWindow" title="IIBB High Risk Register List" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+        <checkbox label="Existing Only" fieldname="ExistingOnly" />
+        <radiobutton label="Type" fieldname="Type" >
+            <radiooption label="Customer" value="0" />
+            <radiooption label="Supplier" value="1" />
+        </radiobutton>
+    </reportwindow>
+</reportuserinput>

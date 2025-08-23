@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="InvoicePasteWindow" title="Invoices" >
+    <matrix name="Invoices" recordname="Invoice" pastefieldname="SerNr" windowname="InvoiceWindow" >
+        <matrixcolumn label="Type" fieldname="DocType" editor="combobox" width="020" >
+            <combooption label="A" value="0" />
+            <combooption label="B" value="1" />
+            <combooption label="C" value="2" />
+        </matrixcolumn>
+        <matrixcolumn label="Nr" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Official Nr" fieldname="OfficialSerNr" editor="text" width="100" />
+        <matrixcolumn label="Date" fieldname="TransDate" editor="date" />
+        <matrixcolumn label="Customer" fieldname="CustCode" editor="text" width="060" />
+        <matrixcolumn label="Name" fieldname="CustName" editor="text" width="200" />
+        <matrixcolumn label="T" fieldname="InvoiceType" editor="combobox" width="12" >
+            <combooption label="" value="0" />
+            <combooption label="C" value="1" />
+            <combooption label="D" value="2" />
+        </matrixcolumn>
+        <matrixcolumn label="Total" fieldname="Total" editor="value" width="100" />
+        <matrixcolumn label="Balance" fieldname="Saldo" editor="value" width="100" />
+        <matrixcolumn label="Cur." fieldname="Currency" editor="text" width="040" />
+    </matrix>
+</listwindow>

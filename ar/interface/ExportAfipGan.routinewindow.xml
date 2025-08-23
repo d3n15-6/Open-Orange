@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="StartDate" type="date" />
+        <field name="EndDate" type="date" />
+        <field name="Option" type="integer" />
+        <field name="PresentDate" type="date" />
+        <field name="ControlInfo" type="boolean" />
+        <field name="PayMode" type="string" length="5" />
+    </routinerecord>
+    <routinewindow name="ExportAfipGanWindow" width="350" title="Exportacion AFIP - SICORE" >
+        <period label="Period" fromfieldname="StartDate" tofieldname="EndDate" />
+        <checkbox label="Show Control Info" fieldname="ControlInfo" />
+    </routinewindow>
+</routineuserinput>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="ProvinceListWindow" title="Provinces" >
+    <matrix name="Provinces" recordname="Province" windowname="ProvinceWindow" >
+        <matrixcolumn label="Code" fieldname="Code" editor="text" />
+        <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" />
+        <matrixcolumn label="Country" fieldname="Country" editor="text" />
+        <matrixcolumn label="IIBB Calc. Type" fieldname="IIBBCalcType" editor="combobox" width="100" >
+            <combooption label="Ninguno" value="0" />
+            <combooption label="Cod. Actividad de Art&#237;culos" value="1" />
+            <combooption label="Provincia de Entrega" value="2" />
+            <combooption label="Tucum&#225;n" value="3" />
+        </matrixcolumn>
+    </matrix>
+</listwindow>

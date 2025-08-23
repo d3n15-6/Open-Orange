@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="Option" type="integer" defaultvalue="0" />
+        <field name="Activity" type="integer" defaultvalue="0" />
+        <field name="ControlInfo" type="boolean" />
+        <field name="Jurisdiction" type="string" length="20" />
+        <field name="DateType" type="integer" defaultvalue="1" />
+    </routinerecord>
+    <routinewindow name="ExportAppWebARIBWindow" title="Exportaci&#243;n AFIP Application Web - ARIB" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+        <radiobutton label="Type" fieldname="Option" >
+            <radiooption label="Withholding" value="0" />
+            <radiooption label="Percepcion" value="1" />
+        </radiobutton>
+        <text label="Province" fieldname="Jurisdiction" pastewindow="ProvincePasteWindow" />
+        <line>
+            <column>
+            </column>
+            <column>
+                <label text="(vacio = B)" />
+            </column>
+        </line>
+        <integer label="Activity" fieldname="Activity" />
+        <radiobutton label="Tipo de Periodo" fieldname="DateType" >
+            <radiooption label="Quincenal" value="0" />
+            <radiooption label="Mensual" value="1" />
+        </radiobutton>
+    </routinewindow>
+</routineuserinput>

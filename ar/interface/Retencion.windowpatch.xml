@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<windowpatch name="RetencionWindow" >
+    <patch mode="addafter" name="ReductionsPage" >
+        <tabpage label="Affected Accounts" name="AffectedAccountPage" >
+            <matrix fieldname="AffectedAccs" name="AffectedAccsMatrix" >
+                <matrixcolumn label="Account" fieldname="Account" editor="text" pastewindow="AccountPasteWindow" />
+                <matrixcolumn label="Name" fieldname="Name" editor="text" width="200" readonly="True" />
+            </matrix>
+        </tabpage>
+    </patch>
+    <patch mode="replace" name="CalculationPage" >
+        <tabpage label="Calculation" name="CalculationPage" >
+            <line>
+                <radiobutton label="Tax" fieldname="RetType" >
+                    <radiooption label="Profits" value="0" />
+                    <radiooption label="Ing.Brutos" value="1" />
+                    <radiooption label="VAT" value="2" />
+                    <radiooption label="Cleaning" value="3" />
+                    <radiooption label="SUSS" value="4" />
+                    <radiooption label="Security Agency" value="5" />
+                    <radiooption label="Detraccion" value="6" />
+                    <radiooption label="VAT Month" value="7" />
+                </radiobutton>
+                <radiobutton label="Type" fieldname="Type" >
+                    <radiooption label="Withholding" value="0" />
+                    <radiooption label="Percepcion" value="1" />
+                    <radiooption label="Other" value="2" />
+                </radiobutton>
+            </line>
+        </tabpage>
+    </patch>    
+</windowpatch>

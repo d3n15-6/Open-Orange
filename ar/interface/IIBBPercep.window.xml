@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--only in spanish-->
+<window name="IIBBPercepWindow" recordname="IIBBPercep" title="IIBB activities codes for items" >
+    <column>
+        <text label="Province" fieldname="Province" pastewindow="ProvincePasteWindow" />
+        <text label="Item Tax Concepts" fieldname="ItemTaxGroup" pastewindow="ItemTaxGroupPasteWindow" />
+        <text label="Perception Code" fieldname="Retencion" pastewindow="RetencionPasteWindow" />
+        <value label="Percentage" fieldname="TaxPercent" />
+    </column>
+</window>

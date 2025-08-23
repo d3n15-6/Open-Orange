@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module label="Taxes" name="Taxes" >
+    <recordentries >
+        <recordentry label="Control de CAI de proveedores" name="SupplierCAIControlListWindow" />
+        <recordentry label="Fiscal Printers" name="FiscalPrinterListWindow" image="FiscalPrinters.png" />
+        <recordentry label="IIBB High Risk Register" name="IIBBHighRiskRegisterListWindow" />
+        <recordentry label="IIBB Agreement Participation" name="IIBBAgreementPartListWindow" />
+        <settingentry label="Opciones de Monotributista" name="TRT5SettingsWindow" />
+    </recordentries>
+    <reportentries >
+        <reportentry label="VAT Purchase Book" name="VATPurchase" />
+        <reportentry label="VAT Sales Book" name="VATSales" />
+        <reportentry label="IIBB High Risk Register List" name="IIBBHighRiskRegisterList" />
+    </reportentries>
+    <routineentries >
+        <routineentry label="Exportaci&#243;n AFIP - IVA" name="ExportAfipIVA" />
+        <routineentry label="Exportaci&#243;n AFIP - SICORE" name="ExportAfipGan" />
+        <routineentry label="Exportaci&#243;n AFIP - SIFERE" name="ExportAfipSIFERE" />
+        <routineentry label="Exportaci&#243;n AFIP - SICOL" name="ExportAfipSICOL" />
+        <routineentry label="Exportaci&#243;n AFIP - Worm" name="ExportWorm" />
+        <routineentry label="Exportaci&#243;n AFIP - ARIB" name="ExportARIB" comment="Province code must be BSAS" />
+        <routineentry label="Exportaci&#243;n AFIP - ARCIBA" name="ExportARCIBA" comment="Province code must be CF" />
+        <routineentry label="Exportaci&#243;n AFIP - SUSS" name="ExportSUSS" />
+        <routineentry label="Exportaci&#243;n COT" name="ExportCOT" />
+        <routineentry label="Exportaci&#243;n - SIRETPER" name="ExportSIRETPER" />
+        <routineentry label="Actualizacion de Percepciones / Retenciones" name="IIBBTaxCodesUpdate" />
+        <routineentry label="Pegar Codigo de Juridisccion" name="PasteJurisdiction" />
+        <routineentry label="Exportaci&#243;n CITI Sales/Purchases" name="ExportCiti" />
+        <routineentry label="Exportaci&#243;n EDI Deliveries" name="ExportAfipEntr" />
+        <routineentry label="Exportaci&#243;n Ganancias Sociedades" name="ExportGanSoc" comment="Exportacion Ganancias de Retenciones Recibos, Facturas de compra" />
+        <routineentry label="Exportaci&#243;n Libros IVA Ventas - Compras" name="ExportAfipVATBook" comment="Exportaci&#243;n Libros IVA" />
+        <routineentry label="Importaci&#243;n Padr&#243;n Grupos IIBB" name="IIBBTaxGroupRegisterImport" />
+        <routineentry label="Importaci&#243;n Padr&#243;n Alto Riesgo IIBB" name="IIBBHighRiskRegisterImport" />
+        <routineentry label="Exportaci&#243;n Aplicacion Web AFIP - ARIB" name="ExportAppWebARIB" comment="Province code must be BSAS" />
+    </routineentries>
+</module>

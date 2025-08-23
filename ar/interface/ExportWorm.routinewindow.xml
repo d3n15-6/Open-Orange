@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="StartDate" type="date" />
+        <field name="EndDate" type="date" />
+        <field name="ViewOption" type="integer" />
+        <field name="Office" type="string" length="10"/>
+    </routinerecord>
+    <routinewindow name="ExportWormWindow" title="Exportaci&#243;n AFIP - Worm" >
+        <column>
+            <period label="Period" fromfieldname="StartDate" tofieldname="EndDate" />
+            <text label="Office" fieldname="Office" pastewindow="OfficePasteWindow"/>
+            <radiobutton label="Operation" fieldname="ViewOption" >
+                <radiooption label="Sales Record" value="0" />
+                <radiooption label="Purchase Record" value="1" />
+                <radiooption label="Registro de Ventas / Encabezado" value="2" />
+                <radiooption label="Registro de Ventas / Detalle" value="3" />
+                <radiooption label="Otras Percepciones" value="4" />
+            </radiobutton>
+        </column>
+    </routinewindow>
+</routineuserinput>

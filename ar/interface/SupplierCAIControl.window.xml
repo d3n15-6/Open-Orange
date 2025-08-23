@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="SupplierCAIControlWindow" recordname="SupplierCAIControl" title="Control de CAI de proveedores" >
+    <integer label="Nr" fieldname="SerNr" />
+    <text label="Code" fieldname="SupCode" pastewindow="SupplierPasteWindow" width="60" />
+    <text label="Empresa" fieldname="SupName" readonly="True" />
+    <text label="CAI" fieldname="CAI" />
+    <line>
+        <text label="From Number" fieldname="FrNumber" />
+        <text label="To Number" fieldname="ToNumber" />
+    </line>
+    <date label="Due Date" fieldname="DueCAI" />
+    <radiobutton label="Comprobante" fieldname="CAIFiscalType" >
+        <radiooption label="Factura Preimpresa" value="0" />
+    </radiobutton>
+</window>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="CustGroupCode" type="string" length="20" />
+        <field name="SupGroupCode" type="string" length="20" />
+        <field name="PerTaxCodeUpdate" type="boolean" />
+        <field name="RetTaxCodeUpdate" type="boolean" />
+    </routinerecord>
+    <routinewindow name="IBBTaxCodeUpdateWindow" title="Actualizacion Retenciones / Percepciones" >
+        <column>
+            <text label="Customer Groups" fieldname="CustGroupCode" pastewindow="CustomerGroupPasteWindow" />
+            <text label="Supplier Groups" fieldname="SupGroupCode" pastewindow="SupplierGroupPasteWindow" />
+            <checkbox label="Grupos de Percepcion" fieldname="PerTaxCodeUpdate" />
+            <checkbox label="Grupos de Retencion" fieldname="RetTaxCodeUpdate" />
+        </column>
+    </routinewindow>
+</routineuserinput>

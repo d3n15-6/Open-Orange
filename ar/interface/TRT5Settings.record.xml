@@ -1,0 +1,5 @@
+<record name="TRT5Settings" tablename="TRT5Settings" setting="true" >
+    <field name="Currency" type="string" linkto="Currency" />
+    <field name="PurType0" type="detail" recordname="TRT5SettingsPurType0Row" />
+    <field name="PurType1" type="detail" recordname="TRT5SettingsPurType1Row" />
+</record>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="TRT5SettingsWindow" recordname="TRT5Settings" title="Opciones de Monotributista" >
+    <text label="Currency" fieldname="Currency" pastewindow="CurrencyPasteWindow" />
+    <tabs name="Tabs" >
+        <tabpage label="Services" name="ServicesPage" >
+            <matrix fieldname="PurType0" name="PurType0Matrix" >
+                <matrixcolumn label="Category" fieldname="Category" editor="text" />
+                <matrixcolumn label="Amount" fieldname="Amount" editor="value" width="100" />
+            </matrix>
+        </tabpage>
+        <tabpage label="Goods" name="GoodsPage" >
+            <matrix fieldname="PurType1" name="PurType1Matrix" >
+                <matrixcolumn label="Category" fieldname="Category" editor="text" />
+                <matrixcolumn label="Amount" fieldname="Amount" editor="value" width="100" />
+            </matrix>
+        </tabpage>
+    </tabs>
+</window>

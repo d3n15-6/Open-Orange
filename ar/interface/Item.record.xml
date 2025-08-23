@@ -1,0 +1,3 @@
+<record name="Item" tablename="Item" inherits="Item">
+    <field name="DontPerceptIIBB" type="boolean" />
+</record>

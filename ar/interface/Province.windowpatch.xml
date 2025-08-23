@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<windowpatch name="ProvinceWindow" >
+    <patch mode="remove" name="PercepAgent2" >
+    </patch>
+    <patch mode="addbefore" name="PercepAgent2Code" >
+        <combobox label="Tipo Calculo IIBB" fieldname="IIBBCalcType" width="200" >
+            <combooption label="Ninguno" value="0" />
+            <combooption label="Cod. Actividad de Art&#237;culos" value="1" />
+            <combooption label="Provincia de Entrega" value="2" />
+            <combooption label="Tucum&#225;n" value="3" />
+        </combobox>
+    </patch>
+</windowpatch>

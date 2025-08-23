@@ -1,0 +1,4 @@
+<record name="Supplier" tablename="Supplier" inherits="Supplier" >
+    <field name="TRT5Retention" type="boolean" />
+    <field name="TaxRegNrDueDate" type="date" />
+</record>

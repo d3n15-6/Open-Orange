@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="IIBBPercepListWindow" title="Grupo Actividad Ing.Brutos" >
+    <matrix name="IIBBPercep" recordname="IIBBPercep" windowname="IIBBPercepWindow" >
+        <matrixcolumn label="Grupo Actividad Ing.Brutos" fieldname="ItemTaxGroup" editor="text" />
+        <matrixcolumn label="Province" fieldname="Province" editor="text" />
+        <matrixcolumn label="Perception Code" fieldname="Retencion" editor="text" />
+        <matrixcolumn label="Percentage" fieldname="TaxPercent" editor="value" />
+    </matrix>
+</listwindow>

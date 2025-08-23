@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="Address" type="integer" />
+        <field name="ReportType" type="integer" />
+        <field name="Office" type="string" length="10"/>
+    </reportrecord>
+    <reportwindow name="IIBBReportReportWindow" title="Informe de Ingresos Brutos" >
+        <tabs name="Tabs" >
+            <tabpage label="Filters" name="FilterPage" >
+                <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+                <radiobutton label="Address" fieldname="Address" >
+                    <radiooption label="Invoices" value="0" />
+                    <radiooption label="Delivery" value="1" />
+                    <radiooption label="Customer" value="2" />
+                </radiobutton>
+                <text label="Office" fieldname="Office" pastewindow="OfficePasteWindow"/>
+            </tabpage>
+            <tabpage label="Options" name="OptionPage" >
+                <radiobutton label="Function" fieldname="ReportType" >
+                    <radiooption label="Overview" value="0" />
+                    <radiooption label="Detailed" value="1" />
+                    <radiooption label="Convenio Multilateral Vtas" value="2" />
+                    <radiooption label="Convenio Multilateral Impuestos" value="3" />
+                </radiobutton>
+            </tabpage>
+        </tabs>
+    </reportwindow>
+</reportuserinput>

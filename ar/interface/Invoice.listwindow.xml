@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<listwindow name="InvoiceListWindow" title="Invoices" >
+    <matrix name="Invoices" recordname="Invoice" windowname="InvoiceWindow" >
+        <matrixcolumn label="Type" fieldname="DocType" editor="combobox" width="30" >
+            <combooption label="A" value="0" />
+            <combooption label="B" value="1" />
+            <combooption label="C" value="2" />
+            <combooption label="E" value="3" />
+            <combooption label="Z" value="4" />
+            <combooption label="M" value="5" />
+            <combooption label="L" value="6" />
+        </matrixcolumn>
+        <matrixcolumn label="Number" fieldname="SerNr" editor="integer" />
+        <matrixcolumn label="Legal Nr" fieldname="OfficialSerNr" editor="text" width="80" />
+        <matrixcolumn label="Trans. Date" fieldname="TransDate" editor="date" width="70" />
+        <matrixcolumn label="Exp. Date" fieldname="DueDate" editor="date" width="70" />
+        <matrixcolumn label="Customer" fieldname="CustCode" editor="text" width="60" secondaryorder="TransDate" />
+        <matrixcolumn label="Name" fieldname="CustName" editor="text" width="200" />
+        <matrixcolumn label="Cur." fieldname="Currency" editor="text" width="40" />
+        <matrixcolumn label="Total" fieldname="Total" editor="value" width="80" />
+        <matrixcolumn label="T" fieldname="InvoiceType" editor="combobox" width="12" >
+            <combooption label="" value="0" />
+            <combooption label="C" value="1" />
+            <combooption label="D" value="2" />
+        </matrixcolumn>
+        <matrixcolumn label="Balance" fieldname="Saldo" editor="value" width="80" />
+        <matrixcolumn label="Approved" fieldname="Status" editor="combobox" width="40" >
+            <combooption label="Yes" value="1" />
+            <combooption label="No" value="0" />
+        </matrixcolumn>
+        <matrixcolumn label="Invalid" fieldname="Invalid" editor="combobox" width="40" >
+            <combooption label="Yes" value="1" />
+            <combooption label="No" value="0" />
+        </matrixcolumn>
+    </matrix>
+</listwindow>

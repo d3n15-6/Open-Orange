@@ -1,0 +1,5 @@
+<record name="IIBBTaxGroupRegister" tablename="IIBBTaxGroupRegister" inherits="Master" >
+    <field name="Code" type="string" length="20" />
+    <field name="GrpPercep" type="string" length="2" />
+    <field name="GrpRetenc" type="string" length="2" />
+</record>

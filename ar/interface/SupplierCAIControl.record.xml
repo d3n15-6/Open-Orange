@@ -1,0 +1,10 @@
+<record name="SupplierCAIControl" tablename="SupplierCAIControl" inherits="Numerable" >
+    <field name="SerNr" type="integer" />
+    <field name="SupCode" type="string" length="20" />
+    <field name="SupName" type="string" length="60" />
+    <field name="CAI" type="string" length="60" />
+    <field name="DueCAI" type="date" />
+    <field name="CAIFiscalType" type="integer" />
+    <field name="FrNumber" type="string" length="20" />
+    <field name="ToNumber" type="string" length="20" />
+</record>

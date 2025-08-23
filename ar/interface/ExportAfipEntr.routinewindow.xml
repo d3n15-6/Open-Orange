@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="StartDate" type="date" />
+        <field name="EndDate" type="date" />
+        <field name="Nro" type="integer" />
+        <field name="Option" type="integer" />
+        <field name="PresentDate" type="date" />
+        <field name="PayMode" type="string" length="5" />
+    </routinerecord>
+    <routinewindow name="ExportAfipEntrWindow" title="Generate Tax Office Electronic Delivery Notes" >
+        <column>
+            <integer label="Roadmap Nr" fieldname="Nro" />
+            <combobox label="Operation Types" fieldname="Option" >
+                <combooption label="Electronic Delivery Note" value="0" />
+                <combooption label="Siap" value="1" />
+            </combobox>
+        </column>
+    </routinewindow>
+</routineuserinput>

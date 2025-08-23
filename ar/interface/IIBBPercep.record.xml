@@ -1,0 +1,6 @@
+<record name="IIBBPercep" tablename="IIBBPercep" >
+    <field name="Province" type="string" linkto="Province" />
+    <field name="ItemTaxGroup" type="string" length="10" />
+    <field name="Retencion" type="string" linkto="Retencion" />
+    <field name="TaxPercent" type="value" />
+</record>

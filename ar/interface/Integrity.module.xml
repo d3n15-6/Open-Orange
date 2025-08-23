@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<module label="Integrity" name="Integrity" >
+    <recordentries >
+    </recordentries>
+    <reportentries >
+    </reportentries>
+    <routineentries >
+        <routineentry label="Fix Supplier/Customer Data" name="UpdateIIBBData" />
+    </routineentries>
+</module>

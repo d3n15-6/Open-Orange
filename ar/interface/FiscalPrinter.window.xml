@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--only in spanish-->
+<window name="FiscalPrinterWindow" recordname="FiscalPrinter" title="Fiscal Printer" >
+    <column>
+        <text label="Code (Local Machine)" fieldname="Code" />
+        <text label="Name" fieldname="Name" />
+    </column>
+    <tabs >
+        <tabpage label="General" name="GeneralPage" width="500" >
+            <column>
+                <text label="Punto de Venta" fieldname="PointOfSales" />
+                <checkbox label="Imprimir Solo Documentos Aprobados" fieldname="PrintOnlyApproved" />
+                <checkbox label="Imprimir Solo Documentos con Fecha de Hoy" fieldname="PrintOnlyTodayTrans" />
+                <checkbox label="Estandarizar Numeros Oficiales" fieldname="StandarizeOfficialNumbers" />
+                <checkbox label="Imprimir Precios con IVA" fieldname="printVATPrice" />
+                <checkbox label="Print On Confirming" fieldname="PrintOnConfirming" />
+                <checkbox label="Abrir Cajón de Dinero al Imprimir" fieldname="OpenDrawer" />
+                <line>
+                    <column>
+                    </column>
+                    <column>
+                        <label text="Copias Adicionales" />
+                    </column>
+                </line>
+                <integer label="Facturas" fieldname="F1" />
+                <integer label="Entregas" fieldname="DeliveryCopies" />
+                <checkbox label="Rechazar la Impresion" fieldname="DennyAmountToCustomer" />
+                <text label="a Cliente" fieldname="DennyCustCode" pastewindow="CustomerPasteWindow" width="80" />
+                <value label="desde Monto" fieldname="DennyAmount" decimals="3" />
+            </column>
+        </tabpage>
+        <tabpage label="Port" name="PortPage" >
+            <column>
+                <text label="Puerto Unix" fieldname="UnixPort" />
+                <integer label="BaudRate" fieldname="BaudRate" />
+                <radiobutton label="Puerto" fieldname="WinPort" >
+                    <radiooption label="Com 1" value="1" />
+                    <radiooption label="Com 2" value="2" />
+                    <radiooption label="Com 3" value="3" />
+                    <radiooption label="Com 4" value="4" />
+                </radiobutton>
+                <radiobutton label="Moneda" fieldname="BaseCur" >
+                    <radiooption label="Base 1" value="1" />
+                    <radiooption label="Base 2" value="2" />
+                </radiobutton>
+            </column>
+        </tabpage>
+        <tabpage label="Brand" name="BrandPage" >
+            <column>
+                <radiobutton label="Brand" fieldname="PrinterModel" >
+                    <radiooption label="Hasar SMH/P-320F" value="0" />
+                    <radiooption label="Hasar SMH/P-330F" value="6" />
+                    <radiooption label="Hasar PL-8F" value="1" />
+                    <radiooption label="Hasar 615F - PR4F" value="2" />
+                    <radiooption label="Hasar 715F - PR5F" value="8" />
+                    <radiooption label="Epson LX-300F/+" value="3" />
+                    <radiooption label="Epson TM-2000AF+" value="4" />
+                    <radiooption label="Epson TM-2002AF+" value="5" />
+                    <radiooption label="Epson TM-U220AF" value="7" />
+                    <radiooption label="Olivetti ARTJET 20-F" value="9" />
+                </radiobutton>
+            </column>
+        </tabpage>
+        <tabpage label="Encabezado/Pie" name="EncabezadoPiePage" >
+            <column>
+                <text label="Encabezado 1" fieldname="Header1" />
+                <text label="Encabezado 2" fieldname="Header2" />
+                <text label="Pie 1" fieldname="Footer1" />
+                <text label="Pie 2" fieldname="Footer2" />
+                <text label="Pie 3" fieldname="Footer3" />
+                <text label="Pie 4" fieldname="Footer4" />
+            </column>
+        </tabpage>
+        <tabpage label="Hasar" name="HasarSettingsPage" >
+            <checkbox label="Resumir Descuentos" fieldname="ResumeItemDiscounts" />
+            <checkbox label="Ocultar Descuentos" fieldname="HideItemDiscounts" />
+            <checkbox label="Imprimir Descripciones Largas" fieldname="WrapItemDescription" />
+            <integer label="Precision Decimal" fieldname="DecimalsPrecision" />
+        </tabpage>
+        <tabpage label="Epson" name="EpsonPage" >
+            <!-- TODO: ver el siguiente seteo: acaso no debería ser al revez?.-->
+            <checkbox label="Forzar Siempre Emision de Tickets Factura" fieldname="ForceInvoiceTicket" />
+        </tabpage>
+    </tabs>
+    <action label="Informe Completo de Estado" methodname="getFiscalStatus" />
+    <action label="Closure X" methodname="fiscalCloseX" />
+    <action label="Closure Z" methodname="fiscalCloseZ" />
+    <action label="Test Non fiscal Document" methodname="testNonFiscalDoc" />
+    <action label="Forward Paper" methodname="forwardPaper" />
+    <action label="Set Date and Time" methodname="setTimeDate" />
+    <action label="Obtain Date and Time" methodname="getTimeDate" />
+    <action label="Obtain Header and Footer Data" methodname="getHeaderInfo" />
+    <action label="Save Footer and Header Data" methodname="setHeaderInfo" />
+</window>

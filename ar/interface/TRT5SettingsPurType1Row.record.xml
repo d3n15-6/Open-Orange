@@ -1,0 +1,4 @@
+<detailrecord name="TRT5SettingsPurType1Row" tablename="TRT5SettingsPurType1Row" >
+    <field name="Category" type="string" length="1" />
+    <field name="Amount" type="value" />
+</detailrecord>

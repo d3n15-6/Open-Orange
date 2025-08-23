@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="ImportTable" type="boolean" />
+        <field name="UpdateTable" type="boolean" />
+    </routinerecord>
+    <routinewindow name="IIBBTaxGroupRegisterImport" width="350" title="Importacion Padron Grupos IIBB" >
+        <checkbox label="Importar Padrones" fieldname="ImportTable" />
+        <checkbox label="Actualizar Clientes - Proveedores" fieldname="UpdateTable" />
+    </routinewindow>
+</routineuserinput>

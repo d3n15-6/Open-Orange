@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="IIBBTaxGroupRegisterWindow" recordname="IIBBTaxGroupRegister" title="IIBB Tax Group Register" >
+    <text label="Code" fieldname="Code" />
+    <text label="GrpPercep" fieldname="GrpPercep" />
+    <text label="GrpRetenc" fieldname="GrpRetenc" />
+</window>

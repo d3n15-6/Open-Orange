@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<routineuserinput >
+    <routinerecord >
+        <field name="FromDate" type="date" />
+        <field name="ToDate" type="date" />
+        <field name="Jurisdiction" type="string" length="20" />
+    </routinerecord>
+    <routinewindow name="ExportSIRETPERWindow" title="Exportaci&#243;n AFIP - SIRETPER" >
+        <period label="Period" fromfieldname="FromDate" tofieldname="ToDate" />
+        <text label="Province" fieldname="Jurisdiction" pastewindow="ProvincePasteWindow" />
+    </routinewindow>
+</routineuserinput>

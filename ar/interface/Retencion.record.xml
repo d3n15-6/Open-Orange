@@ -1,0 +1,3 @@
+<record name="Retencion" tablename="Retencion" inherits="Retencion" >
+    <field name="AffectedAccs" type="detail" recordname="RetencionAffectedAccRow" />
+</record>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<window name="IIBBAgreementPartWindow" recordname="IIBBAgreementPart" title="IIBB Agreement Participation" >
+    <text label="Code" fieldname="Code" pastewindow="CustomerPasteWindow" width="100" />
+    <text label="Name" fieldname="Name" />
+    <text label="Province" fieldname="Province" pastewindow="ProvincePasteWindow" />
+    <value label="Coefficient" fieldname="Coefficient" />
+</window>

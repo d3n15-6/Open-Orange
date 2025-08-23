@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<reportuserinput >
+    <reportrecord >
+        <field name="PayTerm" type="string" length="20" />
+        <field name="GroupCode" type="string" length="20" />
+        <field name="Labels" type="string" length="20" />
+        <field name="Country" type="string" length="20" />
+        <field name="CostAcc" type="string" length="20" />
+        <field name="PayAcc" type="string" length="20" />
+        <field name="ProvinceCode" type="string" length="20" />
+        <field name="ShowPayTerm" type="boolean" />
+        <field name="ShowAddress" type="boolean" />
+        <field name="ShowZipCode" type="boolean" />
+        <field name="ShowEmail" type="boolean" />
+        <field name="ShowPhone" type="boolean" />
+        <field name="ShowFaxPhone" type="boolean" />
+        <field name="TaxRegType0" type="boolean" />
+        <field name="TaxRegType1" type="boolean" />
+        <field name="TaxRegType2" type="boolean" />
+        <field name="TaxRegType3" type="boolean" />
+        <field name="TaxRegType4" type="boolean" />
+        <field name="TaxRegType5" type="boolean" />
+    </reportrecord>
+    <reportwindow name="SupplierListReportWindow" title="Supplier List" >
+        <tabs >
+            <tabpage label="Filters" name="FiltersPage" >
+                <column>
+                    <text label="Payment Term" fieldname="PayTerm" pastewindow="PayTermPasteWindow" />
+                    <text label="GroupCode" fieldname="GroupCode" pastewindow="SupplierGroupPasteWindow" />
+                    <text label="Labels" fieldname="Labels" pastewindow="LabelPasteWindow" />
+                    <text label="ProvinceCode" fieldname="ProvinceCode" pastewindow="ProvincePasteWindow" />
+                    <text label="Country" fieldname="Country" pastewindow="CountryPasteWindow" />
+                    <text label="Cost Account" fieldname="CostAcc" pastewindow="AccountPasteWindow" />
+                    <text label="Payable Account" fieldname="PayAcc" pastewindow="AccountPasteWindow" />
+                    <checkbox label="Resp. Insc." fieldname="TaxRegType0" />
+                    <checkbox label="Con. Final" fieldname="TaxRegType1" />
+                    <checkbox label="IVA No Resp." fieldname="TaxRegType2" />
+                    <checkbox label="Exempt" fieldname="TaxRegType3" />
+                    <checkbox label="Resp. No Insc." fieldname="TaxRegType4" />
+                    <checkbox label="Monotributo" fieldname="TaxRegType5" />
+                </column>
+            </tabpage>
+            <tabpage label="Show" name="ShowPage" >
+                <column>
+                    <checkbox label="Payment Term" fieldname="ShowPayTerm" />
+                    <checkbox label="Address" fieldname="ShowAddress" />
+                    <checkbox label="ZipCode" fieldname="ShowZipCode" />
+                    <checkbox label="Mail" fieldname="ShowEmail" />
+                    <checkbox label="Phone" fieldname="ShowPhone" />
+                    <checkbox label="Fax" fieldname="ShowFaxPhone" />
+                </column>
+            </tabpage>
+        </tabs>
+    </reportwindow>
+</reportuserinput>

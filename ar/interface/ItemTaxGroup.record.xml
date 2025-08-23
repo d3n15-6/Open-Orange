@@ -1,0 +1,3 @@
+<record name="ItemTaxGroup" tablename="ItemTaxGroup" inherits="ItemTaxGroup" >
+    <field name="COTUnit" type="integer" />
+</record>
