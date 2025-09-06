@@ -13,4 +13,4 @@ from BasicFunctions import now, today
 from Query import Query
 from Embeddeb_OpenOrange import *
 
-# 
+# variable globales
