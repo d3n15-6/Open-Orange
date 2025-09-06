@@ -29,4 +29,7 @@ def __redefined_import__(name, globals=None, locals=None, fromlist=None, level=0
         except Exception:
             return __standart_import__(name, globals, locals, fromlist, level)
     return __standart_import__(name, globals, locals, fromlist, level)
+
+# Reemplazamos el import de Python
+
     
