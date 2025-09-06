@@ -14,3 +14,6 @@ from Query import Query
 from Embeddeb_OpenOrange import *
 
 # variable globales
+messages_queue = {}
+modules_index = None
+__langdict = None
