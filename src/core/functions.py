@@ -31,5 +31,6 @@ def __redefined_import__(name, globals=None, locals=None, fromlist=None, level=0
     return __standart_import__(name, globals, locals, fromlist, level)
 
 # Reemplazamos el import de Python
+builtins.__import__ = __redefined_import__
 
     
